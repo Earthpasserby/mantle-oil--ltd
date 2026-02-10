@@ -4,12 +4,14 @@ import { Target, Eye, Users, Award, Briefcase, CheckCircle } from 'lucide-react'
 
 const About = () => {
     const clients = [
-        { name: "Shell Nigeria", logo: "../public/logos/shell.jifif" },
-        { name: "ExxonMobil", logo: "https://cleanpng.com/png-exxonmobil-logo-8354479/" },
-        { name: "NNPC", logo: "https://upload.wikimedia.org/wikipedia/commons/6/69/NNPC_Group_logo.svg" }, // NNPC often needs a specific URL
+        { name: "ExxonMobil", logo: "/logos/ExxonMobil.jfif" },
+        { name: "DWC Engineering", logo: null }, // Placeholder/Text fallback
+        { name: "NNPC", logo: "/logos/nnpc.jfif" }, // NNPC often needs a specific URL
         { name: "Addax Petroleum", logo: "https://logo.clearbit.com/addaxpetroleum.com" },
+        { name: "Shell Nigeria", logo: "/logos/shell.jfif" },
         { name: "WAEP", logo: null }, // Placeholder/Text fallback
-        { name: "DWC Engineering", logo: null } // Placeholder/Text fallback
+
+
     ];
 
     return (
