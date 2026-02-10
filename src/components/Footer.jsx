@@ -19,16 +19,14 @@ const Footer = () => {
                         <h4 className="text-white font-bold mb-6">Company</h4>
                         <ul className="space-y-4 text-sm text-gray-500">
                             <li><Link to="/about" className="hover:text-gold">About Us</Link></li>
-                            <li><Link to="/contact" className="hover:text-gold">Careers</Link></li>
-                            <li><Link to="/contact" className="hover:text-gold">Newsroom</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="text-white font-bold mb-6">Operations</h4>
                         <ul className="space-y-4 text-sm text-gray-500">
-                            <li><Link to="/services" className="hover:text-gold">Exploration</Link></li>
-                            <li><Link to="/services" className="hover:text-gold">Production</Link></li>
-                            <li><Link to="/services" className="hover:text-gold">Refining</Link></li>
+                            <li><Link to="/services" className="hover:text-gold">Fabrication</Link></li>
+                            <li><Link to="/services" className="hover:text-gold">Pipeline</Link></li>
+                            <li><Link to="/services" className="hover:text-gold">Procurements</Link></li>
                         </ul>
                     </div>
                     <div>

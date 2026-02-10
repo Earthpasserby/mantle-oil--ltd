@@ -4,8 +4,8 @@ import { Target, Eye, Users, Award, Briefcase, CheckCircle } from 'lucide-react'
 
 const About = () => {
     const clients = [
-        { name: "Shell Nigeria", logo: "https://logo.clearbit.com/shell.com" },
-        { name: "ExxonMobil", logo: "https://logo.clearbit.com/exxonmobil.com" },
+        { name: "Shell Nigeria", logo: "../public/logos/shell.jifif" },
+        { name: "ExxonMobil", logo: "https://cleanpng.com/png-exxonmobil-logo-8354479/" },
         { name: "NNPC", logo: "https://upload.wikimedia.org/wikipedia/commons/6/69/NNPC_Group_logo.svg" }, // NNPC often needs a specific URL
         { name: "Addax Petroleum", logo: "https://logo.clearbit.com/addaxpetroleum.com" },
         { name: "WAEP", logo: null }, // Placeholder/Text fallback
