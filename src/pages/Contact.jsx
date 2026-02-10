@@ -41,14 +41,14 @@ const Contact = () => {
                                 <Phone className="text-gold mt-1" />
                                 <div>
                                     <h3 className="font-bold text-lg">Phone</h3>
-                                    <p className="text-gray-400">08032368599</p>
+                                    <p className="text-gray-400">08032368599, 09121557656</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
                                 <Mail className="text-gold mt-1" />
                                 <div>
                                     <h3 className="font-bold text-lg">Email</h3>
-                                    <p className="text-gray-400">ekere_afia@yahoo.com</p>
+                                    <p className="text-gray-400">info@mantlegold.com</p>
                                 </div>
                             </div>
                         </div>
@@ -56,7 +56,7 @@ const Contact = () => {
                         <div className="mt-12 p-6 bg-slate rounded-xl border border-white/5">
                             <h3 className="font-bold mb-2">Investor Relations</h3>
                             <p className="text-gray-400 text-sm">
-                                For investor inquiries, please contact our dedicated team at <span className="text-gold">investors@mantlegold.com</span>.
+                                For investor inquiries, please contact our dedicated team at <span className="text-gold">info@mantlegold.com</span>.
                             </p>
                         </div>
                     </div>

@@ -3,6 +3,15 @@ import Footer from '../components/Footer';
 import { Target, Eye, Users, Award, Briefcase, CheckCircle } from 'lucide-react';
 
 const About = () => {
+    const clients = [
+        { name: "Shell Nigeria", logo: "https://logo.clearbit.com/shell.com" },
+        { name: "ExxonMobil", logo: "https://logo.clearbit.com/exxonmobil.com" },
+        { name: "NNPC", logo: "https://upload.wikimedia.org/wikipedia/commons/6/69/NNPC_Group_logo.svg" }, // NNPC often needs a specific URL
+        { name: "Addax Petroleum", logo: "https://logo.clearbit.com/addaxpetroleum.com" },
+        { name: "WAEP", logo: null }, // Placeholder/Text fallback
+        { name: "DWC Engineering", logo: null } // Placeholder/Text fallback
+    ];
+
     return (
         <div className="font-sans bg-black min-h-screen text-white pt-20">
             <div className="container mx-auto px-6 py-12">
@@ -117,41 +126,30 @@ const About = () => {
                     </div>
                 </div>
 
-                {/* Experience Section */}
+                {/* Clients Section */}
                 <div className="mb-12">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold mb-12 text-center">Our <span className="text-gold">Experience</span></h2>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {/* Shell */}
-                        <div className="bg-slate p-8 rounded-2xl border border-white/10 hover:border-gold/30 transition-all">
-                            <h3 className="text-2xl font-serif font-bold text-gold mb-6 border-b border-white/10 pb-4">SHELL NIGERIA</h3>
-                            <ul className="space-y-4 text-gray-300 text-sm">
-                                <li className="flex items-start gap-3"><span className="text-gold mt-1">•</span> Concept Selection, FEED & ITT for Subsea Umbilicals & Distribution Equipment for Bonga South-West Deepwater Project.</li>
-                                <li className="flex items-start gap-3"><span className="text-gold mt-1">•</span> Concept Selection & FEED for Subsea Umbilicals & Distribution Equipment for Bonga North Deepwater Project.</li>
-                                <li className="flex items-start gap-3"><span className="text-gold mt-1">•</span> Installation of Subsea Umbilicals & Distribution Equipment in Perdido Stage 2 – Gulf of Mexico.</li>
-                                <li className="flex items-start gap-3"><span className="text-gold mt-1">•</span> Bonga Main FPSO Topsides Umbilical Termination Assembly and Chemical & Hydraulic Distribution System Upgrade.</li>
-                                <li className="flex items-start gap-3"><span className="text-gold mt-1">•</span> Flushing of Bonga Main FPSO Subsea Production Control System.</li>
-                                <li className="flex items-start gap-3"><span className="text-gold mt-1">•</span> Repair of Damaged Bonga Main FPSO Subsea Hydraulic Flying Leads.</li>
-                            </ul>
-                        </div>
-
-                        {/* ExxonMobil */}
-                        <div className="bg-slate p-8 rounded-2xl border border-white/10 hover:border-gold/30 transition-all">
-                            <h3 className="text-2xl font-serif font-bold text-gold mb-6 border-b border-white/10 pb-4">EXXONMOBIL</h3>
-                            <ul className="space-y-4 text-gray-300 text-sm">
-                                <li className="flex items-start gap-3"><span className="text-gold mt-1">•</span> Six 500,000 barrels Floating Roof Storage Tank Rehabilitation – Qua Iboe River Terminal (QIT).</li>
-                                <li className="flex items-start gap-3"><span className="text-gold mt-1">•</span> Eight Offshore Fixed Jacket Platform Riser Upgrade – EXXONMOBIL Shallow Water Fields.</li>
-                                <li className="flex items-start gap-3"><span className="text-gold mt-1">•</span> Sand Blasting & Painting of Thirty-six Offshore Fixed Jacket Platforms - EXXONMOBIL Shallow Water Fields.</li>
-                                <li className="flex items-start gap-3"><span className="text-gold mt-1">•</span> Design and Construction of 3.6km Bonny Air-strip - BRT Road & Bridge – Bonny River terminal.</li>
-                            </ul>
-                        </div>
-
-                        {/* Addax */}
-                        <div className="bg-slate p-8 rounded-2xl border border-white/10 hover:border-gold/30 transition-all">
-                            <h3 className="text-2xl font-serif font-bold text-gold mb-6 border-b border-white/10 pb-4">ADDAX PETROLEUM</h3>
-                            <ul className="space-y-4 text-gray-300 text-sm">
-                                <li className="flex items-start gap-3"><span className="text-gold mt-1">•</span> Reeling and Unreeling of Subsea Flexible Pipelines and Umbilicals from Donor to Receiver Wells in Okwori Field.</li>
-                            </ul>
-                        </div>
+                    <h2 className="text-3xl md:text-4xl font-serif font-bold mb-16 text-center">Our <span className="text-gold">Clients</span></h2>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
+                        {clients.map((client, index) => (
+                            <div key={index} className="bg-white p-8 rounded-xl flex items-center justify-center h-40 hover:scale-105 transition-transform duration-300 shadow-lg group">
+                                {client.logo ? (
+                                    <img
+                                        src={client.logo}
+                                        alt={`${client.name} Logo`}
+                                        className="max-h-24 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                                        onError={(e) => {
+                                            e.target.style.display = 'none';
+                                            e.target.nextSibling.style.display = 'block';
+                                        }}
+                                    />
+                                ) : null}
+                                <span
+                                    className={`text-black font-bold text-xl text-center ${client.logo ? 'hidden' : 'block'}`}
+                                >
+                                    {client.name}
+                                </span>
+                            </div>
+                        ))}
                     </div>
                 </div>
 
