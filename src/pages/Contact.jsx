@@ -13,7 +13,7 @@ const Contact = () => {
         e.preventDefault();
         const subject = `New Message from ${formData.firstName} ${formData.lastName}`;
         const body = `Name: ${formData.firstName} ${formData.lastName}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
-        window.location.href = `mailto:ekere_afia@yahoo.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+        window.location.href = `mailto:info@mantlegold.com?subject=${encodeURIComponent(subject)}&body=${body}`;
     };
 
     const handleChange = (e) => {
