@@ -4,6 +4,20 @@ import Stats from '../components/Stats';
 import ServiceCard from '../components/ServiceCard';
 
 const Home = () => {
+
+    const clients = [
+        { name: "Shell Nigeria", logo: "/logos/shel.png" },
+        { name: "ExxonMobil", logo: "/logos/exx.png" },
+        { name: "NNPC", logo: "/logos/nn.png" }, // NNPC often needs a specific URL
+        { name: "Addax Petroleum", logo: "/logos/add.png" },
+        { name: "WAEP", logo: "/logos/waep.png" }, // Placeholder/Text fallback
+        { name: "DWC Engineering", logo: "/logos/dwc.png" } // Placeholder/Text fallback
+    ];
+
+
+
+
+
     return (
         <div className="font-sans">
             {/* Hero Section */}
@@ -80,13 +94,44 @@ const Home = () => {
                             desc="Comprehensive maintenance and integrity management solutions to extend the lifecycle of your offshore and onshore assets."
                         />
                         <ServiceCard
-                            icon="Activity"
+                            icon="Waves"
                             title="Pipeline Engineering"
                             desc="Specialized pipeline design, installation, and field services ensuring flow assurance and infrastructure reliability."
                         />
                     </div>
                 </div>
             </div>
+
+
+            <div className="mb-12 px-16">
+                <h2 className="text-3xl md:text-4xl font-serif font-bold mb-16 text-center">Our <span className="text-gold">Clients</span></h2>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
+                    {clients.map((client, index) => (
+                        <div key={index} className="bg-white p-8 rounded-xl flex items-center justify-center h-40 hover:scale-105 transition-transform duration-300 shadow-lg group">
+                            {client.logo ? (
+                                <img
+                                    src={client.logo}
+                                    alt={`${client.name} Logo`}
+                                    className="max-h-24 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                                    onError={(e) => {
+                                        e.target.style.display = 'none';
+                                        e.target.nextSibling.style.display = 'block';
+                                    }}
+                                />
+                            ) : null}
+                            <span
+                                className={`text-black font-bold text-xl text-center ${client.logo ? 'hidden' : 'block'}`}
+                            >
+                                {client.name}
+                            </span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+
+
+
         </div>
     );
 };

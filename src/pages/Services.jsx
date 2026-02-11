@@ -89,7 +89,7 @@ const Services = () => {
             ]
         },
         {
-            icon: "Activity",
+            icon: "Waves",
             title: "Pipeline Engineering and Field Services",
             desc: "Specialized pipeline design, installation, and field services ensuring flow assurance and infrastructure reliability.",
             details: [

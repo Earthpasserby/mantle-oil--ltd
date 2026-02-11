@@ -67,7 +67,7 @@ const Navbar = () => {
                     <img src="/logo.png" alt="Mantle-Gold Ltd" className="h-12" />
                     <div className="flex flex-col">
                         <span className="text-xl font-bold tracking-wide text-white leading-none">MANTLE-GOLD LTD</span>
-                        <span className="text-[10px] text-gold tracking-widest uppercase mt-1">Oil, Gas & Energy Solutions</span>
+                        <span className="text-[10px] text-gold tracking-widest uppercase mt-1">Oil, Gas & Energy products & engineering Solutions</span>
                     </div>
                 </Link>
 

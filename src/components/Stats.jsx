@@ -8,10 +8,9 @@ const StatCard = ({ number, label }) => (
 const Stats = () => {
     return (
         <div className="bg-slate py-12 border-y border-white/5 relative z-20">
-            <div className="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
-                <StatCard number="8+" label="Years Experience" />
+            <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <StatCard number="10+" label="Years Experience" />
                 <StatCard number="532,480" label="Cummulative man hours" />
-                <StatCard number="40+" label="Countries" />
                 <StatCard number="98%" label="Safety Rating" />
             </div>
         </div>
