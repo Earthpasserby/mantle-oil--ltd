@@ -1,0 +1,58 @@
+import { Link } from 'react-router-dom';
+import { MapPin, Phone, Mail } from 'lucide-react';
+
+const Footer = () => {
+    return (
+        <footer className="bg-darker pt-20 pb-10 border-t border-gold/20">
+            <div className="container mx-auto px-6">
+                <div className="grid md:grid-cols-4 gap-12 mb-16">
+                    <div>
+                        <div className="flex items-center gap-3 mb-6">
+                            <img src="/logo.png" alt="Mantle-Gold Ltd" className="h-8" />
+                            <span className="text-lg font-bold text-white">MANTLE-GOLD LTD</span>
+                        </div>
+                        <p className="text-gray-500 text-sm">
+                            Oil Gas & Energy Products & Engineering Solutions. Empowering the world with sustainable energy.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 className="text-white font-bold mb-6">Company</h4>
+                        <ul className="space-y-4 text-sm text-gray-500">
+                            <li><Link to="/about" className="hover:text-gold">About Us</Link></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className="text-white font-bold mb-6">Operations</h4>
+                        <ul className="space-y-4 text-sm text-gray-500">
+                            <li><Link to="/services" className="hover:text-gold">Fabrication</Link></li>
+                            <li><Link to="/services" className="hover:text-gold">Pipeline</Link></li>
+                            <li><Link to="/services" className="hover:text-gold">Procurements</Link></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className="text-white font-bold mb-6">Contact</h4>
+                        <ul className="space-y-4 text-sm text-gray-500">
+                            <li className="flex items-start gap-3">
+                                <MapPin size={20} className="text-gold flex-shrink-0 mt-1" />
+                                <span>31 Discovery Garden Estate, Lekki Lagos Nigeria</span>
+                            </li>
+                            <li className="flex items-center gap-3">
+                                <Phone size={20} className="text-gold flex-shrink-0" />
+                                <span>08032368599, 09121557656</span>
+                            </li>
+                            <li className="flex items-center gap-3">
+                                <Mail size={20} className="text-gold flex-shrink-0" />
+                                <span>info@mantlegold.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="border-t border-white/5 pt-8 text-center text-gray-600 text-sm">
+                    &copy; 2026 MANTLE-GOLD LTD. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    );
+};
+
+export default Footer;
