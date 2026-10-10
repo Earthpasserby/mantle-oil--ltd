@@ -31,7 +31,7 @@ const Home = () => {
             />
 
             {/* Hero Section */}
-            <section className="relative h-screen flex items-center justify-center overflow-hidden" aria-label="Hero">
+            <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-32" aria-label="Hero">
                 <div className="absolute inset-0 z-0">
                     <img
                         src="/images/oil.jpg"
