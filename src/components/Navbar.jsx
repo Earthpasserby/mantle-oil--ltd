@@ -77,18 +77,32 @@ const Navbar = () => {
                         <Link
                             key={link.name}
                             to={link.path}
-                            className={`hover:text-gold transition-colors ${location.pathname === link.path ? 'text-gold' : ''}`}
+                            aria-current={location.pathname === link.path ? 'page' : undefined}
+                            className={`relative hover:text-gold transition-colors py-2 ${location.pathname === link.path ? 'text-gold' : ''}`}
                         >
                             {link.name}
+                            {location.pathname === link.path && (
+                                <motion.div
+                                    layoutId="navbar-indicator"
+                                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold"
+                                    initial={false}
+                                    transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                                />
+                            )}
                         </Link>
                     ))}
-                    <Link to="/contact" className="bg-gold text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-500 transition-colors">
+                    <Link to="/contact" className="bg-gold text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-500 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-gold focus:outline-none">
                         Get Started
                     </Link>
                 </div>
 
                 {/* Mobile Menu Button */}
-                <button className="md:hidden text-white relative w-10 h-10 flex items-center justify-center rounded-full border border-white/10 hover:bg-white/5 transition-colors" onClick={() => setIsOpen(!isOpen)}>
+                <button 
+                    aria-expanded={isOpen}
+                    aria-label="Toggle navigation menu"
+                    className="md:hidden text-white relative w-10 h-10 flex items-center justify-center rounded-full border border-white/10 hover:bg-white/5 transition-colors focus:ring-2 focus:ring-gold focus:outline-none" 
+                    onClick={() => setIsOpen(!isOpen)}
+                >
                     <AnimatePresence mode="wait">
                         {isOpen ? (
                             <motion.div
