@@ -126,15 +126,36 @@ const Services = () => {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <motion.div 
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: { staggerChildren: 0.1 }
+                        }
+                    }}
+                    className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
                     {servicesData.map((service, index) => (
-                        <ServiceCard
+                        <motion.div
                             key={index}
-                            {...service}
-                            onClick={() => setSelectedService(service)}
-                        />
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0 }
+                            }}
+                            whileHover={{ y: -10 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                        >
+                            <ServiceCard
+                                {...service}
+                                onClick={() => setSelectedService(service)}
+                            />
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
 
             {/* Modal */}

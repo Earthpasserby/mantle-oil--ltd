@@ -39,42 +39,54 @@ const Contact = () => {
 
                 <div className="grid md:grid-cols-2 gap-16">
                     {/* Contact Info */}
-                    <div>
+                    <motion.div 
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
                         <h2 className="text-2xl font-bold mb-6">Headquarters</h2>
                         <div className="space-y-6">
-                            <div className="flex items-start gap-4">
+                            <motion.div whileHover={{ x: 10 }} className="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors cursor-pointer">
                                 <MapPin className="text-gold mt-1" />
                                 <div>
                                     <h3 className="font-bold text-lg">Office</h3>
                                     <p className="text-gray-400">31 Discovery Garden Estate, Lekki Lagos Nigeria</p>
                                 </div>
-                            </div>
-                            <div className="flex items-start gap-4">
+                            </motion.div>
+                            <motion.div whileHover={{ x: 10 }} className="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors cursor-pointer">
                                 <Phone className="text-gold mt-1" />
                                 <div>
                                     <h3 className="font-bold text-lg">Phone</h3>
                                     <p className="text-gray-400">08032368599, 09121557656</p>
                                 </div>
-                            </div>
-                            <div className="flex items-start gap-4">
+                            </motion.div>
+                            <motion.div whileHover={{ x: 10 }} className="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors cursor-pointer">
                                 <Mail className="text-gold mt-1" />
                                 <div>
                                     <h3 className="font-bold text-lg">Email</h3>
                                     <p className="text-gray-400">info@mantlegold.com</p>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
 
-                        <div className="mt-12 p-6 bg-slate rounded-xl border border-white/5">
+                        <motion.div 
+                            whileHover={{ scale: 1.02 }}
+                            className="mt-12 p-6 bg-slate rounded-xl border border-white/5 cursor-pointer"
+                        >
                             <h3 className="font-bold mb-2">Investor Relations</h3>
                             <p className="text-gray-400 text-sm">
                                 For investor inquiries, please contact our dedicated team at <span className="text-gold">info@mantlegold.com</span>.
                             </p>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
 
                     {/* Contact Form */}
-                    <div className="bg-slate p-8 rounded-2xl border border-white/5">
+                    <motion.div 
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                        className="bg-slate p-8 rounded-2xl border border-white/5"
+                    >
                         <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
                         <form className="space-y-6" onSubmit={handleSubmit}>
                             <div className="grid md:grid-cols-2 gap-6">
@@ -127,11 +139,16 @@ const Contact = () => {
                                     required
                                 ></textarea>
                             </div>
-                            <button type="submit" className="w-full bg-gold text-black font-bold py-3 rounded-lg hover:bg-yellow-500 transition-colors cursor-pointer">
+                            <motion.button 
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                                type="submit" 
+                                className="w-full bg-gold text-black font-bold py-3 rounded-lg hover:bg-yellow-500 transition-colors cursor-pointer shadow-[0_0_15px_rgba(232,141,20,0.3)] hover:shadow-[0_0_25px_rgba(232,141,20,0.5)]"
+                            >
                                 Send Message
-                            </button>
+                            </motion.button>
                         </form>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </motion.div>

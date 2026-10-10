@@ -88,23 +88,51 @@ const Home = () => {
             <Stats />
 
             {/* Mission Section */}
-            <div className="py-24 bg-darker">
+            <motion.div 
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
+                className="py-24 bg-darker"
+            >
                 <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
                     <div>
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
+                        <motion.h2 
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            className="text-3xl md:text-4xl font-serif font-bold mb-6"
+                        >
                             Redefining Energy <br /><span className="text-gold">Production</span>
-                        </h2>
-                        <p className="text-gray-400 mb-6 leading-relaxed">
+                        </motion.h2>
+                        <motion.p 
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                            className="text-gray-400 mb-6 leading-relaxed"
+                        >
                             MANTLE-GOLD LTD strives to be the community partner of choice as we develop oil and natural gas in a sustainable, innovative way. We focus on low-risk development opportunities combined with rigorous regulatory standards.
-                        </p>
-                        <Link to="/about" className="text-gold font-semibold hover:underline">Read Our Story &rarr;</Link>
+                        </motion.p>
+                        <Link to="/about" className="text-gold font-semibold hover:underline inline-flex items-center gap-2 group">
+                            Read Our Story 
+                            <motion.span 
+                                className="group-hover:translate-x-2 transition-transform"
+                            >
+                                &rarr;
+                            </motion.span>
+                        </Link>
                     </div>
-                    <div className="relative group">
+                    <motion.div 
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8 }}
+                        className="relative group cursor-pointer"
+                    >
                         <div className="absolute -inset-4 bg-gold/20 rounded-2xl filter blur-2xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
                         <img src="/images/oil.jpg" alt="Production Site" className="relative rounded-2xl shadow-2xl border border-white/10 grayscale group-hover:grayscale-0 transition-all duration-500" />
-                    </div>
+                    </motion.div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Services Preview */}
             <div className="py-24 bg-black relative">
@@ -135,11 +163,40 @@ const Home = () => {
             </div>
 
 
-            <div className="mb-12 px-16">
-                <h2 className="text-3xl md:text-4xl font-serif font-bold mb-16 text-center">Our <span className="text-gold">Clients</span></h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
+            <div className="mb-12 px-16 overflow-hidden">
+                <motion.h2 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-3xl md:text-4xl font-serif font-bold mb-16 text-center"
+                >
+                    Our <span className="text-gold">Clients</span>
+                </motion.h2>
+                <motion.div 
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: {
+                                staggerChildren: 0.1
+                            }
+                        }
+                    }}
+                    className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12"
+                >
                     {clients.map((client, index) => (
-                        <div key={index} className="bg-white p-8 rounded-xl flex items-center justify-center h-40 hover:scale-105 transition-transform duration-300 shadow-lg group">
+                        <motion.div 
+                            key={index} 
+                            variants={{
+                                hidden: { opacity: 0, y: 20 },
+                                visible: { opacity: 1, y: 0 }
+                            }}
+                            whileHover={{ scale: 1.05, y: -5 }}
+                            className="bg-white p-8 rounded-xl flex items-center justify-center h-40 shadow-lg group cursor-pointer"
+                        >
                             {client.logo ? (
                                 <img
                                     src={client.logo}
@@ -156,9 +213,9 @@ const Home = () => {
                             >
                                 {client.name}
                             </span>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
 
 
