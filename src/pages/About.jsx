@@ -417,16 +417,16 @@ const About = () => {
             </section>
 
             {/* Timeline */}
-            <section className="py-20 bg-darker" aria-label="Milestones">
-                <div className="container mx-auto px-6">
+            <section className="py-14 sm:py-20 bg-darker overflow-hidden" aria-label="Milestones">
+                <div className="container mx-auto px-4 sm:px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-center mb-16"
+                        className="text-center mb-10 sm:mb-16"
                     >
-                        <span className="text-gold uppercase tracking-[0.2em] text-xs font-bold">Our Journey</span>
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold mt-3">Key <span className="text-gold">Milestones</span></h2>
+                        <span className="text-gold uppercase tracking-[0.2em] text-[10px] sm:text-xs font-bold">Our Journey</span>
+                        <h2 className="text-2xl sm:text-4xl font-serif font-bold mt-2 sm:mt-3">Key <span className="text-gold">Milestones</span></h2>
                     </motion.div>
 
                     <div className="relative">
@@ -440,18 +440,18 @@ const About = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className={`relative flex items-start mb-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                                className={`relative flex items-start mb-8 sm:mb-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                             >
                                 <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-gold rounded-full -translate-x-1.5 mt-2 shadow-[0_0_10px_rgba(232,141,20,0.5)] z-10" />
 
-                                <div className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'}`}>
-                                    <div className="bg-slate p-6 rounded-xl border border-white/5 hover:border-gold/20 transition-colors">
-                                        <div className="flex items-center gap-3 mb-2 justify-start">
-                                            <Calendar size={16} className="text-gold" />
-                                            <span className="text-gold font-bold text-lg">{milestone.year}</span>
+                                <div className={`ml-8 sm:ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 lg:pr-16 md:text-right' : 'md:pl-12 lg:pl-16'}`}>
+                                    <div className="bg-slate p-4 sm:p-6 rounded-xl border border-white/5 hover:border-gold/20 transition-colors">
+                                        <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2 justify-start">
+                                            <Calendar size={15} className="text-gold flex-shrink-0" />
+                                            <span className="text-gold font-bold text-base sm:text-lg">{milestone.year}</span>
                                         </div>
-                                        <h3 className="text-white font-bold text-lg mb-2">{milestone.title}</h3>
-                                        <p className="text-gray-400 text-sm">{milestone.desc}</p>
+                                        <h3 className="text-white font-bold text-base sm:text-lg mb-1 sm:mb-2">{milestone.title}</h3>
+                                        <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{milestone.desc}</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -461,21 +461,21 @@ const About = () => {
             </section>
 
             {/* Vision & Mission */}
-            <section className="py-20 bg-black" aria-label="Vision and Mission">
-                <div className="container mx-auto px-6">
-                    <div className="grid md:grid-cols-2 gap-8 mb-24">
+            <section className="py-14 sm:py-20 bg-black overflow-hidden" aria-label="Vision and Mission">
+                <div className="container mx-auto px-4 sm:px-6">
+                    <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-20">
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            whileHover={{ y: -8 }}
-                            className="bg-slate p-10 rounded-2xl border-l-4 border-gold transition-all duration-300 cursor-pointer shadow-xl"
+                            whileHover={{ y: -6 }}
+                            className="bg-slate p-6 sm:p-8 md:p-10 rounded-2xl border-l-4 border-gold transition-all duration-300 cursor-pointer shadow-xl"
                         >
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="p-3 bg-black rounded-lg text-gold"><Eye size={32} /></div>
-                                <h2 className="text-3xl font-serif font-bold">Our Vision</h2>
+                            <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                                <div className="p-2.5 sm:p-3 bg-black rounded-lg text-gold flex-shrink-0"><Eye size={28} /></div>
+                                <h2 className="text-2xl sm:text-3xl font-serif font-bold">Our Vision</h2>
                             </div>
-                            <p className="text-gray-300 leading-relaxed text-lg">
+                            <p className="text-gray-300 leading-relaxed text-sm sm:text-base md:text-lg">
                                 To be the company of choice in the delivery of quality EPCI projects and providing logistics for brown and green fields development for both Oil and Gas and New Energies.
                             </p>
                         </motion.div>
@@ -484,14 +484,14 @@ const About = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.15 }}
-                            whileHover={{ y: -8 }}
-                            className="bg-slate p-10 rounded-2xl border-l-4 border-gold transition-all duration-300 cursor-pointer shadow-xl"
+                            whileHover={{ y: -6 }}
+                            className="bg-slate p-6 sm:p-8 md:p-10 rounded-2xl border-l-4 border-gold transition-all duration-300 cursor-pointer shadow-xl"
                         >
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="p-3 bg-black rounded-lg text-gold"><Target size={32} /></div>
-                                <h2 className="text-3xl font-serif font-bold">Our Mission</h2>
+                            <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                                <div className="p-2.5 sm:p-3 bg-black rounded-lg text-gold flex-shrink-0"><Target size={28} /></div>
+                                <h2 className="text-2xl sm:text-3xl font-serif font-bold">Our Mission</h2>
                             </div>
-                            <p className="text-gray-300 leading-relaxed text-lg">
+                            <p className="text-gray-300 leading-relaxed text-sm sm:text-base md:text-lg">
                                 To deliver EPCI projects responsibly within statutory and regulatory requirements and to cost, quality and schedule while protecting the environment and our most valued asset – people.
                             </p>
                         </motion.div>
@@ -500,34 +500,34 @@ const About = () => {
             </section>
 
             {/* HSE Culture with Real Field Imagery */}
-            <section className="py-20 bg-darker" aria-label="HSE Culture">
-                <div className="container mx-auto px-6">
+            <section className="py-14 sm:py-20 bg-darker overflow-hidden" aria-label="HSE Culture">
+                <div className="container mx-auto px-4 sm:px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-center mb-16"
+                        className="text-center mb-10 sm:mb-16"
                     >
-                        <span className="text-gold uppercase tracking-[0.2em] text-xs font-bold">Safety First</span>
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold mt-3">HSE &amp; <span className="text-gold">Sustainability</span></h2>
+                        <span className="text-gold uppercase tracking-[0.2em] text-[10px] sm:text-xs font-bold">Safety First</span>
+                        <h2 className="text-2xl sm:text-4xl font-serif font-bold mt-2 sm:mt-3">HSE &amp; <span className="text-gold">Sustainability</span></h2>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                         {[
                             {
-                                icon: <Shield size={36} />,
+                                icon: <Shield size={32} />,
                                 title: "Zero-Harm Philosophy",
                                 desc: "Every project begins and ends with safety. Our 98% safety rating reflects a deep-rooted culture of hazard prevention, rigorous risk assessment, and continuous training.",
                                 image: "/images/bd31e76948d13c5281c60d56d5a55a22.jpg"
                             },
                             {
-                                icon: <Leaf size={36} />,
+                                icon: <Leaf size={32} />,
                                 title: "Environmental Stewardship",
                                 desc: "We integrate environmental responsibility into every phase of operations — from design to decommissioning — minimising ecological impact across all project sites.",
                                 image: "/images/c27c450405ca4d6a31bc72a731768b21.jpg"
                             },
                             {
-                                icon: <HardHat size={36} />,
+                                icon: <HardHat size={32} />,
                                 title: "Local Content Excellence",
                                 desc: "As a proudly Nigerian company, we champion local content development — training, employing, and empowering Nigerian engineers and technicians to deliver world-class EPCI projects.",
                                 image: "/images/ea14084971cb421ebffd7a7d8be6a3ab.jpg"
@@ -539,10 +539,10 @@ const About = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.15 }}
-                                whileHover={{ y: -8 }}
-                                className="group rounded-2xl overflow-hidden bg-slate border border-white/10 hover:border-gold/40 transition-all duration-300 shadow-xl"
+                                whileHover={{ y: -6 }}
+                                className="group rounded-2xl overflow-hidden bg-slate border border-white/10 hover:border-gold/40 transition-all duration-300 shadow-xl flex flex-col"
                             >
-                                <div className="h-44 overflow-hidden relative">
+                                <div className="h-40 sm:h-44 overflow-hidden relative flex-shrink-0">
                                     <img
                                         src={item.image}
                                         alt={item.title}
@@ -550,13 +550,13 @@ const About = () => {
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate via-slate/40 to-transparent" />
-                                    <div className="absolute bottom-3 left-4 text-gold p-2.5 bg-black/80 rounded-xl border border-gold/30">
+                                    <div className="absolute bottom-3 left-4 text-gold p-2 bg-black/80 rounded-xl border border-gold/30">
                                         {item.icon}
                                     </div>
                                 </div>
-                                <div className="p-6">
-                                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-gold transition-colors">{item.title}</h3>
-                                    <p className="text-gray-300 text-sm leading-relaxed">{item.desc}</p>
+                                <div className="p-5 sm:p-6 flex flex-col flex-1">
+                                    <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-gold transition-colors">{item.title}</h3>
+                                    <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">{item.desc}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -565,22 +565,22 @@ const About = () => {
             </section>
 
             {/* Leadership Section */}
-            <section className="py-20 bg-black" aria-label="Leadership">
-                <div className="container mx-auto px-6">
+            <section className="py-14 sm:py-20 bg-black overflow-hidden" aria-label="Leadership">
+                <div className="container mx-auto px-4 sm:px-6">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7 }}
-                        className="bg-slate rounded-3xl p-8 md:p-12 border border-white/10 shadow-2xl"
+                        className="bg-slate rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 border border-white/10 shadow-2xl"
                     >
-                        <div className="grid lg:grid-cols-12 gap-10 items-center">
+                        <div className="grid lg:grid-cols-12 gap-6 sm:gap-10 items-center">
                             <div className="lg:col-span-8">
-                                <span className="text-gold uppercase tracking-[0.2em] text-xs font-bold mb-3 block">Leadership</span>
-                                <h2 className="text-3xl md:text-5xl font-serif font-bold mb-2">Engr. Ekere Afia</h2>
-                                <p className="text-gold text-lg font-medium mb-6">CEO / Managing Director</p>
+                                <span className="text-gold uppercase tracking-[0.2em] text-[10px] sm:text-xs font-bold mb-2 sm:mb-3 block">Leadership</span>
+                                <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold mb-1 sm:mb-2">Engr. Ekere Afia</h2>
+                                <p className="text-gold text-base sm:text-lg font-medium mb-4 sm:mb-6">CEO / Managing Director</p>
 
-                                <div className="prose prose-lg prose-invert max-w-none text-gray-300 space-y-4 text-base md:text-lg leading-relaxed">
+                                <div className="prose prose-sm sm:prose-base prose-invert max-w-none text-gray-300 space-y-3 sm:space-y-4 leading-relaxed">
                                     <p>
                                         The Chief Executive Officer and Managing Director of Mantle-Gold Limited is Engr. Ekere Afia. He has over thirty-one (31) years of experience in the Oil and Gas Industry. Most of the experience were in ExxonMobil, SHELL and ADDAX in Nigeria and United States of America.
                                     </p>
@@ -609,33 +609,33 @@ const About = () => {
                                         loop
                                         muted
                                         playsInline
-                                        className="w-full h-80 object-cover"
+                                        className="w-full h-64 sm:h-80 object-cover"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
                                     <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="w-14 h-14 rounded-full bg-gold/90 text-black flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                                            <Play size={22} className="ml-1" />
+                                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gold/90 text-black flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                                            <Play size={20} className="ml-1" />
                                         </div>
                                     </div>
-                                    <div className="absolute bottom-4 left-4 right-4">
-                                        <div className="text-xs uppercase tracking-widest text-gold font-bold">Executive Video</div>
-                                        <div className="text-sm font-bold text-white">Click to Play Overview</div>
+                                    <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
+                                        <div className="text-[10px] sm:text-xs uppercase tracking-widest text-gold font-bold">Executive Video</div>
+                                        <div className="text-xs sm:text-sm font-bold text-white">Click to Play Overview</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Key credentials */}
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 pt-8 border-t border-white/10">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/10">
                             {[
                                 { stat: "31+", label: "Years Experience" },
                                 { stat: "SHELL", label: "Certified TA" },
                                 { stat: "3", label: "Major IOC Experience" },
                                 { stat: "Global", label: "Nigeria & USA" }
                             ].map((cred, i) => (
-                                <div key={i} className="text-center p-4 bg-black/40 rounded-xl border border-white/5">
-                                    <div className="text-gold text-2xl md:text-3xl font-bold font-serif">{cred.stat}</div>
-                                    <div className="text-gray-400 text-xs uppercase tracking-wider mt-1">{cred.label}</div>
+                                <div key={i} className="text-center p-2.5 sm:p-4 bg-black/40 rounded-xl border border-white/5">
+                                    <div className="text-gold text-xl sm:text-2xl md:text-3xl font-bold font-serif">{cred.stat}</div>
+                                    <div className="text-gray-400 text-[10px] sm:text-xs uppercase tracking-wider mt-1">{cred.label}</div>
                                 </div>
                             ))}
                         </div>
@@ -644,29 +644,29 @@ const About = () => {
             </section>
 
             {/* Clients */}
-            <section className="py-20 bg-darker" aria-label="Our Clients">
-                <div className="container mx-auto px-6">
+            <section className="py-14 sm:py-20 bg-darker overflow-hidden" aria-label="Our Clients">
+                <div className="container mx-auto px-4 sm:px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-center mb-16"
+                        className="text-center mb-10 sm:mb-16"
                     >
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold">Our <span className="text-gold">Clients</span></h2>
+                        <h2 className="text-2xl sm:text-4xl font-serif font-bold">Our <span className="text-gold">Clients</span></h2>
                     </motion.div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 md:gap-12">
                         {clients.map((client, index) => (
                             <motion.div
                                 key={index}
                                 whileHover={{ scale: 1.05, y: -5 }}
-                                className="bg-white p-8 rounded-xl flex items-center justify-center h-40 shadow-lg group cursor-pointer"
+                                className="bg-white p-3 sm:p-6 md:p-8 rounded-xl flex items-center justify-center h-24 sm:h-32 md:h-40 shadow-lg group cursor-pointer"
                             >
                                 {client.logo ? (
                                     <img
                                         src={client.logo}
                                         alt={`${client.name} logo`}
-                                        className="max-h-24 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                                        className="max-h-14 sm:max-h-20 md:max-h-24 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
                                         loading="lazy"
                                         onError={(e) => {
                                             e.target.style.display = 'none';
@@ -674,7 +674,7 @@ const About = () => {
                                         }}
                                     />
                                 ) : null}
-                                <span className={`text-black font-bold text-xl text-center ${client.logo ? 'hidden' : 'block'}`}>
+                                <span className={`text-black font-bold text-sm sm:text-lg md:text-xl text-center ${client.logo ? 'hidden' : 'block'}`}>
                                     {client.name}
                                 </span>
                             </motion.div>

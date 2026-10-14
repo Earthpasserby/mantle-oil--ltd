@@ -20,7 +20,7 @@ const ServiceCard = ({ icon, title, desc, onClick }) => {
     );
 
     // Styling class
-    const cardClasses = "glass-card p-8 rounded-2xl group cursor-pointer h-full flex flex-col items-start w-full text-left";
+    const cardClasses = "glass-card p-5 sm:p-6 md:p-8 rounded-2xl group cursor-pointer h-full flex flex-col items-start w-full text-left";
 
     if (onClick) {
         return (

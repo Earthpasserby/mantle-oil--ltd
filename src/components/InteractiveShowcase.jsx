@@ -188,13 +188,13 @@ const InteractiveShowcase = () => {
                 </motion.div>
 
                 {/* Bottom CTA for about page gallery */}
-                <div className="mt-12 text-center">
+                <div className="mt-8 sm:mt-12 text-center px-2">
                     <Link
                         to="/about"
-                        className="inline-flex items-center gap-3 bg-slate hover:bg-gold hover:text-black text-white px-8 py-4 rounded-full font-bold transition-all duration-300 border border-white/10 hover:border-gold shadow-xl group"
+                        className="inline-flex items-center justify-center gap-2 sm:gap-3 bg-slate hover:bg-gold hover:text-black text-white px-5 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold transition-all duration-300 border border-white/10 hover:border-gold shadow-xl group text-xs sm:text-base max-w-full text-center"
                     >
-                        <span>View All Projects & Video Archive in About Page</span>
-                        <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                        <span>Explore Complete Operations Gallery</span>
+                        <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform flex-shrink-0" />
                     </Link>
                 </div>
             </div>

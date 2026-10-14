@@ -143,53 +143,53 @@ const HeroVideoBackground = ({ onVideoChange }) => {
                 </div>
 
                 {/* Mobile Unified Control Bar (Switcher + Play/Mute all in one compact row) */}
-                <div className="flex md:hidden items-center gap-1.5 bg-black/80 backdrop-blur-lg border border-white/15 px-2.5 py-1.5 rounded-full shadow-2xl">
+                <div className="flex md:hidden items-center gap-1 sm:gap-1.5 bg-black/85 backdrop-blur-lg border border-white/15 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full shadow-2xl max-w-[calc(100vw-1.5rem)] mx-auto overflow-x-auto scrollbar-none">
                     <button
                         onClick={handlePrev}
                         aria-label="Previous video"
-                        className="w-7 h-7 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                        className="w-7 h-7 flex-shrink-0 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                     >
                         <ChevronLeft size={14} />
                     </button>
                     <button
                         onClick={togglePlay}
                         aria-label={isPlaying ? "Pause video" : "Play video"}
-                        className="w-7 h-7 rounded-full bg-gold text-black flex items-center justify-center hover:bg-yellow-400 active:scale-95 transition-transform"
+                        className="w-7 h-7 flex-shrink-0 rounded-full bg-gold text-black flex items-center justify-center hover:bg-yellow-400 active:scale-95 transition-transform"
                     >
                         {isPlaying ? <Pause size={12} /> : <Play size={12} className="ml-0.5" />}
                     </button>
                     <button
                         onClick={handleNext}
                         aria-label="Next video"
-                        className="w-7 h-7 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                        className="w-7 h-7 flex-shrink-0 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                     >
                         <ChevronRight size={14} />
                     </button>
 
-                    <div className="h-3 w-px bg-white/20 mx-1" />
+                    <div className="h-3 w-px bg-white/20 mx-0.5 sm:mx-1 flex-shrink-0" />
 
                     {/* Indicator dots for mobile */}
-                    <div className="flex items-center gap-1.5 px-1">
+                    <div className="flex items-center gap-1 sm:gap-1.5 px-0.5 sm:px-1 flex-shrink-0">
                         {heroVideos.map((vid, idx) => (
                             <button
                                 key={vid.id}
                                 onClick={() => goToIndex(idx)}
                                 aria-label={`Switch to video ${idx + 1}`}
-                                className={`relative h-2 rounded-full transition-all duration-300 ${
+                                className={`relative h-2 rounded-full transition-all duration-300 flex-shrink-0 ${
                                     idx === currentIndex
-                                        ? 'w-6 bg-gold'
+                                        ? 'w-5 sm:w-6 bg-gold'
                                         : 'w-2 bg-white/30 hover:bg-white/60'
                                 }`}
                             />
                         ))}
                     </div>
 
-                    <div className="h-3 w-px bg-white/20 mx-1" />
+                    <div className="h-3 w-px bg-white/20 mx-0.5 sm:mx-1 flex-shrink-0" />
 
                     <button
                         onClick={toggleMute}
                         aria-label={isMuted ? "Unmute video sound" : "Mute video sound"}
-                        className={`w-7 h-7 rounded-full flex items-center justify-center transition-colors ${
+                        className={`w-7 h-7 flex-shrink-0 rounded-full flex items-center justify-center transition-colors ${
                             isMuted ? 'text-gray-400 hover:text-white' : 'text-gold bg-gold/20'
                         }`}
                     >

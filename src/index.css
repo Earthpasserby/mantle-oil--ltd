@@ -22,7 +22,11 @@ html, body {
   .text-gradient {
     background: linear-gradient(to right, #E88D14, #FFA500);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: inline-block;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 
   .glass-card {
@@ -51,5 +55,13 @@ html, body {
 
   .animate-fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
