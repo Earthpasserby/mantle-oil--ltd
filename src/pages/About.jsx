@@ -1,11 +1,9 @@
-import { useState, useMemo } from 'react';
-import { Target, Eye, Users, Award, Briefcase, CheckCircle, Shield, Leaf, HardHat, Calendar, Play, Search, Video, Image as ImageIcon, Sparkles, Filter, ChevronRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+import { Target, Eye, Award, Briefcase, Shield, Leaf, HardHat, Calendar, Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
-import PageHero from '../components/PageHero';
+
 import CTABanner from '../components/CTABanner';
-import { allMedia, categories } from '../data/mediaData';
-import MediaLightbox from '../components/MediaLightbox';
 
 const clients = [
     { name: "Shell Nigeria", logo: "/logos/shel.png" },
@@ -47,35 +45,7 @@ const storyMedia = [
 ];
 
 const About = () => {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [searchQuery, setSearchQuery] = useState('');
     const [activeStoryIdx, setActiveStoryIdx] = useState(0);
-    const [lightboxMedia, setLightboxMedia] = useState(null);
-    const [hoveredMediaId, setHoveredMediaId] = useState(null);
-    const [visibleCount, setVisibleCount] = useState(16);
-
-    // Filtered media list
-    const filteredList = useMemo(() => {
-        return allMedia.filter((item) => {
-            const matchesCategory =
-                selectedCategory === 'all'
-                    ? true
-                    : selectedCategory === 'videos'
-                    ? item.type === 'video'
-                    : item.category === selectedCategory;
-
-            const matchesSearch =
-                searchQuery.trim() === '' ||
-                item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                item.categoryLabel?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                item.badge?.toLowerCase().includes(searchQuery.toLowerCase());
-
-            return matchesCategory && matchesSearch;
-        });
-    }, [selectedCategory, searchQuery]);
-
-    const displayedMedia = filteredList.slice(0, visibleCount);
 
     return (
         <motion.div
@@ -139,8 +109,8 @@ const About = () => {
             <section className="py-14 sm:py-20 bg-darker" aria-label="Company Story">
                 <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-8 md:gap-12 items-center">
                     <motion.div
-                        initial={{ opacity: 0, x: -40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                         className="lg:col-span-6"
@@ -183,10 +153,10 @@ const About = () => {
 
                     {/* Interactive Story Showcase Carousel / Card */}
                     <motion.div
-                        initial={{ opacity: 0, x: 40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
+                        transition={{ duration: 0.6, delay: 0.15 }}
                         className="lg:col-span-6"
                     >
                         <div className="bg-slate p-4 sm:p-6 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden">
@@ -249,172 +219,7 @@ const About = () => {
                 </div>
             </section>
 
-            {/* MASTER INTERACTIVE OPERATIONS GALLERY (ALL PHOTOS AND VIDEOS) */}
-            <section className="py-16 md:py-24 bg-black relative" aria-label="Operations Visual Archive">
-                <div className="container mx-auto px-4 sm:px-6">
-                    {/* Header */}
-                    <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-14">
-                        <span className="text-gold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[10px] sm:text-xs font-bold block mb-2 sm:mb-3">
-                            Visual Operations Archive
-                        </span>
-                        <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-3 sm:mb-4">
-                            What We Do <span className="text-gold">In The Field</span>
-                        </h2>
-                        <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed px-2">
-                            A curated visual record of our offshore drilling platforms, subsea installations, heavy fabrication yards, and technical teams at work.
-                        </p>
-                    </div>
 
-                    {/* Filter and Search Bar */}
-                    <div className="bg-slate p-3 sm:p-4 rounded-2xl border border-white/10 mb-8 sm:mb-10 shadow-xl flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4">
-                        {/* Categories scrollable */}
-                        <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none">
-                            {categories.map((cat) => (
-                                <button
-                                    key={cat.key}
-                                    onClick={() => setSelectedCategory(cat.key)}
-                                    className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all duration-300 flex items-center gap-1.5 sm:gap-2 flex-shrink-0 ${
-                                        selectedCategory === cat.key
-                                            ? 'bg-gold text-black shadow-md'
-                                            : 'bg-black/40 text-gray-300 hover:text-white border border-white/5'
-                                    }`}
-                                >
-                                    {cat.key === 'videos' && <Video size={13} />}
-                                    <span>{cat.label}</span>
-                                    <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${
-                                        selectedCategory === cat.key ? 'bg-black/20 text-black' : 'bg-white/10 text-gray-400'
-                                    }`}>
-                                        {cat.count}
-                                    </span>
-                                </button>
-                            ))}
-                        </div>
-
-                        {/* Search Input */}
-                        <div className="relative w-full md:w-72 flex-shrink-0">
-                            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" size={15} />
-                            <input
-                                type="text"
-                                value={searchQuery}
-                                onChange={(e) => setSearchQuery(e.target.value)}
-                                placeholder="Search operations, videos..."
-                                className="w-full bg-black/60 border border-white/10 rounded-xl pl-9 pr-12 py-2 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-gold"
-                            />
-                            {searchQuery && (
-                                <button
-                                    onClick={() => setSearchQuery('')}
-                                    className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-400 hover:text-white"
-                                >
-                                    Clear
-                                </button>
-                            )}
-                        </div>
-                    </div>
-
-                    {/* Media Grid */}
-                    <motion.div
-                        layout
-                        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
-                    >
-                        <AnimatePresence>
-                            {displayedMedia.map((item, index) => {
-                                const isHovered = hoveredMediaId === item.id;
-                                return (
-                                    <motion.div
-                                        layout
-                                        key={item.id}
-                                        initial={{ opacity: 0, scale: 0.9 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        exit={{ opacity: 0, scale: 0.9 }}
-                                        transition={{ duration: 0.35, delay: (index % 8) * 0.04 }}
-                                        onMouseEnter={() => setHoveredMediaId(item.id)}
-                                        onMouseLeave={() => setHoveredMediaId(null)}
-                                        onClick={() => setLightboxMedia(item)}
-                                        className="group relative rounded-2xl overflow-hidden bg-slate border border-white/10 hover:border-gold/50 cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-gold/10 transition-all duration-300 hover:-translate-y-1.5 flex flex-col"
-                                    >
-                                        <div className="relative aspect-[16/11] w-full overflow-hidden bg-black flex-shrink-0">
-                                            {item.type === 'video' ? (
-                                                <>
-                                                    <video
-                                                        src={item.src}
-                                                        poster={item.poster}
-                                                        muted
-                                                        loop
-                                                        playsInline
-                                                        ref={(el) => {
-                                                            if (el) {
-                                                                if (isHovered) el.play().catch(() => {});
-                                                                else {
-                                                                    el.pause();
-                                                                    el.currentTime = 0;
-                                                                }
-                                                            }
-                                                        }}
-                                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                                    />
-                                                    <div className="absolute top-2.5 left-2.5 bg-black/80 backdrop-blur-md text-gold text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5 border border-gold/30">
-                                                        <Video size={11} /> Video
-                                                    </div>
-                                                    <div className="absolute inset-0 flex items-center justify-center">
-                                                        <div className="w-11 h-11 rounded-full bg-gold/90 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                                                            <Play size={18} className="ml-0.5" />
-                                                        </div>
-                                                    </div>
-                                                </>
-                                            ) : (
-                                                <>
-                                                    <img
-                                                        src={item.src}
-                                                        alt={item.title}
-                                                        loading="lazy"
-                                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                                    />
-                                                    <div className="absolute top-2.5 left-2.5 bg-black/80 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5 border border-white/20">
-                                                        <ImageIcon size={11} /> Photo
-                                                    </div>
-                                                </>
-                                            )}
-
-                                            <div className="absolute bottom-2.5 right-2.5 bg-black/85 backdrop-blur-md text-gray-300 text-[10px] font-medium px-2 py-0.5 rounded border border-white/10">
-                                                {item.badge}
-                                            </div>
-                                        </div>
-
-                                        <div className="p-4 flex-1 flex flex-col justify-between bg-gradient-to-b from-slate to-black/80">
-                                            <div>
-                                                <h3 className="text-white font-bold text-sm line-clamp-1 group-hover:text-gold transition-colors">
-                                                    {item.title}
-                                                </h3>
-                                                <p className="text-gray-400 text-xs mt-1 line-clamp-2 leading-relaxed">
-                                                    {item.description}
-                                                </p>
-                                            </div>
-                                            <div className="mt-3 pt-2 border-t border-white/5 flex items-center justify-between text-[11px] text-gray-400">
-                                                <span className="text-gold font-medium">{item.categoryLabel}</span>
-                                                <span className="text-gray-500 group-hover:text-white flex items-center gap-0.5">
-                                                    View Details <ChevronRight size={12} />
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                );
-                            })}
-                        </AnimatePresence>
-                    </motion.div>
-
-                    {/* Load More Button */}
-                    {visibleCount < filteredList.length && (
-                        <div className="mt-12 text-center">
-                            <button
-                                onClick={() => setVisibleCount((prev) => prev + 12)}
-                                className="bg-slate hover:bg-gold hover:text-black text-white px-8 py-3.5 rounded-full font-bold transition-all border border-white/10 hover:border-gold shadow-lg"
-                            >
-                                Load More Assets ({filteredList.length - visibleCount} remaining)
-                            </button>
-                        </div>
-                    )}
-                </div>
-            </section>
 
             {/* Timeline */}
             <section className="py-14 sm:py-20 bg-darker overflow-hidden" aria-label="Milestones">
@@ -595,14 +400,7 @@ const About = () => {
 
                             {/* Leadership Video Preview Card */}
                             <div className="lg:col-span-4">
-                                <div className="relative rounded-2xl overflow-hidden bg-black border border-gold/30 shadow-2xl group cursor-pointer" onClick={() => setLightboxMedia({
-                                    id: "lead-vid",
-                                    type: "video",
-                                    title: "Engr. Ekere Afia — CEO / MD Mantle-Gold Ltd",
-                                    src: "/images/video-engineer-portrait.mp4",
-                                    badge: "CEO & Shell TA",
-                                    description: "Over 31 years leading subsea engineering, deepwater umbilical projects, and Shell technical authority certifications."
-                                })}>
+                                <div className="relative rounded-2xl overflow-hidden bg-black border border-gold/30 shadow-2xl group">
                                     <video
                                         src="/images/video-engineer-portrait.mp4"
                                         autoPlay
@@ -612,14 +410,9 @@ const About = () => {
                                         className="w-full h-64 sm:h-80 object-cover"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gold/90 text-black flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                                            <Play size={20} className="ml-1" />
-                                        </div>
-                                    </div>
                                     <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
                                         <div className="text-[10px] sm:text-xs uppercase tracking-widest text-gold font-bold">Executive Video</div>
-                                        <div className="text-xs sm:text-sm font-bold text-white">Click to Play Overview</div>
+                                        <div className="text-xs sm:text-sm font-bold text-white">Engr. Ekere Afia — CEO / MD</div>
                                     </div>
                                 </div>
                             </div>
@@ -685,14 +478,7 @@ const About = () => {
 
             <CTABanner />
 
-            {/* Fullscreen Lightbox Modal */}
-            <MediaLightbox
-                item={lightboxMedia}
-                mediaList={filteredList}
-                isOpen={!!lightboxMedia}
-                onClose={() => setLightboxMedia(null)}
-                onNavigate={(item) => setLightboxMedia(item)}
-            />
+
         </motion.div>
     );
 };

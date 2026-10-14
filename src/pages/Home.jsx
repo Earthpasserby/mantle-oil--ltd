@@ -6,7 +6,6 @@ import Stats from '../components/Stats';
 import SEO from '../components/SEO';
 import CTABanner from '../components/CTABanner';
 import HeroVideoBackground from '../components/HeroVideoBackground';
-import InteractiveShowcase from '../components/InteractiveShowcase';
 
 const clients = [
     { name: "Shell Nigeria", logo: "/logos/shel.png" },
@@ -142,68 +141,56 @@ const Home = () => {
             <Stats />
 
             {/* Mission & Purpose Section with Interactive Media Switcher */}
-            <section className="py-14 sm:py-20 md:py-24 bg-darker relative overflow-hidden" aria-label="Our Mission">
+            <section className="py-10 sm:py-16 md:py-24 bg-darker relative overflow-hidden" aria-label="Our Mission">
                 <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-center">
                     {/* Left text */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, margin: "-80px" }}
-                        transition={{ duration: 0.7 }}
-                        className="lg:col-span-6"
-                    >
-                        <span className="text-gold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[10px] sm:text-xs font-bold mb-3 sm:mb-4 block">Our Purpose</span>
-                        <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold mb-4 sm:mb-6 leading-tight">
-                            Redefining Energy <br />
+                    <div className="lg:col-span-6">
+                        <span className="text-gold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[10px] sm:text-xs font-bold mb-2 sm:mb-4 block">Our Purpose</span>
+                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold mb-3 sm:mb-6 leading-tight break-words">
+                            Redefining Energy <br className="hidden sm:inline" />
                             <span className="text-gold">Production &amp; Engineering</span>
                         </h2>
-                        <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base md:text-lg">
+                        <p className="text-gray-300 mb-3 sm:mb-5 leading-relaxed text-xs sm:text-base md:text-lg">
                             MANTLE-GOLD LTD is the community and IOC partner of choice as we develop oil, natural gas, and energy infrastructure in a sustainable, technologically advanced manner.
                         </p>
-                        <p className="text-gray-300 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base md:text-lg">
+                        <p className="text-gray-300 mb-5 sm:mb-7 leading-relaxed text-xs sm:text-base md:text-lg">
                             With over a decade of operational excellence and 532,480 cumulative man-hours delivered safely, we bring proven expertise from FEED to deepwater umbilical relocation and high-pressure subsea flowlines.
                         </p>
 
                         {/* Interactive Highlights List */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 mb-5 sm:mb-8">
                             {[
                                 "Shell Certified Technical Authority",
                                 "Okwori Field Umbilicals & Flowlines",
                                 "Zero LTI Record Over 10+ Years",
                                 "100% Nigerian Content Commitment"
                             ].map((item, i) => (
-                                <div key={i} className="flex items-center gap-2.5 sm:gap-3 bg-slate/60 border border-white/5 p-2.5 sm:p-3 rounded-xl">
+                                <div key={i} className="flex items-center gap-2.5 sm:gap-3 bg-slate/60 border border-white/5 p-2 sm:p-3 rounded-xl min-w-0">
                                     <CheckCircle2 size={16} className="text-gold flex-shrink-0" />
-                                    <span className="text-xs sm:text-sm text-gray-200 font-medium">{item}</span>
+                                    <span className="text-xs sm:text-sm text-gray-200 font-medium truncate">{item}</span>
                                 </div>
                             ))}
                         </div>
 
-                        <Link to="/about" className="text-gold font-bold hover:text-yellow-400 inline-flex items-center gap-2 group text-sm sm:text-base">
+                        <Link to="/about" className="text-gold font-bold hover:text-yellow-400 inline-flex items-center gap-2 group text-xs sm:text-base">
                             Read Our Complete Story &amp; Leadership
                             <ArrowRight size={16} className="group-hover:translate-x-1.5 transition-transform" />
                         </Link>
-                    </motion.div>
+                    </div>
 
                     {/* Right Interactive Media Card Deck */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7, delay: 0.2 }}
-                        className="lg:col-span-6 relative"
-                    >
+                    <div className="lg:col-span-6 relative">
                         {/* Glow halo */}
                         <div className="absolute -inset-4 bg-gold/15 rounded-3xl filter blur-3xl opacity-40 pointer-events-none" />
 
-                        <div className="relative bg-slate rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 border border-white/10 shadow-2xl overflow-hidden">
-                            {/* Card Header Selector Tabs */}
-                            <div className="flex items-center gap-1.5 sm:gap-2 mb-3 sm:mb-4 overflow-x-auto pb-2 scrollbar-none">
+                        <div className="relative bg-slate rounded-2xl sm:rounded-3xl p-3 sm:p-5 md:p-6 border border-white/10 shadow-2xl overflow-hidden">
+                            {/* Card Header Selector Tabs: 2x2 grid on mobile, flex on sm+ so no tab is ever cut off */}
+                            <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                                 {missionTabs.map((tab, idx) => (
                                     <button
                                         key={tab.id}
                                         onClick={() => setActiveMissionTab(idx)}
-                                        className={`px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg text-[11px] sm:text-xs font-semibold whitespace-nowrap transition-all flex-shrink-0 ${
+                                        className={`px-2 sm:px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-semibold text-center transition-all sm:flex-1 ${
                                             activeMissionTab === idx
                                                 ? 'bg-gold text-black shadow-md'
                                                 : 'bg-black/50 text-gray-400 hover:text-white'
@@ -215,7 +202,7 @@ const Home = () => {
                             </div>
 
                             {/* Active Image Box */}
-                            <div className="relative aspect-[16/11] rounded-xl sm:rounded-2xl overflow-hidden border border-white/10 group cursor-pointer">
+                            <div className="relative aspect-[16/10] sm:aspect-[16/11] rounded-xl sm:rounded-2xl overflow-hidden border border-white/10 group cursor-pointer">
                                 <AnimatePresence mode="wait">
                                     <motion.img
                                         key={missionTabs[activeMissionTab].image}
@@ -224,7 +211,7 @@ const Home = () => {
                                         initial={{ opacity: 0, scale: 1.05 }}
                                         animate={{ opacity: 1, scale: 1 }}
                                         exit={{ opacity: 0 }}
-                                        transition={{ duration: 0.5 }}
+                                        transition={{ duration: 0.4 }}
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                 </AnimatePresence>
@@ -232,7 +219,7 @@ const Home = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none" />
 
                                 {/* Caption & Tag */}
-                                <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 z-10 flex items-end justify-between gap-2">
+                                <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-4 sm:left-4 sm:right-4 z-10 flex items-end justify-between gap-2">
                                     <div>
                                         <span className="text-[9px] sm:text-[10px] uppercase tracking-widest text-gold font-bold bg-black/70 backdrop-blur-md px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md border border-gold/30 inline-block mb-1">
                                             {missionTabs[activeMissionTab].tag}
@@ -247,52 +234,35 @@ const Home = () => {
                             {/* Floating Stats Badges */}
                             <div className="grid grid-cols-3 gap-1.5 sm:gap-3 mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-white/10">
                                 <div className="text-center p-1.5 sm:p-2 rounded-xl bg-black/40 border border-white/5">
-                                    <div className="text-lg sm:text-2xl font-bold font-serif text-gold">98%</div>
-                                    <div className="text-[9px] sm:text-[10px] text-gray-400 uppercase tracking-wider">Safety Rating</div>
+                                    <div className="text-base sm:text-xl md:text-2xl font-bold font-serif text-gold">98%</div>
+                                    <div className="text-[8px] sm:text-[10px] text-gray-400 uppercase tracking-wider leading-tight mt-0.5">Safety Rating</div>
                                 </div>
                                 <div className="text-center p-1.5 sm:p-2 rounded-xl bg-black/40 border border-white/5">
-                                    <div className="text-lg sm:text-2xl font-bold font-serif text-gold">532K+</div>
-                                    <div className="text-[9px] sm:text-[10px] text-gray-400 uppercase tracking-wider">Safe Hours</div>
+                                    <div className="text-base sm:text-xl md:text-2xl font-bold font-serif text-gold">532K+</div>
+                                    <div className="text-[8px] sm:text-[10px] text-gray-400 uppercase tracking-wider leading-tight mt-0.5">Safe Hours</div>
                                 </div>
                                 <div className="text-center p-1.5 sm:p-2 rounded-xl bg-black/40 border border-white/5">
-                                    <div className="text-lg sm:text-2xl font-bold font-serif text-gold">10+</div>
-                                    <div className="text-[9px] sm:text-[10px] text-gray-400 uppercase tracking-wider">Years Active</div>
+                                    <div className="text-base sm:text-xl md:text-2xl font-bold font-serif text-gold">10+</div>
+                                    <div className="text-[8px] sm:text-[10px] text-gray-400 uppercase tracking-wider leading-tight mt-0.5">Years Active</div>
                                 </div>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </section>
 
-            {/* Interactive Operations Showcase (Real Video and Photo Highlights) */}
-            <InteractiveShowcase />
-
             {/* Services Preview Section */}
-            <section className="py-14 sm:py-20 md:py-24 bg-black relative overflow-hidden" aria-label="Our Services">
+            <section className="py-10 sm:py-16 md:py-24 bg-black relative overflow-hidden" aria-label="Our Services">
                 <div className="container mx-auto px-4 sm:px-6">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-center mb-10 sm:mb-16"
-                    >
+                    <div className="text-center mb-8 sm:mb-14">
                         <span className="text-gold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[10px] sm:text-xs font-bold">What We Do</span>
-                        <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold mt-2 sm:mt-3 text-white">Comprehensive Solutions</h2>
-                        <p className="text-gray-400 mt-2 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-2">
+                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold mt-2 sm:mt-3 text-white">Comprehensive Solutions</h2>
+                        <p className="text-gray-400 mt-2 sm:mt-4 max-w-2xl mx-auto text-xs sm:text-base md:text-lg px-2 leading-relaxed">
                             From front-end engineering design to offshore installation and asset integrity, we deliver end-to-end excellence across the energy value chain.
                         </p>
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={{
-                            hidden: { opacity: 0 },
-                            visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
-                        }}
-                        className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
-                    >
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
                         {[
                             {
                                 icon: ClipboardCheck,
@@ -315,21 +285,16 @@ const Home = () => {
                         ].map((service, i) => {
                             const IconComponent = service.icon;
                             return (
-                                <motion.div
+                                <div
                                     key={i}
-                                    variants={{
-                                        hidden: { opacity: 0, y: 30 },
-                                        visible: { opacity: 1, y: 0 }
-                                    }}
-                                    whileHover={{ y: -6 }}
                                     className="group relative rounded-2xl overflow-hidden bg-slate border border-white/10 hover:border-gold/40 transition-all duration-300 shadow-xl flex flex-col"
                                 >
-                                    <div className="h-40 sm:h-44 overflow-hidden relative flex-shrink-0">
+                                    <div className="h-44 sm:h-48 md:h-44 overflow-hidden relative flex-shrink-0">
                                         <img
                                             src={service.image}
                                             alt={service.title}
                                             loading="lazy"
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-slate via-slate/30 to-transparent" />
                                         <div className="absolute bottom-3 left-4 text-gold p-2 sm:p-2.5 bg-black/80 rounded-xl border border-gold/30">
@@ -343,28 +308,23 @@ const Home = () => {
                                             Learn More <ArrowRight className="ml-1.5 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                                         </Link>
                                     </div>
-                                </motion.div>
+                                </div>
                             );
                         })}
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        className="text-center mt-8 sm:mt-12"
-                    >
-                        <Link to="/services" className="text-gold font-bold hover:text-yellow-400 inline-flex items-center gap-2 group text-sm sm:text-base">
+                    <div className="text-center mt-6 sm:mt-10">
+                        <Link to="/services" className="text-gold font-bold hover:text-yellow-400 inline-flex items-center gap-2 group text-xs sm:text-base">
                             <span>View All 6 Core Services</span>
                             <ArrowRight size={16} className="group-hover:translate-x-1.5 transition-transform" />
                         </Link>
-                    </motion.div>
+                    </div>
                 </div>
             </section>
 
             {/* Client Marquee */}
-            <section className="py-14 sm:py-20 bg-darker overflow-hidden" aria-label="Our Clients">
-                <div className="container mx-auto px-4 sm:px-6 mb-8 sm:mb-12">
+            <section className="py-10 sm:py-16 md:py-20 bg-darker overflow-hidden" aria-label="Our Clients">
+                <div className="container mx-auto px-4 sm:px-6 mb-6 sm:mb-10">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -384,13 +344,13 @@ const Home = () => {
                         {[...clients, ...clients].map((client, index) => (
                             <div
                                 key={index}
-                                className="flex-shrink-0 mx-2.5 sm:mx-4 md:mx-6 bg-white p-3 sm:p-5 rounded-xl flex items-center justify-center h-22 sm:h-28 md:h-32 w-36 sm:w-44 md:w-52 group cursor-pointer hover:shadow-lg hover:shadow-gold/10 transition-all duration-300"
+                                className="flex-shrink-0 mx-2 sm:mx-3 md:mx-5 bg-white p-2.5 sm:p-4 rounded-xl flex items-center justify-center h-20 sm:h-24 md:h-28 w-32 sm:w-40 md:w-48 group cursor-pointer hover:shadow-lg hover:shadow-gold/10 transition-all duration-300"
                             >
                                 {client.logo ? (
                                     <img
                                         src={client.logo}
                                         alt={`${client.name} logo`}
-                                        className="max-h-14 sm:max-h-20 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                                        className="max-h-12 sm:max-h-16 md:max-h-20 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
                                         loading="lazy"
                                         onError={(e) => {
                                             e.target.style.display = 'none';
@@ -398,7 +358,7 @@ const Home = () => {
                                         }}
                                     />
                                 ) : null}
-                                <span className={`text-black font-bold text-sm sm:text-lg text-center ${client.logo ? 'hidden' : 'block'}`}>
+                                <span className={`text-black font-bold text-xs sm:text-base text-center ${client.logo ? 'hidden' : 'block'}`}>
                                     {client.name}
                                 </span>
                             </div>

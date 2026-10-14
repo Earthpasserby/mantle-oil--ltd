@@ -64,7 +64,7 @@ const Contact = () => {
             formData.message
         ].join('%0D%0A');
 
-        window.location.href = `mailto:info@mantlegold.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+        window.location.href = `mailto:info@mantle-gold.com?subject=${encodeURIComponent(subject)}&body=${body}`;
         setSubmitted(true);
     };
 
@@ -104,8 +104,8 @@ const Contact = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
                         {/* Contact Info Column */}
                         <motion.div
-                            initial={{ opacity: 0, x: -50 }}
-                            animate={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
                             <h2 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8">Headquarters</h2>
@@ -113,7 +113,7 @@ const Contact = () => {
                                 {[
                                     { icon: <MapPin />, title: "Office Address", content: "31 Discovery Garden Estate, Lekki Lagos Nigeria", href: "https://maps.google.com/?q=Discovery+Garden+Estate+Lekki+Lagos+Nigeria" },
                                     { icon: <Phone />, title: "Phone", content: "08032368599, 09121557656", href: "tel:+2348032368599" },
-                                    { icon: <Mail />, title: "Email", content: "info@mantlegold.com", href: "mailto:info@mantlegold.com" },
+                                    { icon: <Mail />, title: "Email", content: "info@mantle-gold.com", href: "mailto:info@mantle-gold.com" },
                                     { icon: <MessageCircle />, title: "WhatsApp", content: "Chat with us instantly", href: "https://wa.me/2348032368599?text=Hello%20Mantle-Gold%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." }
                                 ].map((item, i) => (
                                     <motion.a
@@ -121,7 +121,7 @@ const Contact = () => {
                                         href={item.href}
                                         target={item.href.startsWith('http') ? '_blank' : undefined}
                                         rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                                        whileHover={{ x: 8 }}
+                                        whileHover={{ x: 6 }}
                                         className="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors cursor-pointer group block"
                                     >
                                         <div className="text-gold mt-1 group-hover:scale-110 transition-transform">{item.icon}</div>
@@ -164,9 +164,9 @@ const Contact = () => {
 
                         {/* Contact Form Column */}
                         <motion.div
-                            initial={{ opacity: 0, x: 50 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.3 }}
                             className="bg-slate p-5 sm:p-8 rounded-2xl border border-white/5 h-fit"
                         >
                             <AnimatePresence mode="wait">
@@ -179,7 +179,7 @@ const Contact = () => {
                                     >
                                         <CheckCircle2 size={64} className="text-gold mx-auto mb-6" />
                                         <h2 className="text-2xl font-bold mb-4">Message Prepared</h2>
-                                        <p className="text-gray-400 mb-8">Your email client should have opened with the message pre-filled. If not, please email us directly at <a href="mailto:info@mantlegold.com" className="text-gold hover:underline">info@mantlegold.com</a>.</p>
+                                        <p className="text-gray-400 mb-8">Your email client should have opened with the message pre-filled. If not, please email us directly at <a href="mailto:info@mantle-gold.com" className="text-gold hover:underline">info@mantle-gold.com</a>.</p>
                                         <button
                                             onClick={() => { setSubmitted(false); setFormData({ firstName: '', lastName: '', company: '', email: '', phone: '', inquiryType: '', message: '' }); }}
                                             className="text-gold font-semibold hover:underline"

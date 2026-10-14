@@ -29,7 +29,7 @@ const Footer = () => {
                                 <MessageCircle size={18} />
                             </a>
                             <a
-                                href="mailto:info@mantlegold.com"
+                                href="mailto:info@mantle-gold.com"
                                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold/30 transition-all"
                                 aria-label="Send email"
                             >
@@ -91,7 +91,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3 group">
                                 <Mail size={20} className="text-gold flex-shrink-0" />
-                                <a href="mailto:info@mantlegold.com" className="group-hover:text-gray-300 transition-colors">info@mantlegold.com</a>
+                                <a href="mailto:info@mantle-gold.com" className="group-hover:text-gray-300 transition-colors">info@mantle-gold.com</a>
                             </li>
                         </ul>
 
