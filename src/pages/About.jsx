@@ -52,7 +52,7 @@ const About = () => {
     const [activeStoryIdx, setActiveStoryIdx] = useState(0);
     const [lightboxMedia, setLightboxMedia] = useState(null);
     const [hoveredMediaId, setHoveredMediaId] = useState(null);
-    const [visibleCount, setVisibleCount] = useState(16);
+    const [visibleCount, setVisibleCount] = useState(24);
 
     // Filtered media list
     const filteredList = useMemo(() => {
