@@ -18,29 +18,29 @@ const InteractiveShowcase = () => {
     }).slice(0, 8); // Top 8 featured on homepage
 
     return (
-        <section className="py-24 bg-darker relative overflow-hidden" aria-label="Operations Showcase">
+        <section className="py-16 md:py-24 bg-darker relative overflow-hidden" aria-label="Operations Showcase">
             {/* Background ambiance glow */}
-            <div className="absolute top-1/2 left-0 w-96 h-96 bg-gold/5 rounded-full filter blur-[100px] pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold/5 rounded-full filter blur-[100px] pointer-events-none" />
+            <div className="absolute top-1/2 left-0 w-72 md:w-96 h-72 md:h-96 bg-gold/5 rounded-full filter blur-[100px] pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-72 md:w-96 h-72 md:h-96 bg-gold/5 rounded-full filter blur-[100px] pointer-events-none" />
 
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container mx-auto px-4 sm:px-6 relative z-10">
                 {/* Header */}
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-12 gap-4 md:gap-6">
                     <div>
                         <motion.span
                             initial={{ opacity: 0, y: 15 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-gold uppercase tracking-[0.25em] text-xs font-bold mb-3 flex items-center gap-2"
+                            className="text-gold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[10px] sm:text-xs font-bold mb-2 sm:mb-3 flex items-center gap-2"
                         >
-                            <Sparkles size={14} /> Real Projects in Action
+                            <Sparkles size={13} /> Real Projects in Action
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight"
+                            className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-white leading-tight"
                         >
                             Operational <span className="text-gold">Footprint</span>
                         </motion.h2>
@@ -49,7 +49,7 @@ const InteractiveShowcase = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
-                            className="text-gray-400 mt-3 max-w-xl text-base md:text-lg"
+                            className="text-gray-400 mt-2 sm:mt-3 max-w-xl text-sm sm:text-base md:text-lg"
                         >
                             Explore authentic deepwater drilling, subsea umbilical installations, topside facilities, and certified engineering personnel.
                         </motion.p>
@@ -62,21 +62,21 @@ const InteractiveShowcase = () => {
                     >
                         <Link
                             to="/about"
-                            className="inline-flex items-center gap-2 text-gold font-semibold hover:text-yellow-400 transition-colors group"
+                            className="inline-flex items-center gap-2 text-gold font-semibold hover:text-yellow-400 transition-colors group text-sm sm:text-base"
                         >
                             <span>Browse Complete Gallery ({allMedia.length} Assets)</span>
-                            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </motion.div>
                 </div>
 
-                {/* Filter Tabs */}
-                <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-10 scrollbar-none">
+                {/* Filter Tabs (smooth edge-to-edge touch scroll on mobile) */}
+                <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-8 md:mb-10 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
                     {categories.map((cat) => (
                         <button
                             key={cat.key}
                             onClick={() => setActiveTab(cat.key)}
-                            className={`px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-300 flex items-center gap-2 ${
+                            className={`px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-300 flex items-center gap-1.5 sm:gap-2 flex-shrink-0 ${
                                 activeTab === cat.key
                                     ? 'bg-gold text-black shadow-lg shadow-gold/20 scale-105'
                                     : 'bg-slate/80 text-gray-300 hover:text-white hover:bg-slate border border-white/5'
@@ -96,7 +96,7 @@ const InteractiveShowcase = () => {
                 {/* Media Grid */}
                 <motion.div
                     layout
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
                 >
                     <AnimatePresence>
                         {filteredMedia.map((item, idx) => {

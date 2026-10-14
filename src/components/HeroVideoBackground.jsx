@@ -125,38 +125,93 @@ const HeroVideoBackground = ({ onVideoChange }) => {
             />
 
             {/* Interactive Video Switcher Overlay Bar (Bottom) */}
-            <div className="absolute bottom-6 left-0 right-0 z-30 px-6 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-                {/* Active Video Info Pill */}
-                <div className="flex items-center gap-3 bg-black/60 backdrop-blur-md border border-white/10 px-4 py-2.5 rounded-full shadow-2xl">
+            <div className="absolute bottom-3 sm:bottom-6 left-0 right-0 z-30 px-3 sm:px-6 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4 pointer-events-auto">
+                {/* Active Video Info Pill - visible on md screens */}
+                <div className="hidden md:flex items-center gap-3 bg-black/70 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full shadow-2xl">
                     <span className="flex h-2.5 w-2.5 relative">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold"></span>
                     </span>
                     <div className="text-left">
-                        <div className="text-[11px] uppercase tracking-widest text-gold font-bold flex items-center gap-1.5">
+                        <div className="text-[10px] uppercase tracking-widest text-gold font-bold flex items-center gap-1.5">
                             <Sparkles size={11} /> {currentVideo.badge} &bull; {currentVideo.location}
                         </div>
-                        <div className="text-xs text-white/90 font-medium truncate max-w-[200px] sm:max-w-xs md:max-w-sm">
+                        <div className="text-xs text-white/90 font-medium truncate max-w-[200px] lg:max-w-sm">
                             {currentVideo.title}
                         </div>
                     </div>
                 </div>
 
-                {/* Video Switcher Thumbnails / Indicator Pills */}
-                <div className="flex items-center gap-2 bg-black/60 backdrop-blur-md border border-white/10 p-1.5 rounded-full">
+                {/* Mobile Unified Control Bar (Switcher + Play/Mute all in one compact row) */}
+                <div className="flex md:hidden items-center gap-1.5 bg-black/80 backdrop-blur-lg border border-white/15 px-2.5 py-1.5 rounded-full shadow-2xl">
+                    <button
+                        onClick={handlePrev}
+                        aria-label="Previous video"
+                        className="w-7 h-7 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                    >
+                        <ChevronLeft size={14} />
+                    </button>
+                    <button
+                        onClick={togglePlay}
+                        aria-label={isPlaying ? "Pause video" : "Play video"}
+                        className="w-7 h-7 rounded-full bg-gold text-black flex items-center justify-center hover:bg-yellow-400 active:scale-95 transition-transform"
+                    >
+                        {isPlaying ? <Pause size={12} /> : <Play size={12} className="ml-0.5" />}
+                    </button>
+                    <button
+                        onClick={handleNext}
+                        aria-label="Next video"
+                        className="w-7 h-7 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                    >
+                        <ChevronRight size={14} />
+                    </button>
+
+                    <div className="h-3 w-px bg-white/20 mx-1" />
+
+                    {/* Indicator dots for mobile */}
+                    <div className="flex items-center gap-1.5 px-1">
+                        {heroVideos.map((vid, idx) => (
+                            <button
+                                key={vid.id}
+                                onClick={() => goToIndex(idx)}
+                                aria-label={`Switch to video ${idx + 1}`}
+                                className={`relative h-2 rounded-full transition-all duration-300 ${
+                                    idx === currentIndex
+                                        ? 'w-6 bg-gold'
+                                        : 'w-2 bg-white/30 hover:bg-white/60'
+                                }`}
+                            />
+                        ))}
+                    </div>
+
+                    <div className="h-3 w-px bg-white/20 mx-1" />
+
+                    <button
+                        onClick={toggleMute}
+                        aria-label={isMuted ? "Unmute video sound" : "Mute video sound"}
+                        className={`w-7 h-7 rounded-full flex items-center justify-center transition-colors ${
+                            isMuted ? 'text-gray-400 hover:text-white' : 'text-gold bg-gold/20'
+                        }`}
+                    >
+                        {isMuted ? <VolumeX size={13} /> : <Volume2 size={13} />}
+                    </button>
+                </div>
+
+                {/* Desktop Video Switcher Indicators */}
+                <div className="hidden md:flex items-center gap-2 bg-black/70 backdrop-blur-md border border-white/10 p-1.5 rounded-full">
                     {heroVideos.map((vid, idx) => (
                         <button
                             key={vid.id}
                             onClick={() => goToIndex(idx)}
                             aria-label={`Switch to ${vid.title}`}
-                            className={`group relative h-9 px-3 rounded-full flex items-center gap-2 transition-all duration-300 text-xs font-semibold ${
+                            className={`group relative h-8 px-3 rounded-full flex items-center gap-1.5 transition-all duration-300 text-xs font-semibold ${
                                 idx === currentIndex
                                     ? 'bg-gold text-black shadow-lg shadow-gold/20'
                                     : 'text-gray-400 hover:text-white hover:bg-white/10'
                             }`}
                         >
                             <span>0{idx + 1}</span>
-                            <span className="hidden lg:inline text-[11px] truncate max-w-[100px]">
+                            <span className="hidden lg:inline text-[11px] truncate max-w-[90px]">
                                 {vid.badge.split(' ')[0]}
                             </span>
                             {/* Animated progress bar inside active button */}
@@ -174,8 +229,8 @@ const HeroVideoBackground = ({ onVideoChange }) => {
                     ))}
                 </div>
 
-                {/* Playback Controls (Prev, Play/Pause, Next, Sound) */}
-                <div className="flex items-center gap-2 bg-black/60 backdrop-blur-md border border-white/10 p-1.5 rounded-full">
+                {/* Desktop Playback Controls */}
+                <div className="hidden md:flex items-center gap-2 bg-black/70 backdrop-blur-md border border-white/10 p-1.5 rounded-full">
                     <button
                         onClick={handlePrev}
                         aria-label="Previous video"

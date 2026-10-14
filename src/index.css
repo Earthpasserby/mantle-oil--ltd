@@ -10,6 +10,14 @@
   --font-serif: 'Playfair Display', serif;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
 @layer utilities {
   .text-gradient {
     background: linear-gradient(to right, #E88D14, #FFA500);

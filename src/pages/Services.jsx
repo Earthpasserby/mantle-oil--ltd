@@ -153,7 +153,7 @@ const Services = () => {
             />
 
             {/* Services Page Hero with Background Video */}
-            <section className="relative pt-32 pb-20 overflow-hidden">
+            <section className="relative pt-24 sm:pt-32 pb-14 sm:pb-20 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <video
                         autoPlay
@@ -168,12 +168,12 @@ const Services = () => {
                     <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/80 to-black" />
                 </div>
 
-                <div className="container mx-auto px-6 relative z-10 text-center">
+                <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center">
                     <motion.span
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="inline-flex items-center gap-2 bg-black/60 border border-gold/30 px-4 py-1.5 rounded-full text-gold uppercase tracking-[0.2em] text-xs font-bold mb-4 shadow-lg"
+                        className="inline-flex items-center gap-2 bg-black/60 border border-gold/30 px-3.5 py-1.5 rounded-full text-gold uppercase tracking-[0.18em] sm:tracking-[0.2em] text-[10px] sm:text-xs font-bold mb-4 shadow-lg"
                     >
                         <Sparkles size={13} /> CAPABILITIES &amp; DELIVERABLES
                     </motion.span>
@@ -181,7 +181,7 @@ const Services = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="text-4xl md:text-6xl font-serif font-bold mb-6 text-white"
+                        className="text-3xl sm:text-5xl md:text-6xl font-serif font-bold mb-4 sm:mb-6 text-white"
                     >
                         Our <span className="text-gold">Services</span>
                     </motion.h1>
@@ -189,7 +189,7 @@ const Services = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
-                        className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed"
+                        className="text-gray-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed px-2"
                     >
                         Delivering excellence across the entire energy value chain — from front-end engineering design to offshore installation, marine operations, and asset integrity management.
                     </motion.p>
@@ -197,19 +197,19 @@ const Services = () => {
             </section>
 
             {/* EPCI Process Flow */}
-            <section className="py-20 bg-darker" aria-label="EPCI Process">
-                <div className="container mx-auto px-6">
+            <section className="py-14 sm:py-20 bg-darker" aria-label="EPCI Process">
+                <div className="container mx-auto px-4 sm:px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-center mb-16"
+                        className="text-center mb-10 sm:mb-16"
                     >
-                        <span className="text-gold uppercase tracking-[0.2em] text-xs font-bold">How We Deliver</span>
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold mt-3">The EPCI <span className="text-gold">Process</span></h2>
+                        <span className="text-gold uppercase tracking-[0.2em] text-[10px] sm:text-xs font-bold">How We Deliver</span>
+                        <h2 className="text-2xl sm:text-4xl font-serif font-bold mt-2 sm:mt-3">The EPCI <span className="text-gold">Process</span></h2>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 relative">
                         {processSteps.map((item, index) => {
                             const IconComponent = Icons[item.icon] || Icons.Activity;
                             return (
@@ -221,13 +221,13 @@ const Services = () => {
                                     transition={{ delay: index * 0.15 }}
                                     className="relative"
                                 >
-                                    <div className="bg-slate p-8 rounded-2xl border border-white/5 hover:border-gold/30 transition-all text-center group cursor-pointer shadow-lg hover:-translate-y-1">
-                                        <div className="text-gold text-5xl font-bold font-serif opacity-20 mb-2">{item.step}</div>
-                                        <div className="w-14 h-14 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/20 transition-colors">
-                                            <IconComponent size={24} className="text-gold" />
+                                    <div className="bg-slate p-5 sm:p-8 rounded-2xl border border-white/5 hover:border-gold/30 transition-all text-center group cursor-pointer shadow-lg hover:-translate-y-1">
+                                        <div className="text-gold text-4xl sm:text-5xl font-bold font-serif opacity-20 mb-1 sm:mb-2">{item.step}</div>
+                                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-gold/20 transition-colors">
+                                            <IconComponent size={22} className="text-gold" />
                                         </div>
-                                        <h3 className="text-white font-bold text-lg mb-2">{item.title}</h3>
-                                        <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                                        <h3 className="text-white font-bold text-base sm:text-lg mb-1 sm:mb-2">{item.title}</h3>
+                                        <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{item.desc}</p>
                                     </div>
                                     {index < processSteps.length - 1 && (
                                         <div className="hidden md:block absolute top-1/2 -right-3 z-10 -translate-y-1/2">
@@ -242,20 +242,20 @@ const Services = () => {
             </section>
 
             {/* Service Cards Grid with Project Photos */}
-            <section className="py-20 bg-black" aria-label="Service Details">
-                <div className="container mx-auto px-6">
+            <section className="py-14 sm:py-20 bg-black" aria-label="Service Details">
+                <div className="container mx-auto px-4 sm:px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-center mb-16"
+                        className="text-center mb-10 sm:mb-16"
                     >
-                        <span className="text-gold uppercase tracking-[0.2em] text-xs font-bold">Explore In Detail</span>
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold mt-3">Our Core Capabilities</h2>
-                        <p className="text-gray-400 mt-4 max-w-2xl mx-auto">Click any service card to view detailed specifications, scope of work, and key deliverables.</p>
+                        <span className="text-gold uppercase tracking-[0.2em] text-[10px] sm:text-xs font-bold">Explore In Detail</span>
+                        <h2 className="text-2xl sm:text-4xl font-serif font-bold mt-2 sm:mt-3">Our Core Capabilities</h2>
+                        <p className="text-gray-400 mt-2 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base px-2">Click any service card to view detailed specifications, scope of work, and key deliverables.</p>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                         {servicesData.map((service, index) => {
                             const media = serviceMediaMap[service.title] || {};
                             return (
@@ -355,14 +355,14 @@ const Services = () => {
                             initial={{ scale: 0.9, opacity: 0, y: 20 }}
                             animate={{ scale: 1, opacity: 1, y: 0 }}
                             exit={{ scale: 0.9, opacity: 0, y: 20 }}
-                            className="bg-slate border border-white/10 rounded-2xl p-6 md:p-8 max-w-3xl w-full relative z-10 shadow-2xl overflow-y-auto max-h-[90vh]"
+                            className="bg-slate border border-white/10 rounded-2xl p-4 sm:p-6 md:p-8 max-w-3xl w-full relative z-10 shadow-2xl overflow-y-auto max-h-[92vh] mx-3 sm:mx-auto"
                         >
                             <button
                                 onClick={() => setSelectedService(null)}
-                                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-white/5"
+                                className="absolute top-3 right-3 sm:top-4 sm:right-4 text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-white/5 z-20"
                                 aria-label="Close modal"
                             >
-                                <X size={24} />
+                                <X size={20} />
                             </button>
 
                             {/* Service Media Video/Image Header in Modal */}

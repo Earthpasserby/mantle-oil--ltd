@@ -67,18 +67,18 @@ const Home = () => {
             />
 
             {/* Hero Section with Interactive Video Background */}
-            <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-32" aria-label="Hero">
+            <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-20 md:py-32" aria-label="Hero">
                 {/* Background Video Player with Auto Switcher and Controls */}
                 <HeroVideoBackground />
 
-                <div className="container mx-auto px-6 relative z-20 text-center mt-12 mb-16">
+                <div className="container mx-auto px-4 sm:px-6 relative z-20 text-center mt-6 md:mt-12 mb-10 md:mb-16">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.6 }}
-                        className="inline-flex items-center gap-2 bg-black/60 backdrop-blur-md border border-gold/30 px-5 py-2 rounded-full text-gold uppercase tracking-[0.25em] text-xs font-bold mb-6 shadow-xl"
+                        className="inline-flex items-center gap-2 bg-black/60 backdrop-blur-md border border-gold/30 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-gold uppercase tracking-[0.18em] sm:tracking-[0.25em] text-[10px] sm:text-xs font-bold mb-4 sm:mb-6 shadow-xl"
                     >
-                        <Sparkles size={14} className="text-gold" />
+                        <Sparkles size={13} className="text-gold" />
                         <span>MANTLE-GOLD LTD &bull; EPCI EXCELLENCE</span>
                     </motion.div>
 
@@ -86,9 +86,9 @@ const Home = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4, duration: 0.6 }}
-                        className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 leading-[1.15] max-w-5xl mx-auto drop-shadow-2xl"
+                        className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 sm:mb-8 leading-[1.15] max-w-5xl mx-auto drop-shadow-2xl"
                     >
-                        OIL, GAS AND ENERGY PRODUCTS <br />
+                        OIL, GAS AND ENERGY PRODUCTS <br className="hidden sm:inline" />
                         <span className="text-gradient">&amp; ENGINEERING SOLUTIONS</span>.
                     </motion.h1>
 
@@ -96,7 +96,7 @@ const Home = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6, duration: 0.6 }}
-                        className="text-gray-200 text-lg md:text-xl max-w-3xl mx-auto mb-10 font-light leading-relaxed drop-shadow-md"
+                        className="text-gray-200 text-sm sm:text-lg md:text-xl max-w-3xl mx-auto mb-6 sm:mb-10 font-light leading-relaxed drop-shadow-md px-2"
                     >
                         Leading the global transition with innovative extraction technologies, certified subsea engineering, and a proven track record delivering major projects for Shell, Addax, and ExxonMobil.
                     </motion.p>
@@ -105,17 +105,17 @@ const Home = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8, duration: 0.6 }}
-                        className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                        className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full max-w-xs sm:max-w-none mx-auto"
                     >
                         <Link
                             to="/services"
-                            className="w-full sm:w-auto bg-gold text-black px-8 py-4 rounded-full font-bold hover:bg-yellow-400 transition-all hover:scale-105 flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(232,141,20,0.4)]"
+                            className="w-full sm:w-auto bg-gold text-black px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold hover:bg-yellow-400 transition-all hover:scale-105 flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(232,141,20,0.4)] text-sm sm:text-base"
                         >
-                            Explore Our Operations <ArrowRight size={20} />
+                            Explore Our Operations <ArrowRight size={18} />
                         </Link>
                         <Link
                             to="/about"
-                            className="w-full sm:w-auto bg-black/50 hover:bg-white/10 text-white border border-white/20 px-8 py-4 rounded-full font-bold transition-all backdrop-blur-md flex items-center justify-center gap-2"
+                            className="w-full sm:w-auto bg-black/60 hover:bg-white/10 text-white border border-white/20 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold transition-all backdrop-blur-md flex items-center justify-center gap-2 text-sm sm:text-base"
                         >
                             <span>Our Operations Gallery</span>
                         </Link>
@@ -127,7 +127,7 @@ const Home = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.5 }}
-                    className="absolute bottom-20 left-1/2 -translate-x-1/2 hidden md:block z-20 pointer-events-none"
+                    className="absolute bottom-16 sm:bottom-20 left-1/2 -translate-x-1/2 hidden lg:block z-20 pointer-events-none"
                 >
                     <motion.div
                         animate={{ y: [0, 8, 0] }}

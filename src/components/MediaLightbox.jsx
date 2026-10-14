@@ -49,7 +49,7 @@ const MediaLightbox = ({ item, mediaList, isOpen, onClose, onNavigate }) => {
     return (
         <AnimatePresence>
             <div
-                className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 bg-black/95 backdrop-blur-xl"
+                className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 md:p-8 bg-black/95 backdrop-blur-xl"
                 onClick={onClose}
                 role="dialog"
                 aria-modal="true"
@@ -58,28 +58,28 @@ const MediaLightbox = ({ item, mediaList, isOpen, onClose, onNavigate }) => {
                 {/* Close Button */}
                 <button
                     onClick={onClose}
-                    className="absolute top-5 right-5 z-20 w-12 h-12 rounded-full bg-white/10 hover:bg-gold hover:text-black text-white flex items-center justify-center transition-all duration-200 border border-white/20"
+                    className="absolute top-3 right-3 sm:top-5 sm:right-5 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-gold hover:text-black text-white flex items-center justify-center transition-all duration-200 border border-white/20 shadow-xl"
                     aria-label="Close modal"
                 >
-                    <X size={24} />
+                    <X size={20} />
                 </button>
 
-                {/* Left Arrow */}
+                {/* Left Arrow (Desktop / Tablet) */}
                 {hasNext && (
                     <button
                         onClick={handlePrev}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/60 hover:bg-gold hover:text-black text-white flex items-center justify-center transition-all duration-200 border border-white/20 shadow-xl"
+                        className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/60 hover:bg-gold hover:text-black text-white items-center justify-center transition-all duration-200 border border-white/20 shadow-xl"
                         aria-label="Previous item"
                     >
                         <ChevronLeft size={24} />
                     </button>
                 )}
 
-                {/* Right Arrow */}
+                {/* Right Arrow (Desktop / Tablet) */}
                 {hasNext && (
                     <button
                         onClick={handleNext}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/60 hover:bg-gold hover:text-black text-white flex items-center justify-center transition-all duration-200 border border-white/20 shadow-xl"
+                        className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/60 hover:bg-gold hover:text-black text-white items-center justify-center transition-all duration-200 border border-white/20 shadow-xl"
                         aria-label="Next item"
                     >
                         <ChevronRight size={24} />
@@ -93,10 +93,10 @@ const MediaLightbox = ({ item, mediaList, isOpen, onClose, onNavigate }) => {
                     exit={{ scale: 0.9, opacity: 0, y: 20 }}
                     transition={{ type: "spring", damping: 25, stiffness: 300 }}
                     onClick={(e) => e.stopPropagation()}
-                    className="relative max-w-5xl w-full max-h-[90vh] bg-slate/95 border border-white/15 rounded-3xl overflow-hidden shadow-2xl flex flex-col"
+                    className="relative max-w-5xl w-full max-h-[92vh] bg-slate/95 border border-white/15 rounded-2xl sm:rounded-3xl overflow-y-auto shadow-2xl flex flex-col"
                 >
                     {/* Media Display Area */}
-                    <div className="relative bg-black flex items-center justify-center max-h-[62vh] overflow-hidden">
+                    <div className="relative bg-black flex items-center justify-center max-h-[48vh] sm:max-h-[62vh] overflow-hidden flex-shrink-0">
                         {item.type === 'video' ? (
                             <video
                                 ref={videoRef}
@@ -105,7 +105,7 @@ const MediaLightbox = ({ item, mediaList, isOpen, onClose, onNavigate }) => {
                                 controls
                                 autoPlay
                                 playsInline
-                                className="w-full max-h-[62vh] object-contain"
+                                className="w-full max-h-[48vh] sm:max-h-[62vh] object-contain"
                             >
                                 Your browser does not support HTML5 video.
                             </video>
@@ -113,20 +113,20 @@ const MediaLightbox = ({ item, mediaList, isOpen, onClose, onNavigate }) => {
                             <img
                                 src={item.src}
                                 alt={item.title}
-                                className="w-full max-h-[62vh] object-contain"
+                                className="w-full max-h-[48vh] sm:max-h-[62vh] object-contain"
                             />
                         )}
                     </div>
 
                     {/* Meta & Description Footer */}
-                    <div className="p-6 md:p-8 bg-slate border-t border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                        <div className="space-y-2">
-                            <div className="flex items-center gap-3">
-                                <span className="bg-gold text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5">
-                                    <Tag size={12} /> {item.badge || (item.type === 'video' ? 'Video' : 'Photo')}
+                    <div className="p-4 sm:p-6 md:p-8 bg-slate border-t border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div className="space-y-2 flex-1">
+                            <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+                                <span className="bg-gold text-black text-[10px] sm:text-xs font-bold px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5">
+                                    <Tag size={11} /> {item.badge || (item.type === 'video' ? 'Video' : 'Photo')}
                                 </span>
                                 {item.categoryLabel && (
-                                    <span className="text-gray-400 text-xs uppercase tracking-wider font-semibold">
+                                    <span className="text-gray-400 text-[10px] sm:text-xs uppercase tracking-wider font-semibold">
                                         {item.categoryLabel}
                                     </span>
                                 )}
@@ -136,17 +136,36 @@ const MediaLightbox = ({ item, mediaList, isOpen, onClose, onNavigate }) => {
                                     </span>
                                 )}
                             </div>
-                            <h3 className="text-xl md:text-2xl font-serif font-bold text-white">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-serif font-bold text-white">
                                 {item.title}
                             </h3>
-                            <p className="text-gray-300 text-sm md:text-base max-w-3xl leading-relaxed">
+                            <p className="text-gray-300 text-xs sm:text-sm md:text-base max-w-3xl leading-relaxed">
                                 {item.description}
                             </p>
                         </div>
 
-                        <div className="flex items-center gap-3 self-end md:self-center flex-shrink-0">
-                            <div className="flex items-center gap-2 text-xs text-gold bg-gold/10 border border-gold/30 px-3 py-1.5 rounded-xl font-medium">
-                                <ShieldCheck size={16} /> Mantle-Gold Verified
+                        {/* Mobile & Desktop Action Bar */}
+                        <div className="flex items-center justify-between md:justify-end gap-3 pt-2 md:pt-0 border-t md:border-t-0 border-white/5">
+                            {/* Mobile Prev/Next buttons */}
+                            {hasNext && (
+                                <div className="flex md:hidden items-center gap-2">
+                                    <button
+                                        onClick={handlePrev}
+                                        className="px-3 py-1.5 rounded-lg bg-black/60 hover:bg-gold hover:text-black text-white text-xs font-semibold flex items-center gap-1 border border-white/10"
+                                    >
+                                        <ChevronLeft size={16} /> Prev
+                                    </button>
+                                    <button
+                                        onClick={handleNext}
+                                        className="px-3 py-1.5 rounded-lg bg-black/60 hover:bg-gold hover:text-black text-white text-xs font-semibold flex items-center gap-1 border border-white/10"
+                                    >
+                                        Next <ChevronRight size={16} />
+                                    </button>
+                                </div>
+                            )}
+
+                            <div className="flex items-center gap-1.5 text-[11px] text-gold bg-gold/10 border border-gold/30 px-2.5 py-1 rounded-lg font-medium">
+                                <ShieldCheck size={14} /> Verified
                             </div>
                         </div>
                     </div>

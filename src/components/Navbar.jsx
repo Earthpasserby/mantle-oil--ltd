@@ -16,6 +16,18 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Lock body scroll when mobile menu is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isOpen]);
+
     // Close menu when route changes
     useEffect(() => {
         setIsOpen(false);
@@ -33,7 +45,7 @@ const Navbar = () => {
             opacity: 0,
             y: "-100%",
             transition: {
-                duration: 0.5,
+                duration: 0.4,
                 ease: [0.76, 0, 0.24, 1]
             }
         },
@@ -41,7 +53,7 @@ const Navbar = () => {
             opacity: 1,
             y: "0%",
             transition: {
-                duration: 0.5,
+                duration: 0.4,
                 ease: [0.76, 0, 0.24, 1]
             }
         }
@@ -53,21 +65,25 @@ const Navbar = () => {
             opacity: 1,
             y: 0,
             transition: {
-                delay: 0.1 + (i * 0.1),
-                duration: 0.4,
+                delay: 0.1 + (i * 0.08),
+                duration: 0.35,
                 ease: "easeOut"
             }
         })
     };
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || isOpen ? 'bg-black py-4' : 'bg-transparent py-6'}`}>
-            <div className="container mx-auto px-6 flex justify-between items-center relative z-50">
-                <Link to="/" className="flex items-center gap-3">
-                    <img src="/logo.png" alt="Mantle-Gold Ltd" className="h-12" />
-                    <div className="flex flex-col">
-                        <span className="text-xl font-bold tracking-wide text-white leading-none">MANTLE-GOLD LTD</span>
-                        <span className="text-[10px] text-gold tracking-widest uppercase mt-1">Oil, Gas & Energy products & engineering Solutions</span>
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || isOpen ? 'bg-black/95 backdrop-blur-md py-3 sm:py-4 shadow-xl' : 'bg-transparent py-4 md:py-6'}`}>
+            <div className="container mx-auto px-4 sm:px-6 flex justify-between items-center relative z-50">
+                <Link to="/" className="flex items-center gap-2.5 sm:gap-3 max-w-[calc(100%-54px)] md:max-w-none">
+                    <img src="/logo.png" alt="Mantle-Gold Ltd" className="h-9 sm:h-11 md:h-12 flex-shrink-0" />
+                    <div className="flex flex-col min-w-0">
+                        <span className="text-base sm:text-lg md:text-xl font-bold tracking-wide text-white leading-tight truncate">
+                            MANTLE-GOLD LTD
+                        </span>
+                        <span className="text-[9px] sm:text-[10px] text-gold tracking-wider sm:tracking-widest uppercase mt-0.5 truncate">
+                            Oil, Gas &amp; Energy Solutions
+                        </span>
                     </div>
                 </Link>
 
@@ -91,7 +107,7 @@ const Navbar = () => {
                             )}
                         </Link>
                     ))}
-                    <Link to="/contact" className="bg-gold text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-500 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-gold focus:outline-none">
+                    <Link to="/contact" className="bg-gold text-black px-6 py-2.5 rounded-full font-bold hover:bg-yellow-500 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-gold focus:outline-none shadow-lg shadow-gold/20">
                         Get Started
                     </Link>
                 </div>
@@ -100,7 +116,7 @@ const Navbar = () => {
                 <button 
                     aria-expanded={isOpen}
                     aria-label="Toggle navigation menu"
-                    className="md:hidden text-white relative w-10 h-10 flex items-center justify-center rounded-full border border-white/10 hover:bg-white/5 transition-colors focus:ring-2 focus:ring-gold focus:outline-none" 
+                    className="md:hidden text-white relative w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full border border-white/10 hover:bg-white/5 transition-colors focus:ring-2 focus:ring-gold focus:outline-none" 
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     <AnimatePresence mode="wait">
@@ -137,23 +153,23 @@ const Navbar = () => {
                         initial="closed"
                         animate="open"
                         exit="closed"
-                        className="fixed inset-0 bg-black z-40 flex flex-col pt-32 px-6 md:hidden"
+                        className="fixed inset-0 bg-black z-40 flex flex-col pt-24 pb-8 px-6 md:hidden overflow-y-auto"
                     >
-                        <div className="flex flex-col gap-6">
+                        <div className="flex flex-col gap-5 my-auto">
                             {navLinks.map((link, i) => (
                                 <motion.div
                                     key={link.name}
                                     custom={i}
                                     variants={linkVariants}
-                                    className="border-b border-white/10 pb-6"
+                                    className="border-b border-white/10 pb-4"
                                 >
                                     <Link
                                         to={link.path}
-                                        className={`text-3xl font-serif font-bold flex justify-between items-center ${location.pathname === link.path ? 'text-gold' : 'text-white'}`}
+                                        className={`text-2xl sm:text-3xl font-serif font-bold flex justify-between items-center ${location.pathname === link.path ? 'text-gold' : 'text-white'}`}
                                         onClick={() => setIsOpen(false)}
                                     >
                                         {link.name}
-                                        <ChevronRight size={24} className={`transition-transform ${location.pathname === link.path ? 'text-gold translate-x-2' : 'text-gray-600'}`} />
+                                        <ChevronRight size={22} className={`transition-transform ${location.pathname === link.path ? 'text-gold translate-x-1' : 'text-gray-600'}`} />
                                     </Link>
                                 </motion.div>
                             ))}
@@ -162,13 +178,13 @@ const Navbar = () => {
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 0.5, duration: 0.5 }}
-                            className="mt-auto mb-10 text-center"
+                            transition={{ delay: 0.4, duration: 0.4 }}
+                            className="mt-8 text-center"
                         >
-                            <Link to="/contact" className="w-full block bg-gold text-black py-4 rounded-xl font-bold text-lg mb-6" onClick={() => setIsOpen(false)}>
+                            <Link to="/contact" className="w-full block bg-gold text-black py-3.5 rounded-xl font-bold text-base mb-4 shadow-xl" onClick={() => setIsOpen(false)}>
                                 Get Started
                             </Link>
-                            <p className="text-gray-500 text-sm">
+                            <p className="text-gray-500 text-xs">
                                 &copy; 2026 MANTLE-GOLD LTD.
                             </p>
                         </motion.div>

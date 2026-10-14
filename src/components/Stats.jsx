@@ -43,12 +43,12 @@ const StatCard = ({ number, suffix = '', label, index }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.15 }}
-            className="text-center p-8 border-r last:border-r-0 border-white/10"
+            className="text-center p-5 sm:p-6 md:p-8 border-b md:border-b-0 md:border-r last:border-b-0 md:last:border-r-0 border-white/10"
         >
-            <div className="text-4xl md:text-5xl font-bold text-gold mb-2 stat-glow font-serif">
+            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gold mb-1.5 sm:mb-2 stat-glow font-serif">
                 {formattedCount}
             </div>
-            <div className="text-gray-400 text-sm uppercase tracking-wider font-medium">
+            <div className="text-gray-400 text-xs sm:text-sm uppercase tracking-wider font-medium">
                 {label}
             </div>
         </motion.div>
@@ -57,8 +57,8 @@ const StatCard = ({ number, suffix = '', label, index }) => {
 
 const Stats = () => {
     return (
-        <div className="bg-slate py-12 border-y border-white/5 relative z-20">
-            <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="bg-slate py-8 md:py-12 border-y border-white/5 relative z-20">
+            <div className="container mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8">
                 <StatCard number={10} suffix="+" label="Years Experience" index={0} />
                 <StatCard number={532480} label="Cumulative Man Hours" index={1} />
                 <StatCard number={98} suffix="%" label="Safety Rating" index={2} />

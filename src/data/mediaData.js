@@ -65,7 +65,7 @@ export const heroVideos = [
 ];
 
 export const allMedia = [
-    // ===== OFFSHORE PLATFORMS (3 Videos + 3 Photos) =====
+    // ===== OFFSHORE PLATFORMS (2 Videos + 2 Photos) =====
     {
         id: "vid-1",
         type: "video",
@@ -89,17 +89,6 @@ export const allMedia = [
         description: "Deepwater semi-submersible drilling rig executing exploration and development drilling operations."
     },
     {
-        id: "vid-3",
-        type: "video",
-        title: "Offshore Platform Twilight Aerial Survey",
-        category: "offshore",
-        categoryLabel: "Offshore Platforms",
-        src: "/images/video-offshore-twilight-topview.mp4",
-        poster: "/images/db2994ca1dc3750a2dc8f7e677d6b524.jpg",
-        badge: "4K Aerial",
-        description: "Twilight aerial perspective of an offshore production installation showing topside infrastructure."
-    },
-    {
         id: "img-2",
         type: "image",
         title: "Offshore Production Topsides Platform",
@@ -119,18 +108,8 @@ export const allMedia = [
         badge: "High Res Photo",
         description: "Dynamic positioning drillship maintaining strict station keeping during exploration drilling operations."
     },
-    {
-        id: "img-4",
-        type: "image",
-        title: "Offshore Platform Complex at Full Operation",
-        category: "offshore",
-        categoryLabel: "Offshore Platforms",
-        src: "/images/bc73ef5b884268ec94e67cf95b6dba66.jpg",
-        badge: "High Res Photo",
-        description: "Interconnected bridge platforms, living quarters, and production manifolds delivering 50,000+ BOEPD."
-    },
 
-    // ===== ENGINEERING & INSPECTION (3 Videos + 3 Photos) =====
+    // ===== ENGINEERING & INSPECTION (2 Videos + 2 Photos) =====
     {
         id: "vid-5",
         type: "video",
@@ -154,17 +133,6 @@ export const allMedia = [
         description: "Facility operations team inspecting process vessels, heat exchangers, and instrument lines."
     },
     {
-        id: "vid-7",
-        type: "video",
-        title: "Control System & Industrial Operations",
-        category: "engineering",
-        categoryLabel: "Engineering & Inspection",
-        src: "/images/video-engineers-operating-plant.mp4",
-        poster: "/images/6ad9ec5e149bd2178a6ae693386bf469.jpg",
-        badge: "Control Systems",
-        description: "Technical staff actively managing SCADA telemetry, flow assurance valves, and automated emergency shutoff systems."
-    },
-    {
         id: "img-5",
         type: "image",
         title: "Engineering Field Leads Reviewing Blueprints",
@@ -184,18 +152,8 @@ export const allMedia = [
         badge: "Safety Leadership",
         description: "Safety walkdown ensuring all PPE, fall-arrest systems, and emergency evacuation routes meet Shell TA standards."
     },
-    {
-        id: "img-8",
-        type: "image",
-        title: "Control Room Supervisory Instrumentation",
-        category: "engineering",
-        categoryLabel: "Engineering & Inspection",
-        src: "/images/6ad9ec5e149bd2178a6ae693386bf469.jpg",
-        badge: "SCADA Control",
-        description: "Advanced distributed control system (DCS) console managing subsea hydraulic valves and chemical dosing."
-    },
 
-    // ===== SUBSEA & MARINE (3 Videos + 3 Photos) =====
+    // ===== SUBSEA & MARINE (2 Videos + 2 Photos) =====
     {
         id: "vid-8",
         type: "video",
@@ -206,17 +164,6 @@ export const allMedia = [
         poster: "/images/ea14084971cb421ebffd7a7d8be6a3ab.jpg",
         badge: "Supply Vessel",
         description: "Platform supply vessel (PSV) executing dynamic positioning cargo and equipment transfer to offshore rig."
-    },
-    {
-        id: "vid-9",
-        type: "video",
-        title: "Support Vessel Operations in Open Water",
-        category: "subsea",
-        categoryLabel: "Subsea & Marine",
-        src: "/images/video-platform-support-vessel.mp4",
-        poster: "/images/ecbda25a526406e791a0a92fd2f3cf40.jpg",
-        badge: "Vessel Support",
-        description: "Tug and anchor-handling tug supply (AHTS) vessel performing mooring maintenance and line handling."
     },
     {
         id: "vid-10",
@@ -249,18 +196,8 @@ export const allMedia = [
         badge: "Subsea Layout",
         description: "Pipeline end manifold (PLEM) ready for deployment to seabed receiver well in Okwori field."
     },
-    {
-        id: "img-14",
-        type: "image",
-        title: "Offshore Support Vessel in Calabar / Onne Port",
-        category: "subsea",
-        categoryLabel: "Subsea & Marine",
-        src: "/images/6cf988503aff866bd7f5aea9241828a2.jpg",
-        badge: "Marine Logistics",
-        description: "Mobilization of subsea hardware, spool pieces, and subsea jumpers from Nigerian supply base."
-    },
 
-    // ===== FABRICATION & WELDING (3 Videos + 3 Photos) =====
+    // ===== FABRICATION & WELDING (2 Videos + 2 Photos) =====
     {
         id: "vid-11",
         type: "video",
@@ -284,17 +221,6 @@ export const allMedia = [
         description: "Naval architects and repair engineers planning complex hull refurbishment and mechanical overhauls."
     },
     {
-        id: "vid-18",
-        type: "video",
-        title: "Industrial Pipe Fitting and Integrity Check",
-        category: "fabrication",
-        categoryLabel: "Fabrication & Welding",
-        src: "/images/istockphoto-1475981786-640_adpp_is_1080p_20261011215011.mp4",
-        poster: "/images/c27c450405ca4d6a31bc72a731768b21.jpg",
-        badge: "Pipe Fitting",
-        description: "Certified technicians assembling flange connectors with hydraulic torque tools."
-    },
-    {
         id: "img-9",
         type: "image",
         title: "Heavy Structural Steel Fabrication Assembly",
@@ -313,16 +239,6 @@ export const allMedia = [
         src: "/images/4336e6f9ad99c36e92a0e2454ba170bf.jpg",
         badge: "Specialist Welding",
         description: "TIG root-pass and submerged arc welding on duplex stainless steel flowline piping."
-    },
-    {
-        id: "img-20",
-        type: "image",
-        title: "Pipeline Repair & Clamp Installation",
-        category: "fabrication",
-        categoryLabel: "Fabrication & Welding",
-        src: "/images/ec163ffe69de10490f7f8e4569c66031.jpg",
-        badge: "Pipeline Repair",
-        description: "Subsea diver-assisted clamp installed to reinforce pipeline wall integrity."
     }
 ];
 

@@ -99,16 +99,16 @@ const Contact = () => {
                 subtitle="Whether you have a project inquiry, partnership proposal, or simply want to learn more — our team is ready to respond within 24 business hours."
             />
 
-            <section className="py-12 bg-black" aria-label="Contact Information and Form">
-                <div className="container mx-auto px-6">
-                    <div className="grid md:grid-cols-2 gap-16">
+            <section className="py-8 sm:py-12 bg-black" aria-label="Contact Information and Form">
+                <div className="container mx-auto px-4 sm:px-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
                         {/* Contact Info Column */}
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
-                            <h2 className="text-2xl font-bold mb-8">Headquarters</h2>
+                            <h2 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8">Headquarters</h2>
                             <div className="space-y-4">
                                 {[
                                     { icon: <MapPin />, title: "Office Address", content: "31 Discovery Garden Estate, Lekki Lagos Nigeria", href: "https://maps.google.com/?q=Discovery+Garden+Estate+Lekki+Lagos+Nigeria" },
@@ -167,7 +167,7 @@ const Contact = () => {
                             initial={{ opacity: 0, x: 50 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 0.4 }}
-                            className="bg-slate p-8 rounded-2xl border border-white/5 h-fit"
+                            className="bg-slate p-5 sm:p-8 rounded-2xl border border-white/5 h-fit"
                         >
                             <AnimatePresence mode="wait">
                                 {submitted ? (

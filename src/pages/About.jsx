@@ -52,7 +52,7 @@ const About = () => {
     const [activeStoryIdx, setActiveStoryIdx] = useState(0);
     const [lightboxMedia, setLightboxMedia] = useState(null);
     const [hoveredMediaId, setHoveredMediaId] = useState(null);
-    const [visibleCount, setVisibleCount] = useState(24);
+    const [visibleCount, setVisibleCount] = useState(16);
 
     // Filtered media list
     const filteredList = useMemo(() => {
@@ -92,7 +92,7 @@ const About = () => {
             />
 
             {/* Page Hero with Background Media Banner */}
-            <div className="relative pt-32 pb-20 overflow-hidden">
+            <div className="relative pt-24 sm:pt-32 pb-14 sm:pb-20 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <video
                         autoPlay
@@ -107,12 +107,12 @@ const About = () => {
                     <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/80 to-black" />
                 </div>
 
-                <div className="container mx-auto px-6 relative z-10 text-center">
+                <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center">
                     <motion.span
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="inline-flex items-center gap-2 bg-black/60 border border-gold/30 px-4 py-1.5 rounded-full text-gold uppercase tracking-[0.2em] text-xs font-bold mb-4 shadow-lg"
+                        className="inline-flex items-center gap-2 bg-black/60 border border-gold/30 px-3.5 py-1.5 rounded-full text-gold uppercase tracking-[0.18em] sm:tracking-[0.2em] text-[10px] sm:text-xs font-bold mb-4 shadow-lg"
                     >
                         <Sparkles size={13} /> MANTLE-GOLD LTD
                     </motion.span>
@@ -120,7 +120,7 @@ const About = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="text-4xl md:text-6xl font-serif font-bold mb-6 text-white"
+                        className="text-3xl sm:text-5xl md:text-6xl font-serif font-bold mb-4 sm:mb-6 text-white"
                     >
                         About <span className="text-gold">MANTLE-GOLD LTD</span>
                     </motion.h1>
@@ -128,7 +128,7 @@ const About = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
-                        className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed"
+                        className="text-gray-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed px-2"
                     >
                         A multi-disciplinary service provider in Engineering, Procurement, Installation, and Construction Services — proudly Nigerian, globally competent, and committed to zero-harm operations.
                     </motion.p>
@@ -136,8 +136,8 @@ const About = () => {
             </div>
 
             {/* Company Story with Interactive Visual Showcase */}
-            <section className="py-20 bg-darker" aria-label="Company Story">
-                <div className="container mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
+            <section className="py-14 sm:py-20 bg-darker" aria-label="Company Story">
+                <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-8 md:gap-12 items-center">
                     <motion.div
                         initial={{ opacity: 0, x: -40 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -145,37 +145,37 @@ const About = () => {
                         transition={{ duration: 0.6 }}
                         className="lg:col-span-6"
                     >
-                        <span className="text-gold uppercase tracking-[0.2em] text-xs font-bold mb-3 block">Our Heritage</span>
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight">
+                        <span className="text-gold uppercase tracking-[0.2em] text-xs font-bold mb-2 sm:mb-3 block">Our Heritage</span>
+                        <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold mb-4 sm:mb-6 leading-tight">
                             A Decade of Engineering <span className="text-gold">Excellence</span>
                         </h2>
-                        <p className="text-gray-300 mb-6 leading-relaxed text-base md:text-lg">
+                        <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base md:text-lg">
                             Mantle-Gold Ltd was registered with the Corporate Affairs Commission in June 2014. Since inception, she has grown to be a premier provider of expertise in Subsea Engineering, Pipeline Field Services, and Turnkey EPCI in Nigeria.
                         </p>
-                        <p className="text-gray-300 mb-6 leading-relaxed text-base md:text-lg">
+                        <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base md:text-lg">
                             She has completed Front End Engineering Design (FEED) and Invitation for Tender (IFT) for Deepwater Projects in SNEPCo and Shallow-water projects in ADDAX. Mantle-Gold Limited recently relocated three umbilicals and flexible flowlines from donor to receiver wells in Okwori field for ADDAX.
                         </p>
 
-                        <div className="flex flex-wrap gap-4 pt-2">
-                            <div className="bg-slate p-4 rounded-xl border border-white/10 flex items-center gap-3">
-                                <Briefcase className="text-gold" size={24} />
+                        <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-2">
+                            <div className="bg-slate p-3 sm:p-4 rounded-xl border border-white/10 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-2 sm:gap-3">
+                                <Briefcase className="text-gold flex-shrink-0" size={20} />
                                 <div>
-                                    <div className="text-xl font-bold font-serif text-white">2014</div>
-                                    <div className="text-xs text-gray-400">CAC Registered</div>
+                                    <div className="text-lg sm:text-xl font-bold font-serif text-white">2014</div>
+                                    <div className="text-[10px] sm:text-xs text-gray-400">CAC Registered</div>
                                 </div>
                             </div>
-                            <div className="bg-slate p-4 rounded-xl border border-white/10 flex items-center gap-3">
-                                <Award className="text-gold" size={24} />
+                            <div className="bg-slate p-3 sm:p-4 rounded-xl border border-white/10 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-2 sm:gap-3">
+                                <Award className="text-gold flex-shrink-0" size={20} />
                                 <div>
-                                    <div className="text-xl font-bold font-serif text-white">532K+</div>
-                                    <div className="text-xs text-gray-400">Safe Man-Hours</div>
+                                    <div className="text-lg sm:text-xl font-bold font-serif text-white">532K+</div>
+                                    <div className="text-[10px] sm:text-xs text-gray-400">Safe Hours</div>
                                 </div>
                             </div>
-                            <div className="bg-slate p-4 rounded-xl border border-white/10 flex items-center gap-3">
-                                <Shield className="text-gold" size={24} />
+                            <div className="bg-slate p-3 sm:p-4 rounded-xl border border-white/10 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-2 sm:gap-3">
+                                <Shield className="text-gold flex-shrink-0" size={20} />
                                 <div>
-                                    <div className="text-xl font-bold font-serif text-white">98%</div>
-                                    <div className="text-xs text-gray-400">Safety Rating</div>
+                                    <div className="text-lg sm:text-xl font-bold font-serif text-white">98%</div>
+                                    <div className="text-[10px] sm:text-xs text-gray-400">Safety Rating</div>
                                 </div>
                             </div>
                         </div>
@@ -189,9 +189,9 @@ const About = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="lg:col-span-6"
                     >
-                        <div className="bg-slate p-6 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden">
+                        <div className="bg-slate p-4 sm:p-6 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden">
                             <div className="flex items-center justify-between mb-4">
-                                <span className="text-xs text-gold font-bold uppercase tracking-wider">
+                                <span className="text-[11px] sm:text-xs text-gold font-bold uppercase tracking-wider">
                                     Featured Field Execution
                                 </span>
                                 <div className="flex gap-2">
@@ -199,8 +199,8 @@ const About = () => {
                                         <button
                                             key={i}
                                             onClick={() => setActiveStoryIdx(i)}
-                                            className={`w-7 h-2 rounded-full transition-all ${
-                                                activeStoryIdx === i ? 'bg-gold w-9' : 'bg-white/20'
+                                            className={`h-2 rounded-full transition-all ${
+                                                activeStoryIdx === i ? 'bg-gold w-8 sm:w-9' : 'bg-white/20 w-5 sm:w-7'
                                             }`}
                                             aria-label={`Slide ${i + 1}`}
                                         />
@@ -215,32 +215,32 @@ const About = () => {
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
-                                <div className="absolute bottom-4 left-4 right-4">
-                                    <span className="bg-gold text-black text-[10px] font-bold px-2.5 py-0.5 rounded uppercase tracking-wider mb-1 inline-block">
+                                <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+                                    <span className="bg-gold text-black text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider mb-1 inline-block">
                                         {storyMedia[activeStoryIdx].tag}
                                     </span>
-                                    <h4 className="text-lg font-bold text-white">
+                                    <h4 className="text-base sm:text-lg font-bold text-white">
                                         {storyMedia[activeStoryIdx].title}
                                     </h4>
-                                    <p className="text-gray-300 text-xs mt-1">
+                                    <p className="text-gray-300 text-xs mt-0.5 sm:mt-1 line-clamp-2">
                                         {storyMedia[activeStoryIdx].desc}
                                     </p>
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-3 gap-2">
+                            <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
                                 {storyMedia.map((item, idx) => (
                                     <button
                                         key={idx}
                                         onClick={() => setActiveStoryIdx(idx)}
-                                        className={`p-2 rounded-xl text-left border transition-all ${
+                                        className={`p-1.5 sm:p-2 rounded-xl text-left border transition-all ${
                                             activeStoryIdx === idx
                                                 ? 'bg-gold/15 border-gold text-white'
                                                 : 'bg-black/30 border-white/5 text-gray-400 hover:text-white'
                                         }`}
                                     >
-                                        <div className="text-[11px] font-bold truncate">{item.tag}</div>
-                                        <div className="text-[10px] text-gray-400 truncate">{item.title}</div>
+                                        <div className="text-[10px] sm:text-[11px] font-bold truncate">{item.tag}</div>
+                                        <div className="text-[9px] sm:text-[10px] text-gray-400 truncate">{item.title}</div>
                                     </button>
                                 ))}
                             </div>
@@ -250,30 +250,30 @@ const About = () => {
             </section>
 
             {/* MASTER INTERACTIVE OPERATIONS GALLERY (ALL PHOTOS AND VIDEOS) */}
-            <section className="py-24 bg-black relative" aria-label="Operations Visual Archive">
-                <div className="container mx-auto px-6">
+            <section className="py-16 md:py-24 bg-black relative" aria-label="Operations Visual Archive">
+                <div className="container mx-auto px-4 sm:px-6">
                     {/* Header */}
-                    <div className="text-center max-w-3xl mx-auto mb-14">
-                        <span className="text-gold uppercase tracking-[0.25em] text-xs font-bold block mb-3">
+                    <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-14">
+                        <span className="text-gold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[10px] sm:text-xs font-bold block mb-2 sm:mb-3">
                             Visual Operations Archive
                         </span>
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4">
+                        <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-3 sm:mb-4">
                             What We Do <span className="text-gold">In The Field</span>
                         </h2>
-                        <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-                            A comprehensive visual record of our offshore drilling platforms, subsea installations, heavy fabrication yards, and technical teams at work.
+                        <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed px-2">
+                            A curated visual record of our offshore drilling platforms, subsea installations, heavy fabrication yards, and technical teams at work.
                         </p>
                     </div>
 
                     {/* Filter and Search Bar */}
-                    <div className="bg-slate p-4 rounded-2xl border border-white/10 mb-10 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div className="bg-slate p-3 sm:p-4 rounded-2xl border border-white/10 mb-8 sm:mb-10 shadow-xl flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4">
                         {/* Categories scrollable */}
-                        <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none">
+                        <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none">
                             {categories.map((cat) => (
                                 <button
                                     key={cat.key}
                                     onClick={() => setSelectedCategory(cat.key)}
-                                    className={`px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all duration-300 flex items-center gap-2 ${
+                                    className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all duration-300 flex items-center gap-1.5 sm:gap-2 flex-shrink-0 ${
                                         selectedCategory === cat.key
                                             ? 'bg-gold text-black shadow-md'
                                             : 'bg-black/40 text-gray-300 hover:text-white border border-white/5'
@@ -292,13 +292,13 @@ const About = () => {
 
                         {/* Search Input */}
                         <div className="relative w-full md:w-72 flex-shrink-0">
-                            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
+                            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" size={15} />
                             <input
                                 type="text"
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 placeholder="Search operations, videos..."
-                                className="w-full bg-black/60 border border-white/10 rounded-xl pl-10 pr-4 py-2 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-gold"
+                                className="w-full bg-black/60 border border-white/10 rounded-xl pl-9 pr-12 py-2 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-gold"
                             />
                             {searchQuery && (
                                 <button
@@ -314,7 +314,7 @@ const About = () => {
                     {/* Media Grid */}
                     <motion.div
                         layout
-                        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+                        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
                     >
                         <AnimatePresence>
                             {displayedMedia.map((item, index) => {

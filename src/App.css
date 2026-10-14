@@ -79,10 +79,10 @@ html {
 /* WhatsApp floating button */
 .whatsapp-float {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 56px;
-  height: 56px;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  width: 48px;
+  height: 48px;
   background: #25D366;
   border-radius: 50%;
   display: flex;
@@ -93,24 +93,34 @@ html {
   z-index: 50;
   transition: all 0.3s ease;
 }
+@media (min-width: 768px) {
+  .whatsapp-float {
+    bottom: 2rem;
+    right: 2rem;
+    width: 56px;
+    height: 56px;
+  }
+}
 .whatsapp-float:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
 }
 
-/* Process flow connector line */
-.process-connector {
-  position: relative;
-}
-.process-connector::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -2rem;
-  width: 2rem;
-  height: 2px;
-  background: linear-gradient(90deg, #E88D14, transparent);
-}
-.process-connector:last-child::after {
-  display: none;
+/* Process flow connector line - desktop/tablet only */
+@media (min-width: 768px) {
+  .process-connector {
+    position: relative;
+  }
+  .process-connector::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -2rem;
+    width: 2rem;
+    height: 2px;
+    background: linear-gradient(90deg, #E88D14, transparent);
+  }
+  .process-connector:last-child::after {
+    display: none;
+  }
 }
