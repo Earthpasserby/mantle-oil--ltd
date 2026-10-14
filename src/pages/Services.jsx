@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import ServiceCard from '../components/ServiceCard';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, CheckCircle, ArrowRight } from 'lucide-react';
+import { X, CheckCircle, ArrowRight, Play, Video, Sparkles } from 'lucide-react';
 import * as Icons from 'lucide-react';
 import SEO from '../components/SEO';
-import PageHero from '../components/PageHero';
 import CTABanner from '../components/CTABanner';
+import { serviceMediaMap } from '../data/mediaData';
 
 const servicesData = [
     {
@@ -112,6 +112,29 @@ const processSteps = [
     { step: "04", title: "Installation", desc: "Offshore/onshore deployment, commissioning", icon: "Anchor" }
 ];
 
+const videoHighlights = [
+    {
+        title: "Deepwater Offshore Production",
+        src: "/images/hero-platform-operating.mp4",
+        badge: "Production Deck"
+    },
+    {
+        title: "Subsea Umbilical & Vessel Transfer",
+        src: "/images/hero-supply-vessel.mp4",
+        badge: "Marine Logistics"
+    },
+    {
+        title: "Industrial Plant Inspection",
+        src: "/images/video-engineers-inspecting-plant.mp4",
+        badge: "Integrity Audit"
+    },
+    {
+        title: "Structural Welding & Assembly",
+        src: "/images/video-worker-welding-fabrication.mp4",
+        badge: "Fabrication Yard"
+    }
+];
+
 const Services = () => {
     const [selectedService, setSelectedService] = useState(null);
 
@@ -129,11 +152,49 @@ const Services = () => {
                 keywords="EPCI services Nigeria, pipeline engineering, asset integrity, oil gas fabrication, subsea engineering services, Mantle-Gold services"
             />
 
-            <PageHero
-                title="Our"
-                highlight="Services"
-                subtitle="Delivering excellence across the entire energy value chain — from front-end engineering design to offshore installation and asset integrity management."
-            />
+            {/* Services Page Hero with Background Video */}
+            <section className="relative pt-32 pb-20 overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        poster="/images/bc73ef5b884268ec94e67cf95b6dba66.jpg"
+                        className="w-full h-full object-cover opacity-25"
+                    >
+                        <source src="/images/video-offshore-sunset-aerial.mp4" type="video/mp4" />
+                    </video>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/80 to-black" />
+                </div>
+
+                <div className="container mx-auto px-6 relative z-10 text-center">
+                    <motion.span
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
+                        className="inline-flex items-center gap-2 bg-black/60 border border-gold/30 px-4 py-1.5 rounded-full text-gold uppercase tracking-[0.2em] text-xs font-bold mb-4 shadow-lg"
+                    >
+                        <Sparkles size={13} /> CAPABILITIES &amp; DELIVERABLES
+                    </motion.span>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className="text-4xl md:text-6xl font-serif font-bold mb-6 text-white"
+                    >
+                        Our <span className="text-gold">Services</span>
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 }}
+                        className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed"
+                    >
+                        Delivering excellence across the entire energy value chain — from front-end engineering design to offshore installation, marine operations, and asset integrity management.
+                    </motion.p>
+                </div>
+            </section>
 
             {/* EPCI Process Flow */}
             <section className="py-20 bg-darker" aria-label="EPCI Process">
@@ -160,17 +221,16 @@ const Services = () => {
                                     transition={{ delay: index * 0.15 }}
                                     className="relative"
                                 >
-                                    <div className="bg-slate p-8 rounded-2xl border border-white/5 hover:border-gold/20 transition-all text-center group cursor-pointer">
+                                    <div className="bg-slate p-8 rounded-2xl border border-white/5 hover:border-gold/30 transition-all text-center group cursor-pointer shadow-lg hover:-translate-y-1">
                                         <div className="text-gold text-5xl font-bold font-serif opacity-20 mb-2">{item.step}</div>
                                         <div className="w-14 h-14 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/20 transition-colors">
                                             <IconComponent size={24} className="text-gold" />
                                         </div>
                                         <h3 className="text-white font-bold text-lg mb-2">{item.title}</h3>
-                                        <p className="text-gray-400 text-sm">{item.desc}</p>
+                                        <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
                                     </div>
-                                    {/* Connector arrow (hidden on mobile) */}
                                     {index < processSteps.length - 1 && (
-                                        <div className="hidden md:block absolute top-1/2 -right-3 z-10">
+                                        <div className="hidden md:block absolute top-1/2 -right-3 z-10 -translate-y-1/2">
                                             <ArrowRight size={20} className="text-gold/40" />
                                         </div>
                                     )}
@@ -181,7 +241,7 @@ const Services = () => {
                 </div>
             </section>
 
-            {/* Service Cards */}
+            {/* Service Cards Grid with Project Photos */}
             <section className="py-20 bg-black" aria-label="Service Details">
                 <div className="container mx-auto px-6">
                     <motion.div
@@ -191,37 +251,92 @@ const Services = () => {
                         className="text-center mb-16"
                     >
                         <span className="text-gold uppercase tracking-[0.2em] text-xs font-bold">Explore In Detail</span>
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold mt-3">Our Capabilities</h2>
-                        <p className="text-gray-400 mt-4 max-w-2xl mx-auto">Click any service card to explore our detailed capabilities and deliverables.</p>
+                        <h2 className="text-3xl md:text-4xl font-serif font-bold mt-3">Our Core Capabilities</h2>
+                        <p className="text-gray-400 mt-4 max-w-2xl mx-auto">Click any service card to view detailed specifications, scope of work, and key deliverables.</p>
                     </motion.div>
 
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={{
-                            hidden: { opacity: 0 },
-                            visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
-                        }}
-                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-                    >
-                        {servicesData.map((service, index) => (
-                            <motion.div
-                                key={index}
-                                variants={{
-                                    hidden: { opacity: 0, y: 30 },
-                                    visible: { opacity: 1, y: 0 }
-                                }}
-                                whileHover={{ y: -8 }}
-                                transition={{ type: "spring", stiffness: 300 }}
-                            >
-                                <ServiceCard
-                                    {...service}
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {servicesData.map((service, index) => {
+                            const media = serviceMediaMap[service.title] || {};
+                            return (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                    whileHover={{ y: -8 }}
                                     onClick={() => setSelectedService(service)}
-                                />
-                            </motion.div>
+                                    className="group rounded-2xl overflow-hidden bg-slate border border-white/10 hover:border-gold/40 transition-all duration-300 shadow-xl cursor-pointer flex flex-col"
+                                >
+                                    {/* Image Banner */}
+                                    <div className="h-44 overflow-hidden relative bg-black">
+                                        <img
+                                            src={media.image}
+                                            alt={service.title}
+                                            loading="lazy"
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate via-slate/40 to-transparent" />
+                                        <span className="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-gold text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-gold/30">
+                                            {media.badge}
+                                        </span>
+                                    </div>
+
+                                    {/* Card Content */}
+                                    <div className="p-6 flex-1 flex flex-col justify-between">
+                                        <ServiceCard
+                                            icon={service.icon}
+                                            title={service.title}
+                                            desc={service.desc}
+                                            onClick={() => setSelectedService(service)}
+                                        />
+                                        <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-gold font-semibold">
+                                            <span>Explore Deliverables</span>
+                                            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
+
+            {/* Video Highlights Row */}
+            <section className="py-20 bg-darker" aria-label="Field Highlights">
+                <div className="container mx-auto px-6">
+                    <div className="text-center mb-12">
+                        <span className="text-gold uppercase tracking-[0.2em] text-xs font-bold">Field Footage</span>
+                        <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2">Services in Action</h2>
+                    </div>
+
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {videoHighlights.map((vid, idx) => (
+                            <div
+                                key={idx}
+                                className="group relative rounded-2xl overflow-hidden bg-slate border border-white/10 hover:border-gold/40 shadow-xl"
+                            >
+                                <div className="aspect-[16/10] overflow-hidden relative bg-black">
+                                    <video
+                                        src={vid.src}
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none" />
+                                    <span className="absolute top-2.5 left-2.5 bg-black/70 backdrop-blur-md text-gold text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                                        <Video size={10} /> {vid.badge}
+                                    </span>
+                                </div>
+                                <div className="p-4 bg-slate">
+                                    <div className="text-white font-bold text-sm">{vid.title}</div>
+                                </div>
+                            </div>
                         ))}
-                    </motion.div>
+                    </div>
                 </div>
             </section>
 
@@ -234,13 +349,13 @@ const Services = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setSelectedService(null)}
-                            className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+                            className="absolute inset-0 bg-black/80 backdrop-blur-md"
                         />
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0, y: 20 }}
                             animate={{ scale: 1, opacity: 1, y: 0 }}
                             exit={{ scale: 0.9, opacity: 0, y: 20 }}
-                            className="bg-slate border border-white/10 rounded-2xl p-8 max-w-2xl w-full relative z-10 shadow-2xl overflow-y-auto max-h-[90vh]"
+                            className="bg-slate border border-white/10 rounded-2xl p-6 md:p-8 max-w-3xl w-full relative z-10 shadow-2xl overflow-y-auto max-h-[90vh]"
                         >
                             <button
                                 onClick={() => setSelectedService(null)}
@@ -250,36 +365,62 @@ const Services = () => {
                                 <X size={24} />
                             </button>
 
-                            <div className="flex items-center gap-4 mb-6">
+                            {/* Service Media Video/Image Header in Modal */}
+                            {serviceMediaMap[selectedService.title] && (
+                                <div className="aspect-[16/9] w-full rounded-xl overflow-hidden mb-6 bg-black border border-white/10 relative">
+                                    {serviceMediaMap[selectedService.title].video ? (
+                                        <video
+                                            src={serviceMediaMap[selectedService.title].video}
+                                            controls
+                                            autoPlay
+                                            muted
+                                            loop
+                                            playsInline
+                                            className="w-full h-full object-cover"
+                                        />
+                                    ) : (
+                                        <img
+                                            src={serviceMediaMap[selectedService.title].image}
+                                            alt={selectedService.title}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    )}
+                                </div>
+                            )}
+
+                            <div className="flex items-center gap-4 mb-4">
                                 <div className="text-gold">
                                     {(() => {
                                         const IconComponent = Icons[selectedService.icon];
                                         return IconComponent ? (
                                             <div className="p-3 bg-black rounded-xl border border-white/10">
-                                                <IconComponent size={32} />
+                                                <IconComponent size={28} />
                                             </div>
                                         ) : null;
                                     })()}
                                 </div>
-                                <h2 className="text-2xl md:text-3xl font-serif font-bold">{selectedService.title}</h2>
+                                <div>
+                                    <span className="text-xs uppercase tracking-widest text-gold font-bold">Capabilities Scope</span>
+                                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-white">{selectedService.title}</h2>
+                                </div>
                             </div>
 
-                            <p className="text-gray-300 mb-8 text-lg leading-relaxed border-b border-white/10 pb-6">
+                            <p className="text-gray-300 mb-6 text-base leading-relaxed border-b border-white/10 pb-4">
                                 {selectedService.desc}
                             </p>
 
-                            <h3 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Key Capabilities</h3>
+                            <h3 className="text-white font-bold mb-4 text-xs uppercase tracking-wider text-gold">Key Capabilities &amp; Deliverables</h3>
                             <div className="grid md:grid-cols-2 gap-3">
                                 {selectedService.details.map((detail, idx) => (
                                     <motion.div
                                         key={idx}
-                                        initial={{ opacity: 0, x: -20 }}
+                                        initial={{ opacity: 0, x: -15 }}
                                         animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: idx * 0.04 }}
-                                        className="flex items-start gap-3 p-2 rounded-lg hover:bg-white/5 transition-colors"
+                                        transition={{ delay: idx * 0.03 }}
+                                        className="flex items-start gap-3 p-2.5 rounded-lg bg-black/30 border border-white/5"
                                     >
-                                        <CheckCircle className="text-gold w-5 h-5 flex-shrink-0 mt-0.5" />
-                                        <span className="text-gray-300 text-sm">{detail}</span>
+                                        <CheckCircle className="text-gold w-4 h-4 flex-shrink-0 mt-0.5" />
+                                        <span className="text-gray-200 text-xs md:text-sm">{detail}</span>
                                     </motion.div>
                                 ))}
                             </div>
