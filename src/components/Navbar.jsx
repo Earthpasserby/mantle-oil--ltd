@@ -73,7 +73,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || isOpen ? 'bg-black/95 backdrop-blur-md py-3 sm:py-4 shadow-xl' : 'bg-transparent py-4 md:py-6'}`}>
+        <nav className={`fixed top-0 left-0 right-0 w-full z-50 transition-colors duration-300 ${scrolled ? 'bg-black/95 md:backdrop-blur-md py-3 sm:py-4 shadow-xl' : isOpen ? 'bg-black py-3 sm:py-4' : 'bg-transparent py-4 md:py-6'}`}>
             <div className="container mx-auto px-4 sm:px-6 flex justify-between items-center relative z-50">
                 <Link to="/" className="flex items-center gap-2.5 sm:gap-3 max-w-[calc(100%-54px)] md:max-w-none">
                     <img src="/logo.png" alt="Mantle-Gold Ltd" className="h-9 sm:h-11 md:h-12 flex-shrink-0" />
@@ -116,7 +116,7 @@ const Navbar = () => {
                 <button 
                     aria-expanded={isOpen}
                     aria-label="Toggle navigation menu"
-                    className="md:hidden text-white relative w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full border border-white/10 hover:bg-white/5 transition-colors focus:ring-2 focus:ring-gold focus:outline-none" 
+                    className="md:hidden text-white relative w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full border border-white/10 hover:bg-white/5 transition-colors focus:ring-2 focus:ring-gold focus:outline-none z-50" 
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     <AnimatePresence mode="wait">
@@ -153,41 +153,43 @@ const Navbar = () => {
                         initial="closed"
                         animate="open"
                         exit="closed"
-                        className="fixed inset-0 bg-black z-40 flex flex-col pt-24 pb-8 px-6 md:hidden overflow-y-auto"
+                        className="fixed inset-0 w-screen h-screen min-h-[100dvh] bg-black z-40 flex flex-col pt-20 sm:pt-24 pb-8 px-6 md:hidden overflow-y-auto"
                     >
-                        <div className="flex flex-col gap-5 my-auto">
-                            {navLinks.map((link, i) => (
-                                <motion.div
-                                    key={link.name}
-                                    custom={i}
-                                    variants={linkVariants}
-                                    className="border-b border-white/10 pb-4"
-                                >
-                                    <Link
-                                        to={link.path}
-                                        className={`text-2xl sm:text-3xl font-serif font-bold flex justify-between items-center ${location.pathname === link.path ? 'text-gold' : 'text-white'}`}
-                                        onClick={() => setIsOpen(false)}
+                        <div className="flex flex-col justify-between flex-1 max-w-md mx-auto w-full py-4">
+                            <div className="flex flex-col gap-4 sm:gap-5">
+                                {navLinks.map((link, i) => (
+                                    <motion.div
+                                        key={link.name}
+                                        custom={i}
+                                        variants={linkVariants}
+                                        className="border-b border-white/10 pb-3 sm:pb-4"
                                     >
-                                        {link.name}
-                                        <ChevronRight size={22} className={`transition-transform ${location.pathname === link.path ? 'text-gold translate-x-1' : 'text-gray-600'}`} />
-                                    </Link>
-                                </motion.div>
-                            ))}
-                        </div>
+                                        <Link
+                                            to={link.path}
+                                            className={`text-2xl sm:text-3xl font-serif font-bold flex justify-between items-center ${location.pathname === link.path ? 'text-gold' : 'text-white'}`}
+                                            onClick={() => setIsOpen(false)}
+                                        >
+                                            {link.name}
+                                            <ChevronRight size={22} className={`transition-transform ${location.pathname === link.path ? 'text-gold translate-x-1' : 'text-gray-600'}`} />
+                                        </Link>
+                                    </motion.div>
+                                ))}
+                            </div>
 
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.4, duration: 0.4 }}
-                            className="mt-8 text-center"
-                        >
-                            <Link to="/contact" className="w-full block bg-gold text-black py-3.5 rounded-xl font-bold text-base mb-4 shadow-xl" onClick={() => setIsOpen(false)}>
-                                Get Started
-                            </Link>
-                            <p className="text-gray-500 text-xs">
-                                &copy; 2026 MANTLE-GOLD LTD.
-                            </p>
-                        </motion.div>
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.3, duration: 0.3 }}
+                                className="mt-8 text-center flex-shrink-0"
+                            >
+                                <Link to="/contact" className="w-full block bg-gold text-black py-3.5 rounded-xl font-bold text-base mb-3 shadow-xl hover:bg-yellow-500 transition-colors" onClick={() => setIsOpen(false)}>
+                                    Get Started
+                                </Link>
+                                <p className="text-gray-500 text-xs">
+                                    &copy; {new Date().getFullYear()} MANTLE-GOLD LTD.
+                                </p>
+                            </motion.div>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>
