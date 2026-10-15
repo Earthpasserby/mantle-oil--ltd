@@ -398,21 +398,35 @@ const About = () => {
                                 </div>
                             </div>
 
-                            {/* Leadership Video Preview Card */}
+                            {/* Leadership CEO Portrait Card */}
                             <div className="lg:col-span-4">
-                                <div className="relative rounded-2xl overflow-hidden bg-black border border-gold/30 shadow-2xl group">
-                                    <video
-                                        src="/images/video-engineer-portrait.mp4"
-                                        autoPlay
-                                        loop
-                                        muted
-                                        playsInline
-                                        className="w-full h-64 sm:h-80 object-cover"
+                                <div className="relative rounded-2xl overflow-hidden bg-slate border border-gold/40 shadow-2xl group">
+                                    <img
+                                        src="/images/ceo-ekere-afia.jpg"
+                                        alt="Engr. Ekere Afia — CEO & Managing Director, Mantle-Gold Limited"
+                                        className="w-full h-72 sm:h-84 md:h-96 object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                        onError={(e) => {
+                                            // Fallback to portrait video if photo is still being uploaded
+                                            e.currentTarget.style.display = 'none';
+                                            const videoEl = e.currentTarget.parentElement.querySelector('video');
+                                            if (videoEl) videoEl.parentElement.classList.remove('hidden');
+                                        }}
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
+                                    <div className="hidden">
+                                        <video
+                                            src="/images/video-engineer-portrait.mp4"
+                                            autoPlay
+                                            loop
+                                            muted
+                                            playsInline
+                                            className="w-full h-72 sm:h-84 md:h-96 object-cover"
+                                        />
+                                    </div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20 pointer-events-none" />
                                     <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
-                                        <div className="text-[10px] sm:text-xs uppercase tracking-widest text-gold font-bold">Executive Video</div>
-                                        <div className="text-xs sm:text-sm font-bold text-white">Engr. Ekere Afia — CEO / MD</div>
+                                        <div className="text-[10px] sm:text-xs uppercase tracking-widest text-gold font-bold">Chief Executive Officer</div>
+                                        <div className="text-sm sm:text-base font-bold text-white">Engr. Ekere Afia</div>
+                                        <div className="text-xs text-gray-300">Managing Director &bull; Mantle-Gold Ltd</div>
                                     </div>
                                 </div>
                             </div>

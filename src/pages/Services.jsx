@@ -112,28 +112,6 @@ const processSteps = [
     { step: "04", title: "Installation", desc: "Offshore/onshore deployment, commissioning", icon: "Anchor" }
 ];
 
-const videoHighlights = [
-    {
-        title: "Deepwater Offshore Production",
-        src: "/images/hero-platform-operating.mp4",
-        badge: "Production Deck"
-    },
-    {
-        title: "Subsea Umbilical & Vessel Transfer",
-        src: "/images/hero-supply-vessel.mp4",
-        badge: "Marine Logistics"
-    },
-    {
-        title: "Industrial Plant Inspection",
-        src: "/images/video-engineers-inspecting-plant.mp4",
-        badge: "Integrity Audit"
-    },
-    {
-        title: "Structural Welding & Assembly",
-        src: "/images/video-worker-welding-fabrication.mp4",
-        badge: "Fabrication Yard"
-    }
-];
 
 const Services = () => {
     const [selectedService, setSelectedService] = useState(null);
@@ -209,7 +187,7 @@ const Services = () => {
                         <h2 className="text-2xl sm:text-4xl font-serif font-bold mt-2 sm:mt-3">The EPCI <span className="text-gold">Process</span></h2>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 relative">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 relative items-stretch">
                         {processSteps.map((item, index) => {
                             const IconComponent = Icons[item.icon] || Icons.Activity;
                             return (
@@ -219,15 +197,17 @@ const Services = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: index * 0.15 }}
-                                    className="relative"
+                                    className="relative h-full flex flex-col"
                                 >
-                                    <div className="bg-slate p-5 sm:p-8 rounded-2xl border border-white/5 hover:border-gold/30 transition-all text-center group cursor-pointer shadow-lg hover:-translate-y-1">
-                                        <div className="text-gold text-4xl sm:text-5xl font-bold font-serif opacity-20 mb-1 sm:mb-2">{item.step}</div>
-                                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-gold/20 transition-colors">
-                                            <IconComponent size={22} className="text-gold" />
+                                    <div className="bg-slate p-5 sm:p-7 md:p-8 rounded-2xl border border-white/5 hover:border-gold/30 transition-all text-center group cursor-pointer shadow-lg hover:-translate-y-1 h-full flex flex-col items-center justify-between">
+                                        <div className="w-full flex flex-col items-center">
+                                            <div className="text-gold text-4xl sm:text-5xl font-bold font-serif opacity-20 mb-1 sm:mb-2">{item.step}</div>
+                                            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-gold/20 transition-colors shrink-0">
+                                                <IconComponent size={22} className="text-gold" />
+                                            </div>
+                                            <h3 className="text-white font-bold text-base sm:text-lg mb-1.5 sm:mb-2">{item.title}</h3>
                                         </div>
-                                        <h3 className="text-white font-bold text-base sm:text-lg mb-1 sm:mb-2">{item.title}</h3>
-                                        <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{item.desc}</p>
+                                        <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mt-auto pt-2">{item.desc}</p>
                                     </div>
                                     {index < processSteps.length - 1 && (
                                         <div className="hidden md:block absolute top-1/2 -right-3 z-10 -translate-y-1/2">
@@ -303,42 +283,7 @@ const Services = () => {
                 </div>
             </section>
 
-            {/* Video Highlights Row */}
-            <section className="py-20 bg-darker" aria-label="Field Highlights">
-                <div className="container mx-auto px-6">
-                    <div className="text-center mb-12">
-                        <span className="text-gold uppercase tracking-[0.2em] text-xs font-bold">Field Footage</span>
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2">Services in Action</h2>
-                    </div>
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {videoHighlights.map((vid, idx) => (
-                            <div
-                                key={idx}
-                                className="group relative rounded-2xl overflow-hidden bg-slate border border-white/10 hover:border-gold/40 shadow-xl"
-                            >
-                                <div className="aspect-[16/10] overflow-hidden relative bg-black">
-                                    <video
-                                        src={vid.src}
-                                        autoPlay
-                                        loop
-                                        muted
-                                        playsInline
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none" />
-                                    <span className="absolute top-2.5 left-2.5 bg-black/70 backdrop-blur-md text-gold text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
-                                        <Video size={10} /> {vid.badge}
-                                    </span>
-                                </div>
-                                <div className="p-4 bg-slate">
-                                    <div className="text-white font-bold text-sm">{vid.title}</div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* Service Detail Modal */}
             <AnimatePresence>

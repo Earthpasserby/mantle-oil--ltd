@@ -87,7 +87,7 @@ const Home = () => {
                         className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 sm:mb-8 leading-[1.18] max-w-5xl mx-auto pb-1"
                     >
                         OIL, GAS AND ENERGY PRODUCTS <br className="hidden sm:inline" />
-                        <span className="text-gradient">&amp; ENGINEERING SOLUTIONS</span>.
+                        <span className="text-gradient">&amp; ENGINEERING SOLUTIONS</span>
                     </motion.h1>
 
                     <motion.p

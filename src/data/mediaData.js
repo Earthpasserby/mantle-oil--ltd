@@ -3,16 +3,6 @@
 
 export const heroVideos = [
     {
-        id: "hero-1",
-        title: "Deepwater Offshore Platform Operations",
-        subtitle: "Safe, efficient hydrocarbon extraction and production management across deepwater basins.",
-        badge: "Offshore Production",
-        src: "/images/hero-platform-operating.mp4",
-        poster: "/images/be1d6b1d93df908ca7c8e66795cb404c.jpg",
-        location: "Deepwater West Africa",
-        specs: "1080p 60FPS"
-    },
-    {
         id: "hero-2",
         title: "Subsea Field Development & Drilling",
         subtitle: "State-of-the-art drilling rigs delivering complex subsea well completions.",
