@@ -20,28 +20,28 @@ const missionTabs = [
     {
         id: "subsea",
         title: "Subsea Installation",
-        image: "/images/1fac060faf011a6062d9dc6eaa9e38ba.jpg",
+        image: "/images/subsea-vessel.jpg",
         caption: "Deepwater Flowline & Umbilical Deployment",
         tag: "Okwori Field Project"
     },
     {
         id: "topsides",
         title: "Offshore Topsides",
-        image: "/images/db2994ca1dc3750a2dc8f7e677d6b524.jpg",
+        image: "/images/platform-topsides.jpg",
         caption: "Multi-Tier Production Facilities",
         tag: "Active Asset Management"
     },
     {
         id: "drilling",
         title: "Deepwater Rigs",
-        image: "/images/be1d6b1d93df908ca7c8e66795cb404c.jpg",
+        image: "/images/drilling-rig.jpg",
         caption: "High-Capacity Semi-Submersible Exploration",
         tag: "Safety-First Drilling"
     },
     {
         id: "inspection",
         title: "Engineering Team",
-        image: "/images/ea14084971cb421ebffd7a7d8be6a3ab.jpg",
+        image: "/images/engineers-team.jpg",
         caption: "Site Engineers Reviewing Field Specifications",
         tag: "Shell TA Standards"
     }
@@ -268,19 +268,19 @@ const Home = () => {
                                 icon: ClipboardCheck,
                                 title: "EPCI Project Execution",
                                 desc: "End-to-end Engineering, Procurement, Construction, and Installation services delivered with precision and safety.",
-                                image: "/images/bc73ef5b884268ec94e67cf95b6dba66.jpg"
+                                image: "/images/epci-overview.jpg"
                             },
                             {
                                 icon: ShieldCheck,
                                 title: "Asset Support & Integrity",
                                 desc: "Comprehensive maintenance and integrity management solutions to extend the lifecycle of your offshore and onshore assets.",
-                                image: "/images/10162884367c50ef998c1cb6abdd2126.jpg"
+                                image: "/images/asset-integrity.jpg"
                             },
                             {
                                 icon: Waves,
                                 title: "Pipeline Engineering",
                                 desc: "Specialized pipeline design, installation, and field services ensuring flow assurance and infrastructure reliability.",
-                                image: "/images/ecbda25a526406e791a0a92fd2f3cf40.jpg"
+                                image: "/images/pipeline-subsea.jpg"
                             }
                         ].map((service, i) => {
                             const IconComponent = service.icon;

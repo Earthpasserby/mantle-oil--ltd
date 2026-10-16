@@ -26,19 +26,19 @@ const milestones = [
 const storyMedia = [
     {
         title: "Okwori Field Umbilicals & Flowlines",
-        image: "/images/1fac060faf011a6062d9dc6eaa9e38ba.jpg",
+        image: "/images/subsea-vessel.jpg",
         tag: "Addax Petroleum",
         desc: "Relocated three umbilicals and flexible flowlines from donor to receiver wells."
     },
     {
         title: "SNEPCo Deepwater Projects",
-        image: "/images/db2994ca1dc3750a2dc8f7e677d6b524.jpg",
+        image: "/images/platform-topsides.jpg",
         tag: "FEED & Tender",
         desc: "Front End Engineering Design and Invitation for Tender for deepwater assets."
     },
     {
         title: "Marine Vessel & Rig Operations",
-        image: "/images/be1d6b1d93df908ca7c8e66795cb404c.jpg",
+        image: "/images/drilling-rig.jpg",
         tag: "Offshore Execution",
         desc: "Precision station-keeping and subsea installation in West African waters."
     }
@@ -69,10 +69,10 @@ const About = () => {
                         loop
                         muted
                         playsInline
-                        poster="/images/db2994ca1dc3750a2dc8f7e677d6b524.jpg"
+                        poster="/images/platform-topsides.jpg"
                         className="w-full h-full object-cover opacity-25"
                     >
-                        <source src="/images/video-offshore-twilight-topview.mp4" type="video/mp4" />
+                        <source src="/images/hero-twilight.mp4" type="video/mp4" />
                     </video>
                     <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/80 to-black" />
                 </div>
@@ -323,19 +323,19 @@ const About = () => {
                                 icon: <Shield size={32} />,
                                 title: "Zero-Harm Philosophy",
                                 desc: "Every project begins and ends with safety. Our 98% safety rating reflects a deep-rooted culture of hazard prevention, rigorous risk assessment, and continuous training.",
-                                image: "/images/bd31e76948d13c5281c60d56d5a55a22.jpg"
+                                image: "/images/safety-officer.jpg"
                             },
                             {
                                 icon: <Leaf size={32} />,
                                 title: "Environmental Stewardship",
                                 desc: "We integrate environmental responsibility into every phase of operations — from design to decommissioning — minimising ecological impact across all project sites.",
-                                image: "/images/c27c450405ca4d6a31bc72a731768b21.jpg"
+                                image: "/images/operations-plant.jpg"
                             },
                             {
                                 icon: <HardHat size={32} />,
                                 title: "Local Content Excellence",
                                 desc: "As a proudly Nigerian company, we champion local content development — training, employing, and empowering Nigerian engineers and technicians to deliver world-class EPCI projects.",
-                                image: "/images/ea14084971cb421ebffd7a7d8be6a3ab.jpg"
+                                image: "/images/engineers-team.jpg"
                             }
                         ].map((item, index) => (
                             <motion.div
@@ -402,7 +402,7 @@ const About = () => {
                             <div className="lg:col-span-4">
                                 <div className="relative rounded-2xl overflow-hidden bg-slate border border-gold/40 shadow-2xl group">
                                     <img
-                                        src="/images/ceo-ekere-afia.jpg"
+                                        src="/images/ceo.jpg"
                                         alt="Engr. Ekere Afia — CEO & Managing Director, Mantle-Gold Limited"
                                         className="w-full h-72 sm:h-84 md:h-96 object-cover object-top transition-transform duration-500 group-hover:scale-105"
                                         onError={(e) => {
@@ -414,7 +414,7 @@ const About = () => {
                                     />
                                     <div className="hidden">
                                         <video
-                                            src="/images/video-engineer-portrait.mp4"
+                                            src="/images/vid-portrait.mp4"
                                             autoPlay
                                             loop
                                             muted

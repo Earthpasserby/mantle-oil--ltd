@@ -7,8 +7,8 @@ export const heroVideos = [
         title: "Subsea Field Development & Drilling",
         subtitle: "State-of-the-art drilling rigs delivering complex subsea well completions.",
         badge: "Drilling & Wells",
-        src: "/images/hero-drilling-ocean.mp4",
-        poster: "/images/1fac060faf011a6062d9dc6eaa9e38ba.jpg",
+        src: "/images/hero-drilling.mp4",
+        poster: "/images/subsea-vessel.jpg",
         location: "Okwori Field Basin",
         specs: "1080p Ultra HD"
     },
@@ -17,8 +17,8 @@ export const heroVideos = [
         title: "Offshore Platform Top View at Twilight",
         subtitle: "Round-the-clock continuous production monitoring and facility surveillance.",
         badge: "Field Operations",
-        src: "/images/video-offshore-twilight-topview.mp4",
-        poster: "/images/db2994ca1dc3750a2dc8f7e677d6b524.jpg",
+        src: "/images/hero-twilight.mp4",
+        poster: "/images/platform-topsides.jpg",
         location: "Gulf of Guinea",
         specs: "4K Aerial Survey"
     },
@@ -27,8 +27,8 @@ export const heroVideos = [
         title: "Certified Technical Authority & Engineering Inspection",
         subtitle: "World-class Nigerian engineers upholding rigorous Shell & IOC technical standards.",
         badge: "Technical Authority",
-        src: "/images/video-engineers-offshore-inspection.mp4",
-        poster: "/images/bd31e76948d13c5281c60d56d5a55a22.jpg",
+        src: "/images/hero-inspect.mp4",
+        poster: "/images/safety-officer.jpg",
         location: "Offshore Facility Deck",
         specs: "1080p Inspection"
     },
@@ -37,8 +37,8 @@ export const heroVideos = [
         title: "Subsea Umbilicals & Platform Support Logistics",
         subtitle: "Synchronized marine operations with offshore supply and support vessels.",
         badge: "Marine Logistics",
-        src: "/images/hero-supply-vessel.mp4",
-        poster: "/images/6ad9ec5e149bd2178a6ae693386bf469.jpg",
+        src: "/images/hero-vessel.mp4",
+        poster: "/images/marine-logistics.jpg",
         location: "Shallow & Deepwater",
         specs: "1080p HD Marine"
     },
@@ -47,8 +47,8 @@ export const heroVideos = [
         title: "Precision Heavy Fabrication & Structural Welding",
         subtitle: "Certified welding and fabrication for topsides, subsea spools, and pipeline manifolds.",
         badge: "EPCI Fabrication",
-        src: "/images/video-worker-welding-fabrication.mp4",
-        poster: "/images/4336e6f9ad99c36e92a0e2454ba170bf.jpg",
+        src: "/images/hero-welding.mp4",
+        poster: "/images/fabrication-welding.jpg",
         location: "Fabrication Yard",
         specs: "1080p Industrial"
     }
@@ -62,8 +62,8 @@ export const allMedia = [
         title: "Offshore Platform Active Operating Loop",
         category: "offshore",
         categoryLabel: "Offshore Platforms",
-        src: "/images/hero-platform-operating.mp4",
-        poster: "/images/be1d6b1d93df908ca7c8e66795cb404c.jpg",
+        src: "/images/vid-platform.mp4",
+        poster: "/images/drilling-rig.jpg",
         badge: "1080p Video",
         description: "Full production deck and drilling tower in active continuous operation under high safety protocol."
     },
@@ -73,8 +73,8 @@ export const allMedia = [
         title: "Ocean Drilling Platform Deployment",
         category: "offshore",
         categoryLabel: "Offshore Platforms",
-        src: "/images/hero-drilling-ocean.mp4",
-        poster: "/images/1fac060faf011a6062d9dc6eaa9e38ba.jpg",
+        src: "/images/hero-drilling.mp4",
+        poster: "/images/subsea-vessel.jpg",
         badge: "1080p Video",
         description: "Deepwater semi-submersible drilling rig executing exploration and development drilling operations."
     },
@@ -84,7 +84,7 @@ export const allMedia = [
         title: "Offshore Production Topsides Platform",
         category: "offshore",
         categoryLabel: "Offshore Platforms",
-        src: "/images/db2994ca1dc3750a2dc8f7e677d6b524.jpg",
+        src: "/images/platform-topsides.jpg",
         badge: "High Res Photo",
         description: "Multi-level processing facilities, flare booms, and turbine generator packages on Nigerian offshore concession."
     },
@@ -94,7 +94,7 @@ export const allMedia = [
         title: "Deepwater Semi-Submersible Rig in Blue Waters",
         category: "offshore",
         categoryLabel: "Offshore Platforms",
-        src: "/images/be1d6b1d93df908ca7c8e66795cb404c.jpg",
+        src: "/images/drilling-rig.jpg",
         badge: "High Res Photo",
         description: "Dynamic positioning drillship maintaining strict station keeping during exploration drilling operations."
     },
@@ -106,8 +106,8 @@ export const allMedia = [
         title: "Engineers Conducting Offshore Deck Inspection",
         category: "engineering",
         categoryLabel: "Engineering & Inspection",
-        src: "/images/video-engineers-offshore-inspection.mp4",
-        poster: "/images/bd31e76948d13c5281c60d56d5a55a22.jpg",
+        src: "/images/hero-inspect.mp4",
+        poster: "/images/safety-officer.jpg",
         badge: "Technical Audit",
         description: "Field engineers reviewing structural integrity checklists and high-pressure manifold assemblies."
     },
@@ -117,8 +117,8 @@ export const allMedia = [
         title: "Industrial Plant Equipment Inspection",
         category: "engineering",
         categoryLabel: "Engineering & Inspection",
-        src: "/images/video-engineers-inspecting-plant.mp4",
-        poster: "/images/bf5933e434f42197f3ba9124698a8ab3.jpg",
+        src: "/images/vid-plant.mp4",
+        poster: "/images/plant-inspection.jpg",
         badge: "Plant Inspection",
         description: "Facility operations team inspecting process vessels, heat exchangers, and instrument lines."
     },
@@ -128,7 +128,7 @@ export const allMedia = [
         title: "Engineering Field Leads Reviewing Blueprints",
         category: "engineering",
         categoryLabel: "Engineering & Inspection",
-        src: "/images/ea14084971cb421ebffd7a7d8be6a3ab.jpg",
+        src: "/images/engineers-team.jpg",
         badge: "Field Inspection",
         description: "Mantle-Gold site supervisors reviewing isometric CAD drawings on location before umbilical lay begins."
     },
@@ -138,7 +138,7 @@ export const allMedia = [
         title: "Senior Offshore Technical Authority on Rig Walkway",
         category: "engineering",
         categoryLabel: "Engineering & Inspection",
-        src: "/images/bd31e76948d13c5281c60d56d5a55a22.jpg",
+        src: "/images/safety-officer.jpg",
         badge: "Safety Leadership",
         description: "Safety walkdown ensuring all PPE, fall-arrest systems, and emergency evacuation routes meet Shell TA standards."
     },
@@ -150,8 +150,8 @@ export const allMedia = [
         title: "Marine Platform & Supply Vessel Offloading",
         category: "subsea",
         categoryLabel: "Subsea & Marine",
-        src: "/images/hero-supply-vessel.mp4",
-        poster: "/images/ea14084971cb421ebffd7a7d8be6a3ab.jpg",
+        src: "/images/hero-vessel.mp4",
+        poster: "/images/engineers-team.jpg",
         badge: "Supply Vessel",
         description: "Platform supply vessel (PSV) executing dynamic positioning cargo and equipment transfer to offshore rig."
     },
@@ -161,8 +161,8 @@ export const allMedia = [
         title: "3D Animation: Subsea Extraction & Drilling",
         category: "subsea",
         categoryLabel: "Subsea & Marine",
-        src: "/images/video-offshore-extraction-3d.mp4",
-        poster: "/images/10162884367c50ef998c1cb6abdd2126.jpg",
+        src: "/images/vid-subsea3d.mp4",
+        poster: "/images/asset-integrity.jpg",
         badge: "3D Schematic",
         description: "Technical simulation of subsea tree installation, manifold routing, and umbilical tie-ins."
     },
@@ -172,7 +172,7 @@ export const allMedia = [
         title: "Subsea Umbilical Installation Vessel Deck",
         category: "subsea",
         categoryLabel: "Subsea & Marine",
-        src: "/images/1fac060faf011a6062d9dc6eaa9e38ba.jpg",
+        src: "/images/subsea-vessel.jpg",
         badge: "High Res Photo",
         description: "High-capacity carousel reel and tensioner deck mobilizing flexible flowlines for deepwater field relocation."
     },
@@ -182,7 +182,7 @@ export const allMedia = [
         title: "Subsea Manifold and Pipeline Tie-in Junction",
         category: "subsea",
         categoryLabel: "Subsea & Marine",
-        src: "/images/ecbda25a526406e791a0a92fd2f3cf40.jpg",
+        src: "/images/pipeline-subsea.jpg",
         badge: "Subsea Layout",
         description: "Pipeline end manifold (PLEM) ready for deployment to seabed receiver well in Okwori field."
     },
@@ -194,8 +194,8 @@ export const allMedia = [
         title: "Heavy Structural Steel Welding & Fabrication",
         category: "fabrication",
         categoryLabel: "Fabrication & Welding",
-        src: "/images/video-worker-welding-fabrication.mp4",
-        poster: "/images/4336e6f9ad99c36e92a0e2454ba170bf.jpg",
+        src: "/images/hero-welding.mp4",
+        poster: "/images/fabrication-welding.jpg",
         badge: "Heavy Welding",
         description: "Certified welders executing SMAW and GTAW welding on pressure-containing pipes and offshore tubulars."
     },
@@ -205,8 +205,8 @@ export const allMedia = [
         title: "Shipyard Maintenance & Bulk Carrier Repair Planning",
         category: "fabrication",
         categoryLabel: "Fabrication & Welding",
-        src: "/images/video-shipyard-maintenance-team.mp4",
-        poster: "/images/3bbabe4a7b6b42ee58899d7c27b5418d.jpg",
+        src: "/images/vid-shipyard.mp4",
+        poster: "/images/drydock-repair.jpg",
         badge: "Drydock Overhaul",
         description: "Naval architects and repair engineers planning complex hull refurbishment and mechanical overhauls."
     },
@@ -216,7 +216,7 @@ export const allMedia = [
         title: "Heavy Structural Steel Fabrication Assembly",
         category: "fabrication",
         categoryLabel: "Fabrication & Welding",
-        src: "/images/bf5933e434f42197f3ba9124698a8ab3.jpg",
+        src: "/images/plant-inspection.jpg",
         badge: "Fabrication Yard",
         description: "High-grade tubular steel sections aligned for non-destructive testing (NDT) and welding qualification."
     },
@@ -226,7 +226,7 @@ export const allMedia = [
         title: "Specialized Hyperbaric and Pipe Welding",
         category: "fabrication",
         categoryLabel: "Fabrication & Welding",
-        src: "/images/4336e6f9ad99c36e92a0e2454ba170bf.jpg",
+        src: "/images/fabrication-welding.jpg",
         badge: "Specialist Welding",
         description: "TIG root-pass and submerged arc welding on duplex stainless steel flowline piping."
     }
@@ -234,33 +234,33 @@ export const allMedia = [
 
 export const serviceMediaMap = {
     "Asset Support & Integrity": {
-        image: "/images/10162884367c50ef998c1cb6abdd2126.jpg",
-        video: "/images/video-engineers-inspecting-plant.mp4",
+        image: "/images/asset-integrity.jpg",
+        video: "/images/vid-plant.mp4",
         badge: "Asset Integrity"
     },
     "EPCI Project Execution": {
-        image: "/images/bc73ef5b884268ec94e67cf95b6dba66.jpg",
-        video: "/images/hero-platform-operating.mp4",
+        image: "/images/epci-overview.jpg",
+        video: "/images/vid-platform.mp4",
         badge: "Turnkey EPCI"
     },
     "Fabrication & Construction Services": {
-        image: "/images/4336e6f9ad99c36e92a0e2454ba170bf.jpg",
-        video: "/images/video-worker-welding-fabrication.mp4",
+        image: "/images/fabrication-welding.jpg",
+        video: "/images/hero-welding.mp4",
         badge: "Heavy Fabrication"
     },
     "Engineering and Procurements": {
-        image: "/images/60abdd36f4c4d894e9fd0f5f1a5907fc.jpg",
-        video: "/images/video-engineers-operating-plant.mp4",
+        image: "/images/feed-procurement.jpg",
+        video: "/images/vid-operations.mp4",
         badge: "FEED & Procurement"
     },
     "Facility Operations Support Services": {
-        image: "/images/6cf988503aff866bd7f5aea9241828a2.jpg",
-        video: "/images/video-shipyard-maintenance-team.mp4",
+        image: "/images/facility-support.jpg",
+        video: "/images/vid-shipyard.mp4",
         badge: "Facility Support"
     },
     "Pipeline Engineering and Field Services": {
-        image: "/images/ecbda25a526406e791a0a92fd2f3cf40.jpg",
-        video: "/images/hero-supply-vessel.mp4",
+        image: "/images/pipeline-subsea.jpg",
+        video: "/images/hero-vessel.mp4",
         badge: "Pipeline & Subsea"
     }
 };

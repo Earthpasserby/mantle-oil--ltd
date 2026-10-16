@@ -138,10 +138,10 @@ const Services = () => {
                         loop
                         muted
                         playsInline
-                        poster="/images/bc73ef5b884268ec94e67cf95b6dba66.jpg"
+                        poster="/images/epci-overview.jpg"
                         className="w-full h-full object-cover opacity-25"
                     >
-                        <source src="/images/video-offshore-sunset-aerial.mp4" type="video/mp4" />
+                        <source src="/images/vid-sunset.mp4" type="video/mp4" />
                     </video>
                     <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/80 to-black" />
                 </div>
