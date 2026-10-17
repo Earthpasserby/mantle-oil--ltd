@@ -1,0 +1,31 @@
+Source URL,Destination URL,Status Code,Notes
+http://www.mantle-gold.com/*,https://mantle-gold.com/:splat,301,Force non-www and HTTPS canonical
+https://www.mantle-gold.com/*,https://mantle-gold.com/:splat,301,Force non-www canonical
+http://mantle-gold.com/*,https://mantle-gold.com/:splat,301,Force HTTPS
+/index.html,/,301,Directory root canonicalization
+/home,/,301,Legacy alias redirect
+/about.html,/about,301,Legacy static page mapping
+/about-us,/about,301,Legacy alias redirect
+/company,/about,301,Legacy alias redirect
+/services.html,/services,301,Legacy static page mapping
+/our-services,/services,301,Legacy alias redirect
+/epci.html,/services/epci,301,Legacy static page mapping
+/epci,/services/epci,301,Direct service URL migration
+/services/epci.html,/services/epci,301,Legacy static extension removal
+/subsea.html,/services/subsea-engineering,301,Legacy static page mapping
+/subsea-engineering.html,/services/subsea-engineering,301,Legacy static page mapping
+/services/subsea,/services/subsea-engineering,301,Canonical slug standardization
+/pipeline.html,/services/pipeline-engineering,301,Legacy static page mapping
+/pipeline-engineering.html,/services/pipeline-engineering,301,Legacy static page mapping
+/services/pipeline,/services/pipeline-engineering,301,Canonical slug standardization
+/asset-integrity.html,/services/asset-integrity,301,Legacy static page mapping
+/asset-support.html,/services/asset-integrity,301,Legacy static page mapping
+/services/asset-support,/services/asset-integrity,301,Canonical slug standardization
+/fabrication.html,/services/fabrication,301,Legacy static page mapping
+/services/fabrication.html,/services/fabrication,301,Legacy static extension removal
+/procurement.html,/services/procurement,301,Legacy static page mapping
+/procurements.html,/services/procurement,301,Legacy static page mapping
+/services/procurements,/services/procurement,301,Canonical slug standardization
+/contact.html,/contact,301,Legacy static page mapping
+/contact-us,/contact,301,Legacy alias redirect
+/contact-us.html,/contact,301,Legacy static page mapping
