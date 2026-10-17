@@ -2,13 +2,17 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 const useCountUp = (end, duration = 2000, startCounting = false) => {
-    const [count, setCount] = useState(0);
+    // Default to the actual value so server HTML, no-JS, and search engine crawlers never see 0
+    const [count, setCount] = useState(end);
     const isNumber = typeof end === 'number';
+    const hasAnimatedRef = useRef(false);
 
     useEffect(() => {
-        if (!startCounting || !isNumber) return;
+        if (!startCounting || !isNumber || hasAnimatedRef.current) return;
+        hasAnimatedRef.current = true;
 
         let startTime = null;
+        setCount(0); // Animate smoothly for human visitors in view
         const step = (timestamp) => {
             if (!startTime) startTime = timestamp;
             const progress = Math.min((timestamp - startTime) / duration, 1);
@@ -35,6 +39,7 @@ const StatCard = ({ number, suffix = '', label, index }) => {
     const formattedCount = numericValue !== null
         ? displayCount.toLocaleString() + suffix
         : number;
+    const fallbackStaticText = (numericValue !== null ? numericValue.toLocaleString() : number) + suffix;
 
     return (
         <motion.div

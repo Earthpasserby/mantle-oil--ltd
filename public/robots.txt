@@ -1,0 +1,12 @@
+# Robots.txt for Mantle-Gold Ltd (https://mantle-gold.com)
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /thank-you
+Disallow: /404
+
+# Host
+Host: https://mantle-gold.com
+
+# Sitemap
+Sitemap: https://mantle-gold.com/sitemap.xml

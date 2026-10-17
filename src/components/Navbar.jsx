@@ -50,7 +50,20 @@ const Navbar = () => {
         { name: 'Home', path: '/' },
         { name: 'About', path: '/about' },
         { name: 'Services', path: '/services' },
+        { name: 'Blog', path: '/blog' },
         { name: 'Contact', path: '/contact' },
+    ];
+
+    const [servicesDropdown, setServicesDropdown] = useState(false);
+    const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+
+    const serviceSubLinks = [
+        { name: 'EPCI Project Execution', path: '/services/epci' },
+        { name: 'Subsea Engineering', path: '/services/subsea-engineering' },
+        { name: 'Pipeline Engineering', path: '/services/pipeline-engineering' },
+        { name: 'Asset Integrity', path: '/services/asset-integrity' },
+        { name: 'Fabrication & Welding', path: '/services/fabrication' },
+        { name: 'Procurement Services', path: '/services/procurement' },
     ];
 
     const menuVariants = {
@@ -89,10 +102,10 @@ const Navbar = () => {
         <nav className={`fixed top-0 left-0 right-0 w-full z-50 transition-colors duration-300 ${scrolled ? 'bg-black/95 md:backdrop-blur-md py-3 sm:py-4 shadow-xl' : isOpen ? 'bg-black py-3 sm:py-4' : 'bg-transparent py-4 md:py-6'}`}>
             <div className="container mx-auto px-4 sm:px-6 flex justify-between items-center relative z-50">
                 <Link to="/" className="flex items-center gap-2.5 sm:gap-3 max-w-[calc(100%-54px)] md:max-w-none">
-                    <img src="/logo.png" alt="Mantle-Gold Ltd" className="h-9 sm:h-11 md:h-12 flex-shrink-0" />
+                    <img src="/logo.png" alt="Mantle-Gold Ltd logo" className="h-9 sm:h-11 md:h-12 flex-shrink-0" />
                     <div className="flex flex-col min-w-0">
                         <span className="text-base sm:text-lg md:text-xl font-bold tracking-wide text-white leading-tight truncate">
-                            MANTLE-GOLD LTD
+                            Mantle-Gold Ltd
                         </span>
                         <span className="text-[9px] sm:text-[10px] text-gold tracking-wider sm:tracking-widest uppercase mt-0.5 truncate">
                             Oil, Gas &amp; Energy Solutions
@@ -101,16 +114,53 @@ const Navbar = () => {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex gap-8 items-center text-sm font-medium text-gray-300">
-                    {navLinks.map((link) => (
+                <div className="hidden md:flex gap-7 items-center text-sm font-medium text-gray-300">
+                    <Link
+                        to="/"
+                        aria-current={location.pathname === '/' ? 'page' : undefined}
+                        className={`relative hover:text-gold transition-colors py-2 ${location.pathname === '/' ? 'text-gold' : ''}`}
+                    >
+                        Home
+                        {location.pathname === '/' && (
+                            <motion.div
+                                layoutId="navbar-indicator"
+                                className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold"
+                                initial={false}
+                                transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                            />
+                        )}
+                    </Link>
+
+                    <Link
+                        to="/about"
+                        aria-current={location.pathname === '/about' ? 'page' : undefined}
+                        className={`relative hover:text-gold transition-colors py-2 ${location.pathname === '/about' ? 'text-gold' : ''}`}
+                    >
+                        About
+                        {location.pathname === '/about' && (
+                            <motion.div
+                                layoutId="navbar-indicator"
+                                className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold"
+                                initial={false}
+                                transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                            />
+                        )}
+                    </Link>
+
+                    {/* Services with Desktop Dropdown */}
+                    <div
+                        className="relative"
+                        onMouseEnter={() => setServicesDropdown(true)}
+                        onMouseLeave={() => setServicesDropdown(false)}
+                    >
                         <Link
-                            key={link.name}
-                            to={link.path}
-                            aria-current={location.pathname === link.path ? 'page' : undefined}
-                            className={`relative hover:text-gold transition-colors py-2 ${location.pathname === link.path ? 'text-gold' : ''}`}
+                            to="/services"
+                            aria-current={location.pathname.startsWith('/services') ? 'page' : undefined}
+                            className={`relative hover:text-gold transition-colors py-2 flex items-center gap-1 ${location.pathname.startsWith('/services') ? 'text-gold' : ''}`}
                         >
-                            {link.name}
-                            {location.pathname === link.path && (
+                            <span>Services</span>
+                            <span className="text-[10px] text-gold">▾</span>
+                            {location.pathname.startsWith('/services') && (
                                 <motion.div
                                     layoutId="navbar-indicator"
                                     className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold"
@@ -119,7 +169,57 @@ const Navbar = () => {
                                 />
                             )}
                         </Link>
-                    ))}
+
+                        <AnimatePresence>
+                            {servicesDropdown && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: 10 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="absolute top-full left-0 w-64 bg-slate/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl py-2 z-50 overflow-hidden"
+                                >
+                                    <div className="px-4 py-2 border-b border-white/5 text-[10px] uppercase font-bold text-gold tracking-widest">
+                                        Engineering &amp; EPCI
+                                    </div>
+                                    {serviceSubLinks.map((sub) => (
+                                        <Link
+                                            key={sub.path}
+                                            to={sub.path}
+                                            className="block px-4 py-2.5 text-xs text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
+                                        >
+                                            {sub.name}
+                                        </Link>
+                                    ))}
+                                    <div className="border-t border-white/5 mt-1 pt-1">
+                                        <Link
+                                            to="/services"
+                                            className="block px-4 py-2 text-xs font-bold text-gold hover:text-yellow-400"
+                                        >
+                                            View All Services &rarr;
+                                        </Link>
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
+
+                    <Link
+                        to="/contact"
+                        aria-current={location.pathname === '/contact' ? 'page' : undefined}
+                        className={`relative hover:text-gold transition-colors py-2 ${location.pathname === '/contact' ? 'text-gold' : ''}`}
+                    >
+                        Contact
+                        {location.pathname === '/contact' && (
+                            <motion.div
+                                layoutId="navbar-indicator"
+                                className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold"
+                                initial={false}
+                                transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                            />
+                        )}
+                    </Link>
+
                     <Link to="/contact" className="bg-gold text-black px-6 py-2.5 rounded-full font-bold hover:bg-yellow-500 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-gold focus:outline-none shadow-lg shadow-gold/20">
                         Get Started
                     </Link>
@@ -169,24 +269,73 @@ const Navbar = () => {
                         className="fixed inset-0 w-screen h-screen min-h-[100dvh] bg-black z-40 flex flex-col pt-20 sm:pt-24 pb-8 px-6 md:hidden overflow-y-auto"
                     >
                         <div className="flex flex-col justify-between flex-1 max-w-md mx-auto w-full py-4">
-                            <div className="flex flex-col gap-4 sm:gap-5">
-                                {navLinks.map((link, i) => (
-                                    <motion.div
-                                        key={link.name}
-                                        custom={i}
-                                        variants={linkVariants}
-                                        className="border-b border-white/10 pb-3 sm:pb-4"
+                            <div className="flex flex-col gap-3 sm:gap-4">
+                                <div className="border-b border-white/10 pb-3">
+                                    <Link
+                                        to="/"
+                                        className={`text-xl font-serif font-bold flex justify-between items-center ${location.pathname === '/' ? 'text-gold' : 'text-white'}`}
+                                        onClick={() => setIsOpen(false)}
                                     >
+                                        Home
+                                        <ChevronRight size={18} className={location.pathname === '/' ? 'text-gold' : 'text-gray-600'} />
+                                    </Link>
+                                </div>
+
+                                <div className="border-b border-white/10 pb-3">
+                                    <Link
+                                        to="/about"
+                                        className={`text-xl font-serif font-bold flex justify-between items-center ${location.pathname === '/about' ? 'text-gold' : 'text-white'}`}
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        About Us
+                                        <ChevronRight size={18} className={location.pathname === '/about' ? 'text-gold' : 'text-gray-600'} />
+                                    </Link>
+                                </div>
+
+                                <div className="border-b border-white/10 pb-3">
+                                    <div className="flex justify-between items-center">
                                         <Link
-                                            to={link.path}
-                                            className={`text-2xl sm:text-3xl font-serif font-bold flex justify-between items-center ${location.pathname === link.path ? 'text-gold' : 'text-white'}`}
+                                            to="/services"
+                                            className={`text-xl font-serif font-bold ${location.pathname.startsWith('/services') ? 'text-gold' : 'text-white'}`}
                                             onClick={() => setIsOpen(false)}
                                         >
-                                            {link.name}
-                                            <ChevronRight size={22} className={`transition-transform ${location.pathname === link.path ? 'text-gold translate-x-1' : 'text-gray-600'}`} />
+                                            Services Hub
                                         </Link>
-                                    </motion.div>
-                                ))}
+                                        <button
+                                            onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                                            className="text-xs text-gold py-1 px-2 border border-gold/30 rounded"
+                                            aria-label="Toggle sub-services"
+                                        >
+                                            {mobileServicesOpen ? '▲ Hide' : '▼ Sub-pages'}
+                                        </button>
+                                    </div>
+
+                                    {mobileServicesOpen && (
+                                        <div className="mt-2.5 pl-3 border-l-2 border-gold/30 space-y-2">
+                                            {serviceSubLinks.map((sub) => (
+                                                <Link
+                                                    key={sub.path}
+                                                    to={sub.path}
+                                                    className="block text-xs text-gray-300 hover:text-gold py-1"
+                                                    onClick={() => setIsOpen(false)}
+                                                >
+                                                    {sub.name}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+
+                                <div className="border-b border-white/10 pb-3">
+                                    <Link
+                                        to="/contact"
+                                        className={`text-xl font-serif font-bold flex justify-between items-center ${location.pathname === '/contact' ? 'text-gold' : 'text-white'}`}
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        Contact Us
+                                        <ChevronRight size={18} className={location.pathname === '/contact' ? 'text-gold' : 'text-gray-600'} />
+                                    </Link>
+                                </div>
                             </div>
 
                             <motion.div

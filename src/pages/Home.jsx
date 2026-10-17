@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { ArrowRight, Shield, Award, Activity, Sparkles, CheckCircle2, ClipboardCheck, ShieldCheck, Waves } from 'lucide-react';
+import { ArrowRight, Shield, Award, Activity, Sparkles, CheckCircle2, ClipboardCheck, ShieldCheck, Waves, Anchor, Wrench, PackageCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Stats from '../components/Stats';
 import SEO from '../components/SEO';
 import CTABanner from '../components/CTABanner';
 import HeroVideoBackground from '../components/HeroVideoBackground';
+import FAQAccordion from '../components/FAQAccordion';
 
 const clients = [
     { name: "Shell Nigeria", logo: "/logos/shel.png" },
@@ -47,6 +48,74 @@ const missionTabs = [
     }
 ];
 
+const homeFaqs = [
+    {
+        question: "What core services does Mantle-Gold Ltd provide in Nigeria?",
+        answer: "Mantle-Gold Ltd delivers end-to-end EPCI project execution, subsea engineering, offshore and onshore pipeline installation, asset integrity management, structural fabrication, and specialized energy procurement for Nigeria's oil and gas sector."
+    },
+    {
+        question: "Where is Mantle-Gold Ltd located and what regions do you serve?",
+        answer: "Mantle-Gold Ltd is headquartered at 31 Discovery Gardens Estate, Lekki, Lagos, Nigeria. We execute projects across the Niger Delta, offshore Gulf of Guinea, Port Harcourt, Warri, and major deepwater basins."
+    },
+    {
+        question: "What technical qualifications and safety standards does Mantle-Gold Ltd maintain?",
+        answer: "Our leadership includes a Shell-Certified Technical Authority in Subsea Systems. We operate under rigorous ISO 9001 quality and ISO 45001 occupational safety guidelines, with a 98% safety rating and zero Lost Time Injuries (LTI) across 532,480+ cumulative project man-hours."
+    },
+    {
+        question: "How does Mantle-Gold Ltd comply with Nigerian Content (NCDMB) requirements?",
+        answer: "Mantle-Gold Ltd is 100% committed to Nigerian Content development under the NOGICD Act. We prioritize local engineering talent, domestic fabrication facilities in Lagos and the Niger Delta, and local vendor ecosystems."
+    },
+    {
+        question: "What are some of Mantle-Gold Ltd's landmark projects in Nigeria?",
+        answer: "Notable project milestones include the Okwori Field umbilical and flexible flowline relocation for ADDAX Petroleum, as well as deepwater subsea FEED, technical authority oversight, and ITT engineering support on major SNEPCo deepwater assets."
+    }
+];
+
+const servicesList = [
+    {
+        slug: "/services/epci",
+        title: "EPCI Project Execution",
+        icon: ClipboardCheck,
+        desc: "Turnkey engineering, procurement, fabrication, and offshore commissioning for complex upstream and midstream energy infrastructure.",
+        image: "/images/epci-overview.jpg"
+    },
+    {
+        slug: "/services/subsea-engineering",
+        title: "Subsea Engineering Services",
+        icon: Anchor,
+        desc: "Deepwater SURF design, flowline tie-ins, subsea manifold installation, and umbilical lay operations under Shell-Certified TA governance.",
+        image: "/images/subsea-vessel.jpg"
+    },
+    {
+        slug: "/services/pipeline-engineering",
+        title: "Pipeline Engineering & Installation",
+        icon: Waves,
+        desc: "Onshore, swamp, and offshore pipeline design, trenching, horizontal directional drilling, hydrostatic testing, and pre-commissioning.",
+        image: "/images/pipeline-subsea.jpg"
+    },
+    {
+        slug: "/services/asset-integrity",
+        title: "Asset Integrity Management",
+        icon: ShieldCheck,
+        desc: "Risk-based inspection, non-destructive testing, corrosion monitoring, and structural lifecycle extension for aging offshore production platforms.",
+        image: "/images/asset-integrity.jpg"
+    },
+    {
+        slug: "/services/fabrication",
+        title: "Oil & Gas Structural Fabrication",
+        icon: Wrench,
+        desc: "Certified heavy structural steel fabrication, spool piping, subsea manifolds, and skid assemblies manufactured in Lagos to international codes.",
+        image: "/images/fabrication-yard.jpg"
+    },
+    {
+        slug: "/services/procurement",
+        title: "Procurement & Supply Chain",
+        icon: PackageCheck,
+        desc: "Global supply chain management, API-grade casing and tubular goods, subsea valves, flowline components, and expedite logistics to site.",
+        image: "/images/warehouse-valves.jpg"
+    }
+];
+
 const Home = () => {
     const [activeMissionTab, setActiveMissionTab] = useState(0);
 
@@ -59,9 +128,10 @@ const Home = () => {
             className="font-sans bg-black text-white"
         >
             <SEO
-                title="Home"
-                description="Mantle-Gold Limited — leading EPCI and Engineering Solutions provider in the Oil, Gas, and Energy sector. 10+ years of excellence in subsea engineering, pipeline construction, and asset integrity across Nigeria and West Africa."
-                keywords="Mantle-Gold, oil and gas Nigeria, EPCI, subsea engineering, pipeline engineering, asset integrity, Lagos, offshore platform video"
+                title="Mantle-Gold Ltd | EPCI & Oil and Gas Services in Nigeria"
+                description="Mantle-Gold Ltd is a Lagos-based EPCI contractor: subsea engineering, pipeline installation and asset integrity for Nigeria's oil and gas sector."
+                canonical="https://mantle-gold.com/"
+                type="website"
             />
 
             {/* Hero Section with Interactive Video Background */}
@@ -77,7 +147,7 @@ const Home = () => {
                         className="inline-flex items-center gap-2 bg-black/60 backdrop-blur-md border border-gold/30 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-gold uppercase tracking-[0.18em] sm:tracking-[0.25em] text-[10px] sm:text-xs font-bold mb-4 sm:mb-6 shadow-xl"
                     >
                         <Sparkles size={13} className="text-gold" />
-                        <span>MANTLE-GOLD LTD &bull; EPCI EXCELLENCE</span>
+                        <span>MANTLE-GOLD LTD &bull; NIGERIAN EPCI EXCELLENCE</span>
                     </motion.div>
 
                     <motion.h1
@@ -86,8 +156,7 @@ const Home = () => {
                         transition={{ delay: 0.4, duration: 0.6 }}
                         className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 sm:mb-8 leading-[1.18] max-w-5xl mx-auto pb-1"
                     >
-                        OIL, GAS AND ENERGY PRODUCTS <br className="hidden sm:inline" />
-                        <span className="text-gradient">&amp; ENGINEERING SOLUTIONS</span>
+                        Mantle-Gold Ltd: EPCI and Engineering Solutions for Nigeria's Oil and Gas Industry
                     </motion.h1>
 
                     <motion.p
@@ -96,7 +165,7 @@ const Home = () => {
                         transition={{ delay: 0.6, duration: 0.6 }}
                         className="text-gray-200 text-sm sm:text-lg md:text-xl max-w-3xl mx-auto mb-6 sm:mb-10 font-light leading-relaxed drop-shadow-md px-2"
                     >
-                        Leading the global transition with innovative extraction technologies, certified subsea engineering, and a proven track record delivering major projects for Shell, Addax, and ExxonMobil.
+                        Mantle-Gold Ltd delivers premier turnkey EPCI, subsea installation, pipeline engineering, and asset integrity management for offshore and onshore energy operators across Nigeria and the Gulf of Guinea.
                     </motion.p>
 
                     <motion.div
@@ -109,13 +178,13 @@ const Home = () => {
                             to="/services"
                             className="w-full sm:w-auto bg-gold text-black px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold hover:bg-yellow-400 transition-all hover:scale-105 flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(232,141,20,0.4)] text-sm sm:text-base"
                         >
-                            Explore Our Operations <ArrowRight size={18} />
+                            Explore Our Services <ArrowRight size={18} />
                         </Link>
                         <Link
                             to="/about"
                             className="w-full sm:w-auto bg-black/60 hover:bg-white/10 text-white border border-white/20 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold transition-all backdrop-blur-md flex items-center justify-center gap-2 text-sm sm:text-base"
                         >
-                            <span>Our Operations Gallery</span>
+                            <span>About Mantle-Gold Ltd</span>
                         </Link>
                     </motion.div>
                 </div>
@@ -141,20 +210,20 @@ const Home = () => {
             <Stats />
 
             {/* Mission & Purpose Section with Interactive Media Switcher */}
-            <section className="py-10 sm:py-16 md:py-24 bg-darker relative overflow-hidden" aria-label="Our Mission">
+            <section className="py-12 sm:py-16 md:py-24 bg-darker relative overflow-hidden" aria-label="Our Purpose">
                 <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-center">
                     {/* Left text */}
                     <div className="lg:col-span-6">
                         <span className="text-gold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[10px] sm:text-xs font-bold mb-2 sm:mb-4 block">Our Purpose</span>
                         <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold mb-3 sm:mb-6 leading-tight break-words">
-                            Redefining Energy <br className="hidden sm:inline" />
-                            <span className="text-gold">Production &amp; Engineering</span>
+                            Proven EPCI Engineering <br className="hidden sm:inline" />
+                            <span className="text-gold">Delivered in Nigeria</span>
                         </h2>
                         <p className="text-gray-300 mb-3 sm:mb-5 leading-relaxed text-xs sm:text-base md:text-lg">
-                            MANTLE-GOLD LTD is the community and IOC partner of choice as we develop oil, natural gas, and energy infrastructure in a sustainable, technologically advanced manner.
+                            Mantle-Gold Ltd is the trusted engineering contractor of choice for International Oil Companies (IOCs) and Nigerian independents developing critical oil, natural gas, and offshore energy infrastructure.
                         </p>
                         <p className="text-gray-300 mb-5 sm:mb-7 leading-relaxed text-xs sm:text-base md:text-lg">
-                            With over a decade of operational excellence and 532,480 cumulative man-hours delivered safely, we bring proven expertise from FEED to deepwater umbilical relocation and high-pressure subsea flowlines.
+                            With over a decade of operational excellence, Shell-certified technical governance, and 532,480 cumulative safe man-hours, Mantle-Gold Ltd combines world-class engineering standards with 100% Nigerian Content compliance.
                         </p>
 
                         {/* Interactive Highlights List */}
@@ -180,11 +249,9 @@ const Home = () => {
 
                     {/* Right Interactive Media Card Deck */}
                     <div className="lg:col-span-6 relative">
-                        {/* Glow halo */}
                         <div className="absolute -inset-4 bg-gold/15 rounded-3xl filter blur-3xl opacity-40 pointer-events-none" />
 
                         <div className="relative bg-slate rounded-2xl sm:rounded-3xl p-3 sm:p-5 md:p-6 border border-white/10 shadow-2xl overflow-hidden">
-                            {/* Card Header Selector Tabs: 2x2 grid on mobile, flex on sm+ so no tab is ever cut off */}
                             <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                                 {missionTabs.map((tab, idx) => (
                                     <button
@@ -218,7 +285,6 @@ const Home = () => {
 
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none" />
 
-                                {/* Caption & Tag */}
                                 <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-4 sm:left-4 sm:right-4 z-10 flex items-end justify-between gap-2">
                                     <div>
                                         <span className="text-[9px] sm:text-[10px] uppercase tracking-widest text-gold font-bold bg-black/70 backdrop-blur-md px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md border border-gold/30 inline-block mb-1">
@@ -251,95 +317,106 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Services Preview Section */}
-            <section className="py-10 sm:py-16 md:py-24 bg-black relative overflow-hidden" aria-label="Our Services">
+            {/* Complete Services Grid - Linking to Every Service Page */}
+            <section className="py-12 sm:py-16 md:py-24 bg-black relative overflow-hidden" aria-label="Our Services">
                 <div className="container mx-auto px-4 sm:px-6">
                     <div className="text-center mb-8 sm:mb-14">
-                        <span className="text-gold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[10px] sm:text-xs font-bold">What We Do</span>
-                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold mt-2 sm:mt-3 text-white">Comprehensive Solutions</h2>
+                        <span className="text-gold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[10px] sm:text-xs font-bold">Specialized Solutions</span>
+                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold mt-2 sm:mt-3 text-white">Our Oil &amp; Gas Services</h2>
                         <p className="text-gray-400 mt-2 sm:mt-4 max-w-2xl mx-auto text-xs sm:text-base md:text-lg px-2 leading-relaxed">
-                            From front-end engineering design to offshore installation and asset integrity, we deliver end-to-end excellence across the energy value chain.
+                            Mantle-Gold Ltd provides six specialized service divisions engineered to deliver lifecycle integrity and operational reliability for energy assets in Nigeria.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
-                        {[
-                            {
-                                icon: ClipboardCheck,
-                                title: "EPCI Project Execution",
-                                desc: "End-to-end Engineering, Procurement, Construction, and Installation services delivered with precision and safety.",
-                                image: "/images/epci-overview.jpg"
-                            },
-                            {
-                                icon: ShieldCheck,
-                                title: "Asset Support & Integrity",
-                                desc: "Comprehensive maintenance and integrity management solutions to extend the lifecycle of your offshore and onshore assets.",
-                                image: "/images/asset-integrity.jpg"
-                            },
-                            {
-                                icon: Waves,
-                                title: "Pipeline Engineering",
-                                desc: "Specialized pipeline design, installation, and field services ensuring flow assurance and infrastructure reliability.",
-                                image: "/images/pipeline-subsea.jpg"
-                            }
-                        ].map((service, i) => {
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {servicesList.map((service, i) => {
                             const IconComponent = service.icon;
                             return (
                                 <div
                                     key={i}
                                     className="group relative rounded-2xl overflow-hidden bg-slate border border-white/10 hover:border-gold/40 transition-all duration-300 shadow-xl flex flex-col"
                                 >
-                                    <div className="h-44 sm:h-48 md:h-44 overflow-hidden relative flex-shrink-0">
+                                    <div className="h-48 overflow-hidden relative flex-shrink-0">
                                         <img
                                             src={service.image}
                                             alt={service.title}
                                             loading="lazy"
                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate via-slate/30 to-transparent" />
-                                        <div className="absolute bottom-3 left-4 text-gold p-2 sm:p-2.5 bg-black/80 rounded-xl border border-gold/30">
-                                            <IconComponent size={20} />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate via-slate/40 to-transparent" />
+                                        <div className="absolute bottom-3 left-4 text-gold p-2.5 bg-black/80 rounded-xl border border-gold/30">
+                                            <IconComponent size={22} />
                                         </div>
                                     </div>
-                                    <div className="p-4 sm:p-6 flex flex-col flex-1">
-                                        <h3 className="text-base sm:text-lg font-bold mb-1.5 sm:mb-2 text-white group-hover:text-gold transition-colors">{service.title}</h3>
-                                        <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-4 flex-grow">{service.desc}</p>
-                                        <Link to="/services" className="inline-flex items-center text-gold text-xs sm:text-sm font-semibold hover:underline mt-auto">
-                                            Learn More <ArrowRight className="ml-1.5 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                                    <div className="p-6 flex flex-col flex-1">
+                                        <h3 className="text-lg font-bold mb-2 text-white group-hover:text-gold transition-colors">{service.title}</h3>
+                                        <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">{service.desc}</p>
+                                        <Link to={service.slug} className="inline-flex items-center text-gold text-sm font-semibold hover:underline mt-auto">
+                                            Explore Service <ArrowRight className="ml-1.5 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                         </Link>
                                     </div>
                                 </div>
                             );
                         })}
                     </div>
+                </div>
+            </section>
 
-                    <div className="text-center mt-6 sm:mt-10">
-                        <Link to="/services" className="text-gold font-bold hover:text-yellow-400 inline-flex items-center gap-2 group text-xs sm:text-base">
-                            <span>View All 6 Core Services</span>
-                            <ArrowRight size={16} className="group-hover:translate-x-1.5 transition-transform" />
-                        </Link>
+            {/* Featured Projects Section */}
+            <section className="py-12 sm:py-16 md:py-24 bg-darker relative" aria-label="Featured Projects">
+                <div className="container mx-auto px-4 sm:px-6">
+                    <div className="text-center mb-12">
+                        <span className="text-gold uppercase tracking-[0.25em] text-xs font-bold">Track Record</span>
+                        <h2 className="text-2xl sm:text-4xl font-serif font-bold mt-2 text-white">Featured Project Milestones</h2>
+                        <p className="text-gray-400 mt-3 max-w-2xl mx-auto text-sm sm:text-base">
+                            Field-proven engineering performance across demanding onshore and offshore operational environments in Nigeria.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        <div className="bg-slate p-8 rounded-2xl border border-white/10 hover:border-gold/30 transition-all">
+                            <span className="text-gold text-xs font-bold uppercase tracking-widest bg-gold/10 px-3 py-1 rounded-full border border-gold/20 inline-block mb-4">
+                                ADDAX Petroleum &bull; Okwori Field
+                            </span>
+                            <h3 className="text-xl font-bold text-white mb-3">Umbilicals &amp; Flexible Flowlines Relocation</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                                Executed offshore subsea engineering and technical coordination for the safe disconnect, recovery, re-routing, and re-installation of dynamic subsea umbilicals and flexible production flowlines, maintaining uninterrupted asset integrity.
+                            </p>
+                            <div className="flex items-center gap-4 text-xs text-gray-400 border-t border-white/5 pt-4">
+                                <span><strong>Role:</strong> Subsea Engineering Support</span>
+                                <span>&bull;</span>
+                                <span><strong>Outcome:</strong> Zero Incidents</span>
+                            </div>
+                        </div>
+
+                        <div className="bg-slate p-8 rounded-2xl border border-white/10 hover:border-gold/30 transition-all">
+                            <span className="text-gold text-xs font-bold uppercase tracking-widest bg-gold/10 px-3 py-1 rounded-full border border-gold/20 inline-block mb-4">
+                                SNEPCo &bull; Deepwater Gulf of Guinea
+                            </span>
+                            <h3 className="text-xl font-bold text-white mb-3">Subsea FEED &amp; Technical Authority Oversight</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                                Provided Front-End Engineering Design (FEED) verification, Invitation to Tender (ITT) package development, and Shell-Certified Technical Authority (TA) review for major subsea production systems and deepwater flowline networks.
+                            </p>
+                            <div className="flex items-center gap-4 text-xs text-gray-400 border-t border-white/5 pt-4">
+                                <span><strong>Role:</strong> Technical Authority / FEED</span>
+                                <span>&bull;</span>
+                                <span><strong>Standard:</strong> Shell DEP</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Client Marquee */}
-            <section className="py-10 sm:py-16 md:py-20 bg-darker overflow-hidden" aria-label="Our Clients">
-                <div className="container mx-auto px-4 sm:px-6 mb-6 sm:mb-10">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-center"
-                    >
-                        <span className="text-gold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[10px] sm:text-xs font-bold">Trusted By Industry Leaders</span>
-                        <h2 className="text-2xl sm:text-4xl font-serif font-bold mt-2 sm:mt-3">Our <span className="text-gold">Clients</span></h2>
-                    </motion.div>
+            <section className="py-10 sm:py-16 md:py-20 bg-black overflow-hidden" aria-label="Our Clients">
+                <div className="container mx-auto px-4 sm:px-6 mb-6 sm:mb-10 text-center">
+                    <span className="text-gold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[10px] sm:text-xs font-bold">Trusted By Industry Leaders</span>
+                    <h2 className="text-2xl sm:text-4xl font-serif font-bold mt-2 sm:mt-3">Our <span className="text-gold">Clients</span></h2>
                 </div>
 
-                {/* Infinite marquee */}
                 <div className="relative">
-                    <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 md:w-24 bg-gradient-to-r from-darker to-transparent z-10 pointer-events-none" />
-                    <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 md:w-24 bg-gradient-to-l from-darker to-transparent z-10 pointer-events-none" />
+                    <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 md:w-24 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
+                    <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 md:w-24 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
                     <div className="marquee-track">
                         {[...clients, ...clients].map((client, index) => (
                             <div
@@ -364,6 +441,17 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+            </section>
+
+            {/* FAQ Section with FAQPage Schema */}
+            <section className="py-14 sm:py-20 bg-darker">
+                <div className="container mx-auto px-4 sm:px-6">
+                    <FAQAccordion
+                        title="Frequently Asked Questions About Mantle-Gold Ltd"
+                        subtitle="Key insights into our EPCI engineering capabilities, certifications, and project track record in Nigeria."
+                        faqs={homeFaqs}
+                    />
                 </div>
             </section>
 

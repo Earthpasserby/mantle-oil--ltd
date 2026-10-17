@@ -8,6 +8,17 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import EPCIService from './pages/services/EPCIService';
+import SubseaService from './pages/services/SubseaService';
+import PipelineService from './pages/services/PipelineService';
+import AssetIntegrityService from './pages/services/AssetIntegrityService';
+import FabricationService from './pages/services/FabricationService';
+import ProcurementService from './pages/services/ProcurementService';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import Blog from './pages/Blog';
+import ThankYou from './pages/ThankYou';
+import NotFound from './pages/NotFound';
 import './App.css';
 
 function App() {
@@ -25,7 +36,18 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/epci" element={<EPCIService />} />
+            <Route path="/services/subsea-engineering" element={<SubseaService />} />
+            <Route path="/services/pipeline-engineering" element={<PipelineService />} />
+            <Route path="/services/asset-integrity" element={<AssetIntegrityService />} />
+            <Route path="/services/fabrication" element={<FabricationService />} />
+            <Route path="/services/procurement" element={<ProcurementService />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
+            <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
       </main>

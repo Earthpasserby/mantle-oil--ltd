@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Target, Eye, Award, Briefcase, Shield, Leaf, HardHat, Calendar, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
-
+import Breadcrumbs from '../components/Breadcrumbs';
 import CTABanner from '../components/CTABanner';
 
 const clients = [
@@ -56,13 +56,21 @@ const About = () => {
             className="font-sans bg-black min-h-screen text-white"
         >
             <SEO
-                title="About Us & Operations"
-                description="Learn about Mantle-Gold Limited — founded in 2014, a leading Nigerian provider of Subsea Engineering, EPCI project delivery, and energy solutions. Explore our comprehensive operations gallery."
-                keywords="Mantle-Gold about, Nigerian oil gas company, EPCI Nigeria, subsea engineering history, Engr Ekere Afia, offshore photos, drilling videos"
+                title="About Mantle-Gold Ltd | Oil & Gas Engineering, Lagos"
+                description="Established in 2014, Mantle-Gold Ltd delivers EPCI and engineering services to Nigeria's oil and gas industry. Meet the team behind our projects."
+                canonical="https://mantle-gold.com/about"
+                type="website"
             />
 
+            {/* Breadcrumbs Navigation */}
+            <div className="pt-24 sm:pt-28 pb-4 bg-black">
+                <div className="container mx-auto px-4 sm:px-6">
+                    <Breadcrumbs items={[{ name: 'About Mantle-Gold Ltd', url: '/about' }]} />
+                </div>
+            </div>
+
             {/* Page Hero with Background Media Banner */}
-            <div className="relative pt-24 sm:pt-32 pb-14 sm:pb-20 overflow-hidden">
+            <div className="relative pt-8 sm:pt-12 pb-14 sm:pb-20 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <video
                         autoPlay
@@ -84,7 +92,7 @@ const About = () => {
                         transition={{ delay: 0.1 }}
                         className="inline-flex items-center gap-2 bg-black/60 border border-gold/30 px-3.5 py-1.5 rounded-full text-gold uppercase tracking-[0.18em] sm:tracking-[0.2em] text-[10px] sm:text-xs font-bold mb-4 shadow-lg"
                     >
-                        <Sparkles size={13} /> MANTLE-GOLD LTD
+                        <Sparkles size={13} /> NIGERIAN EPCI CONTRACTOR
                     </motion.span>
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
@@ -92,7 +100,7 @@ const About = () => {
                         transition={{ delay: 0.2 }}
                         className="text-3xl sm:text-5xl md:text-6xl font-serif font-bold mb-4 sm:mb-6 text-white"
                     >
-                        About <span className="text-gold">MANTLE-GOLD LTD</span>
+                        About Mantle-Gold Ltd
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -100,7 +108,7 @@ const About = () => {
                         transition={{ delay: 0.3 }}
                         className="text-gray-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed px-2"
                     >
-                        A multi-disciplinary service provider in Engineering, Procurement, Installation, and Construction Services — proudly Nigerian, globally competent, and committed to zero-harm operations.
+                        About Mantle-Gold Ltd: Established in June 2014 as an indigenous oil and gas engineering contractor in Lagos, Mantle-Gold Ltd delivers world-class EPCI, subsea installation, pipeline engineering, and asset integrity solutions for Nigeria's energy sector.
                     </motion.p>
                 </div>
             </div>
@@ -120,10 +128,10 @@ const About = () => {
                             A Decade of Engineering <span className="text-gold">Excellence</span>
                         </h2>
                         <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base md:text-lg">
-                            Mantle-Gold Ltd was registered with the Corporate Affairs Commission in June 2014. Since inception, she has grown to be a premier provider of expertise in Subsea Engineering, Pipeline Field Services, and Turnkey EPCI in Nigeria.
+                            Mantle-Gold Ltd was registered with the Corporate Affairs Commission in June 2014. Since inception, the company has grown to become a premier provider of expertise in Subsea Engineering, Pipeline Field Services, and Turnkey EPCI in Nigeria.
                         </p>
                         <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base md:text-lg">
-                            She has completed Front End Engineering Design (FEED) and Invitation for Tender (IFT) for Deepwater Projects in SNEPCo and Shallow-water projects in ADDAX. Mantle-Gold Limited recently relocated three umbilicals and flexible flowlines from donor to receiver wells in Okwori field for ADDAX.
+                            She has completed Front End Engineering Design (FEED) and Invitation for Tender (IFT) for Deepwater Projects in SNEPCo and Shallow-water projects in ADDAX. Mantle-Gold Ltd recently relocated three umbilicals and flexible flowlines from donor to receiver wells in Okwori field for ADDAX.
                         </p>
 
                         <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-2">
@@ -387,7 +395,7 @@ const About = () => {
 
                                 <div className="prose prose-sm sm:prose-base prose-invert max-w-none text-gray-300 space-y-3 sm:space-y-4 leading-relaxed">
                                     <p>
-                                        The Chief Executive Officer and Managing Director of Mantle-Gold Limited is Engr. Ekere Afia. He has over thirty-one (31) years of experience in the Oil and Gas Industry. Most of the experience were in ExxonMobil, SHELL and ADDAX in Nigeria and United States of America.
+                                        The Chief Executive Officer and Managing Director of Mantle-Gold Ltd is Engr. Ekere Afia. He has over thirty-one (31) years of experience in the Oil and Gas Industry. Most of the experience were in ExxonMobil, SHELL and ADDAX in Nigeria and United States of America.
                                     </p>
                                     <p>
                                         He has Civil Engineering and Project Management degrees and several Subsea Engineering Certifications in Nigeria and the United States of America. He is a SHELL certified Technical Authority (TA) in Subsea Systems. He specialises in the design, manufacture, installation and commissioning of Subsea Umbilicals and Distribution Equipment.
@@ -403,7 +411,7 @@ const About = () => {
                                 <div className="relative rounded-2xl overflow-hidden bg-slate border border-gold/40 shadow-2xl group">
                                     <img
                                         src="/images/ceo.jpg"
-                                        alt="Engr. Ekere Afia — CEO & Managing Director, Mantle-Gold Limited"
+                                        alt="Engr. Ekere Afia — CEO & Managing Director, Mantle-Gold Ltd"
                                         className="w-full h-72 sm:h-84 md:h-96 object-cover object-top transition-transform duration-500 group-hover:scale-105"
                                         onError={(e) => {
                                             // Fallback to portrait video if photo is still being uploaded

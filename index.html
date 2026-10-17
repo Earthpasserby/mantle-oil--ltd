@@ -1,27 +1,39 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-NG">
 
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <link rel="manifest" href="/site.webmanifest" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MANTLE-GOLD LTD - Oil, Gas & Energy Solutions</title>
-  <meta name="description" content="Mantle-Gold Limited is a multi-disciplinary service provider in Engineering, Procurement, Installation and Construction Services in the Oil and Gas Industry." />
-  <meta name="keywords" content="oil, gas, energy, EPCI, subsea engineering, pipeline engineering, offshore, onshore, Mantle-Gold, Nigeria, Lagos, fabrication" />
+  <meta name="theme-color" content="#C5A059" />
+
+  <title>Mantle-Gold Ltd | EPCI &amp; Oil and Gas Services in Nigeria</title>
+  <meta name="description" content="Mantle-Gold Ltd is a Lagos-based EPCI contractor: subsea engineering, pipeline installation and asset integrity for Nigeria's oil and gas sector." />
   <meta name="author" content="Mantle-Gold Ltd" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://mantle-gold.com" />
 
   <!-- Open Graph -->
+  <meta property="og:site_name" content="Mantle-Gold Ltd" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mantle-gold.com" />
-  <meta property="og:title" content="MANTLE-GOLD LTD - Oil, Gas & Energy Solutions" />
-  <meta property="og:description" content="Leading EPCI and Engineering Solutions provider in the Oil, Gas, and Energy sector." />
-  <meta property="og:site_name" content="Mantle-Gold Ltd" />
+  <meta property="og:title" content="Mantle-Gold Ltd | EPCI &amp; Oil and Gas Services in Nigeria" />
+  <meta property="og:description" content="Mantle-Gold Ltd is a Lagos-based EPCI contractor: subsea engineering, pipeline installation and asset integrity for Nigeria's oil and gas sector." />
+  <meta property="og:image" content="https://mantle-gold.com/images/og-mantle-gold.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Mantle-Gold Ltd EPCI &amp; Oil and Gas Engineering Solutions in Nigeria" />
+  <meta property="og:locale" content="en_NG" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MANTLE-GOLD LTD - Oil, Gas & Energy Solutions" />
+  <meta name="twitter:site" content="@mantlegold" />
+  <meta name="twitter:creator" content="@mantlegold" />
+  <meta name="twitter:title" content="Mantle-Gold Ltd | EPCI &amp; Oil and Gas Services in Nigeria" />
+  <meta name="twitter:description" content="Mantle-Gold Ltd is a Lagos-based EPCI contractor: subsea engineering, pipeline installation and asset integrity for Nigeria's oil and gas sector." />
+  <meta name="twitter:image" content="https://mantle-gold.com/images/og-mantle-gold.jpg" />
 
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,49 +42,82 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
     rel="stylesheet" />
 
-  <!-- Structured Data: Organization -->
+  <!-- Structured Data: Organization & WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Mantle-Gold Ltd",
-    "url": "https://mantle-gold.com",
-    "logo": "https://mantle-gold.com/logo.png",
-    "description": "Multi-disciplinary service provider in Engineering, Procurement, Installation and Construction Services for the Oil and Gas Industry.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "31 Discovery Garden Estate",
-      "addressLocality": "Lekki, Lagos",
-      "addressCountry": "NG"
-    },
-    "telephone": ["+2348032368599", "+2349121557656"],
-    "email": "info@mantle-gold.com",
-    "sameAs": [],
-    "foundingDate": "2014",
-    "areaServed": "West Africa",
-    "knowsAbout": ["EPCI", "Subsea Engineering", "Pipeline Engineering", "Oil and Gas", "Fabrication", "Asset Integrity"]
-  }
-  </script>
-
-  <!-- Structured Data: LocalBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Mantle-Gold Ltd",
-    "image": "https://mantle-gold.com/logo.png",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "31 Discovery Garden Estate",
-      "addressLocality": "Lekki",
-      "addressRegion": "Lagos",
-      "addressCountry": "NG"
-    },
-    "telephone": "+2348032368599",
-    "email": "info@mantle-gold.com",
-    "url": "https://mantle-gold.com",
-    "openingHours": "Mo-Fr 08:00-17:00",
-    "priceRange": "$$$$"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://mantle-gold.com/#organization",
+        "name": "Mantle-Gold Ltd",
+        "alternateName": [
+          "Mantle Gold Ltd",
+          "Mantle-Gold Limited",
+          "Mantle Gold Limited"
+        ],
+        "url": "https://mantle-gold.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mantle-gold.com/logo.png",
+          "caption": "Mantle-Gold Ltd logo"
+        },
+        "description": "Mantle-Gold Ltd is a Lagos-based EPCI contractor delivering subsea engineering, pipeline installation, fabrication, and asset integrity for Nigeria's oil and gas sector.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "31 Discovery Gardens Estate",
+          "addressLocality": "Lekki",
+          "addressRegion": "Lagos",
+          "postalCode": "105102",
+          "addressCountry": "NG"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+234-803-236-8599",
+            "contactType": "customer service",
+            "areaServed": "NG",
+            "availableLanguage": ["English"]
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+234-912-155-7656",
+            "contactType": "technical support",
+            "areaServed": "NG",
+            "availableLanguage": ["English"]
+          }
+        ],
+        "email": "info@mantleoilandgas.com",
+        "sameAs": [
+          "https://www.linkedin.com/company/mantle-gold-ltd/?viewAsMember=true",
+          "https://x.com/mantlegold",
+          "https://www.instagram.com/mantle.gold/"
+        ],
+        "foundingDate": "2014-06",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Nigeria"
+        },
+        "knowsAbout": [
+          "EPCI Project Execution",
+          "Subsea Umbilicals & Flowlines",
+          "Pipeline Engineering & Installation",
+          "Asset Integrity Management",
+          "Heavy Structural Fabrication & Welding",
+          "Oil & Gas Procurement Services"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mantle-gold.com/#website",
+        "url": "https://mantle-gold.com",
+        "name": "Mantle-Gold Ltd",
+        "publisher": {
+          "@id": "https://mantle-gold.com/#organization"
+        },
+        "inLanguage": "en-NG"
+      }
+    ]
   }
   </script>
 </head>
