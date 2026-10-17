@@ -1,6 +1,19 @@
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, ArrowUpRight, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, ArrowUpRight, MessageCircle, Linkedin, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
+
+const XIcon = ({ size = 18, className = "" }) => (
+    <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className={className}
+        aria-hidden="true"
+    >
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+);
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -16,22 +29,54 @@ const Footer = () => {
                             <span className="text-lg font-bold text-white">MANTLE-GOLD LTD</span>
                         </div>
                         <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                            Oil Gas & Energy Products & Engineering Solutions. Delivering EPCI excellence with safety, quality, and Nigerian local content strength.
+                            Oil Gas &amp; Energy Products &amp; Engineering Solutions. Delivering EPCI excellence with safety, quality, and Nigerian local content strength.
                         </p>
-                        <div className="flex gap-3">
+                        <div className="flex flex-wrap items-center gap-2.5">
                             <a
-                                href="https://wa.me/2348032368599"
+                                href="https://www.linkedin.com/company/mantle-gold-ltd/?viewAsMember=true"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-green-400 hover:border-green-400/30 transition-all"
+                                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#0A66C2] hover:border-[#0A66C2]/40 hover:bg-[#0A66C2]/10 transition-all"
+                                aria-label="Mantle-Gold Ltd on LinkedIn"
+                                title="LinkedIn"
+                            >
+                                <Linkedin size={18} />
+                            </a>
+                            <a
+                                href="https://x.com/mantlegold"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-white/40 hover:bg-white/10 transition-all"
+                                aria-label="Mantle-Gold Ltd on X"
+                                title="X (Twitter)"
+                            >
+                                <XIcon size={15} />
+                            </a>
+                            <a
+                                href="https://www.instagram.com/mantle.gold/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#E4405F] hover:border-[#E4405F]/40 hover:bg-[#E4405F]/10 transition-all"
+                                aria-label="Mantle-Gold Ltd on Instagram"
+                                title="Instagram"
+                            >
+                                <Instagram size={18} />
+                            </a>
+                            <a
+                                href="https://wa.me/2348032368599?text=Hello%20Mantle-Gold%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-green-400 hover:border-green-400/30 hover:bg-green-400/10 transition-all"
                                 aria-label="Chat on WhatsApp"
+                                title="WhatsApp"
                             >
                                 <MessageCircle size={18} />
                             </a>
                             <a
-                                href="mailto:info@mantle-gold.com"
-                                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold/30 transition-all"
+                                href="mailto:info@mantleoilandgas.com"
+                                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold/30 hover:bg-gold/10 transition-all"
                                 aria-label="Send email"
+                                title="Email Us"
                             >
                                 <Mail size={18} />
                             </a>
@@ -91,7 +136,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3 group">
                                 <Mail size={20} className="text-gold flex-shrink-0" />
-                                <a href="mailto:info@mantle-gold.com" className="group-hover:text-gray-300 transition-colors">info@mantle-gold.com</a>
+                                <a href="mailto:info@mantleoilandgas.com" className="group-hover:text-gray-300 transition-colors">info@mantleoilandgas.com</a>
                             </li>
                         </ul>
 

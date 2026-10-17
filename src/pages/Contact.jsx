@@ -1,8 +1,21 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, MessageCircle, Clock, Send, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageCircle, Clock, Send, CheckCircle2, Linkedin, Instagram } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SEO from '../components/SEO';
 import PageHero from '../components/PageHero';
+
+const XIcon = ({ size = 18, className = "" }) => (
+    <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className={className}
+        aria-hidden="true"
+    >
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+);
 
 const inquiryTypes = [
     "EPCI Project Inquiry",
@@ -64,7 +77,7 @@ const Contact = () => {
             formData.message
         ].join('%0D%0A');
 
-        window.location.href = `mailto:info@mantle-gold.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+        window.location.href = `mailto:info@mantleoilandgas.com?subject=${encodeURIComponent(subject)}&body=${body}`;
         setSubmitted(true);
     };
 
@@ -113,7 +126,7 @@ const Contact = () => {
                                 {[
                                     { icon: <MapPin />, title: "Office Address", content: "31 Discovery Garden Estate, Lekki Lagos Nigeria", href: "https://maps.google.com/?q=Discovery+Garden+Estate+Lekki+Lagos+Nigeria" },
                                     { icon: <Phone />, title: "Phone", content: "08032368599, 09121557656", href: "tel:+2348032368599" },
-                                    { icon: <Mail />, title: "Email", content: "info@mantle-gold.com", href: "mailto:info@mantle-gold.com" },
+                                    { icon: <Mail />, title: "Email", content: "info@mantleoilandgas.com", href: "mailto:info@mantleoilandgas.com" },
                                     { icon: <MessageCircle />, title: "WhatsApp", content: "Chat with us instantly", href: "https://wa.me/2348032368599?text=Hello%20Mantle-Gold%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." }
                                 ].map((item, i) => (
                                     <motion.a
@@ -145,6 +158,63 @@ const Contact = () => {
                                 <p className="text-gray-400 text-sm">
                                     We respond to all inquiries within <span className="text-gold font-semibold">24 business hours</span>. For urgent project matters, please reach us directly via phone or WhatsApp.
                                 </p>
+                            </motion.div>
+
+                            {/* Official Social Media Channels */}
+                            <motion.div
+                                whileHover={{ scale: 1.01 }}
+                                className="mt-6 p-5 sm:p-6 bg-slate rounded-xl border border-white/5"
+                            >
+                                <h3 className="font-bold text-white mb-2 text-base">Connect On Social Media</h3>
+                                <p className="text-gray-400 text-xs sm:text-sm mb-4">
+                                    Follow Mantle-Gold Limited on our official channels for field operations, company updates, and insights:
+                                </p>
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                                    <a
+                                        href="https://www.linkedin.com/company/mantle-gold-ltd/?viewAsMember=true"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-3 p-3 rounded-lg bg-black/40 border border-white/10 hover:border-[#0A66C2]/50 hover:bg-[#0A66C2]/10 text-gray-300 hover:text-white transition-all group"
+                                    >
+                                        <div className="w-8 h-8 rounded-full bg-[#0A66C2]/20 flex items-center justify-center text-[#0A66C2] group-hover:scale-110 transition-transform flex-shrink-0">
+                                            <Linkedin size={16} />
+                                        </div>
+                                        <div className="min-w-0">
+                                            <div className="text-xs font-bold truncate">LinkedIn</div>
+                                            <div className="text-[10px] text-gray-400 truncate">Mantle-Gold Ltd</div>
+                                        </div>
+                                    </a>
+
+                                    <a
+                                        href="https://x.com/mantlegold"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-3 p-3 rounded-lg bg-black/40 border border-white/10 hover:border-white/40 hover:bg-white/10 text-gray-300 hover:text-white transition-all group"
+                                    >
+                                        <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:scale-110 transition-transform flex-shrink-0">
+                                            <XIcon size={14} />
+                                        </div>
+                                        <div className="min-w-0">
+                                            <div className="text-xs font-bold truncate">X (Twitter)</div>
+                                            <div className="text-[10px] text-gray-400 truncate">@mantlegold</div>
+                                        </div>
+                                    </a>
+
+                                    <a
+                                        href="https://www.instagram.com/mantle.gold/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-3 p-3 rounded-lg bg-black/40 border border-white/10 hover:border-[#E4405F]/50 hover:bg-[#E4405F]/10 text-gray-300 hover:text-white transition-all group"
+                                    >
+                                        <div className="w-8 h-8 rounded-full bg-[#E4405F]/20 flex items-center justify-center text-[#E4405F] group-hover:scale-110 transition-transform flex-shrink-0">
+                                            <Instagram size={16} />
+                                        </div>
+                                        <div className="min-w-0">
+                                            <div className="text-xs font-bold truncate">Instagram</div>
+                                            <div className="text-[10px] text-gray-400 truncate">@mantle.gold</div>
+                                        </div>
+                                    </a>
+                                </div>
                             </motion.div>
 
                             {/* Map */}
@@ -179,7 +249,7 @@ const Contact = () => {
                                     >
                                         <CheckCircle2 size={64} className="text-gold mx-auto mb-6" />
                                         <h2 className="text-2xl font-bold mb-4">Message Prepared</h2>
-                                        <p className="text-gray-400 mb-8">Your email client should have opened with the message pre-filled. If not, please email us directly at <a href="mailto:info@mantle-gold.com" className="text-gold hover:underline">info@mantle-gold.com</a>.</p>
+                                        <p className="text-gray-400 mb-8">Your email client should have opened with the message pre-filled. If not, please email us directly at <a href="mailto:info@mantleoilandgas.com" className="text-gold hover:underline">info@mantleoilandgas.com</a>.</p>
                                         <button
                                             onClick={() => { setSubmitted(false); setFormData({ firstName: '', lastName: '', company: '', email: '', phone: '', inquiryType: '', message: '' }); }}
                                             className="text-gold font-semibold hover:underline"

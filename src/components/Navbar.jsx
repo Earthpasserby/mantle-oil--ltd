@@ -1,7 +1,20 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronRight, Linkedin, Instagram, MessageCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+
+const XIcon = ({ size = 18, className = "" }) => (
+    <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className={className}
+        aria-hidden="true"
+    >
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+);
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -182,9 +195,49 @@ const Navbar = () => {
                                 transition={{ delay: 0.3, duration: 0.3 }}
                                 className="mt-8 text-center flex-shrink-0"
                             >
-                                <Link to="/contact" className="w-full block bg-gold text-black py-3.5 rounded-xl font-bold text-base mb-3 shadow-xl hover:bg-yellow-500 transition-colors" onClick={() => setIsOpen(false)}>
+                                <Link to="/contact" className="w-full block bg-gold text-black py-3.5 rounded-xl font-bold text-base mb-4 shadow-xl hover:bg-yellow-500 transition-colors" onClick={() => setIsOpen(false)}>
                                     Get Started
                                 </Link>
+
+                                <div className="flex items-center justify-center gap-3 mb-4">
+                                    <a
+                                        href="https://www.linkedin.com/company/mantle-gold-ltd/?viewAsMember=true"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#0A66C2] hover:border-[#0A66C2]/40 hover:bg-[#0A66C2]/10 transition-all"
+                                        aria-label="LinkedIn"
+                                    >
+                                        <Linkedin size={18} />
+                                    </a>
+                                    <a
+                                        href="https://x.com/mantlegold"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-white/40 hover:bg-white/10 transition-all"
+                                        aria-label="X (Twitter)"
+                                    >
+                                        <XIcon size={16} />
+                                    </a>
+                                    <a
+                                        href="https://www.instagram.com/mantle.gold/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#E4405F] hover:border-[#E4405F]/40 hover:bg-[#E4405F]/10 transition-all"
+                                        aria-label="Instagram"
+                                    >
+                                        <Instagram size={18} />
+                                    </a>
+                                    <a
+                                        href="https://wa.me/2348032368599?text=Hello%20Mantle-Gold%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-green-400 hover:border-green-400/30 hover:bg-green-400/10 transition-all"
+                                        aria-label="WhatsApp"
+                                    >
+                                        <MessageCircle size={18} />
+                                    </a>
+                                </div>
+
                                 <p className="text-gray-500 text-xs">
                                     &copy; {new Date().getFullYear()} MANTLE-GOLD LTD.
                                 </p>

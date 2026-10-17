@@ -19,6 +19,8 @@ const SEO = ({ title, description, keywords, url }) => {
             
             {/* Twitter */}
             <meta property="twitter:card" content="summary_large_image" />
+            <meta property="twitter:site" content="@mantlegold" />
+            <meta property="twitter:creator" content="@mantlegold" />
             <meta property="twitter:url" content={url || "https://mantle-gold.com"} />
             <meta property="twitter:title" content={title ? `${title} | Mantle-Gold Ltd` : defaultTitle} />
             <meta property="twitter:description" content={description || defaultDescription} />
