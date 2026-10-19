@@ -255,7 +255,7 @@ const Contact = () => {
                                 </p>
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                                     <a
-                                        href="https://www.linkedin.com/company/mantle-gold-ltd/?viewAsMember=true"
+                                        href="https://www.linkedin.com/company/mantle-gold-ltd"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex items-center gap-3 p-3 rounded-lg bg-black/40 border border-white/10 hover:border-[#0A66C2]/50 hover:bg-[#0A66C2]/10 text-gray-300 hover:text-white transition-all group"

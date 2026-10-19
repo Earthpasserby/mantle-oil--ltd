@@ -33,7 +33,7 @@ const Footer = () => {
                         </p>
                         <div className="flex flex-wrap items-center gap-2.5">
                             <a
-                                href="https://www.linkedin.com/company/mantle-gold-ltd/?viewAsMember=true"
+                                href="https://www.linkedin.com/company/mantle-gold-ltd"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#0A66C2] hover:border-[#0A66C2]/40 hover:bg-[#0A66C2]/10 transition-all"

@@ -72,7 +72,7 @@ const pages = [
                         "name": "Nigeria"
                     },
                     "sameAs": [
-                        "https://www.linkedin.com/company/mantle-gold-ltd/?viewAsMember=true",
+                        "https://www.linkedin.com/company/mantle-gold-ltd",
                         "https://x.com/mantlegold",
                         "https://www.instagram.com/mantle.gold/"
                     ]
