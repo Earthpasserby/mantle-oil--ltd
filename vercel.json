@@ -3,17 +3,6 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.mantle-gold.com"
-        }
-      ],
-      "destination": "https://mantle-gold.com/$1",
-      "permanent": true
-    },
-    {
       "source": "/about.html",
       "destination": "/about",
       "permanent": true
