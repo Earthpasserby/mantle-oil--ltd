@@ -129,7 +129,7 @@ const pages = [
         description: "End-to-end EPCI project execution for oil and gas assets in Nigeria, from engineering and procurement to installation. Request a quote.",
         h1: "EPCI Project Execution for Oil and Gas in Nigeria",
         canonical: "https://mantle-gold.com/services/epci",
-        type: "article",
+        type: "website",
         noindex: false,
         schema: {
             "@context": "https://schema.org",
@@ -159,7 +159,7 @@ const pages = [
         description: "Subsea engineering, umbilical and flowline installation support for Nigerian offshore fields. Talk to our technical team.",
         h1: "Subsea Engineering Services in Nigeria",
         canonical: "https://mantle-gold.com/services/subsea-engineering",
-        type: "article",
+        type: "website",
         noindex: false,
         schema: {
             "@context": "https://schema.org",
@@ -189,7 +189,7 @@ const pages = [
         description: "Pipeline and flowline engineering, installation and construction support for onshore and offshore projects in Nigeria. Request a proposal.",
         h1: "Pipeline Engineering and Installation in Nigeria",
         canonical: "https://mantle-gold.com/services/pipeline-engineering",
-        type: "article",
+        type: "website",
         noindex: false,
         schema: {
             "@context": "https://schema.org",
@@ -215,11 +215,11 @@ const pages = [
     },
     {
         route: '/services/asset-integrity',
-        title: "Asset Integrity Management Nigeria | Mantle-Gold Ltd",
+        title: "Asset Integrity Management in Nigeria | Mantle-Gold Ltd",
         description: "Asset support and integrity services that keep Nigerian oil and gas facilities safe, compliant and operating. Speak to Mantle-Gold Ltd.",
         h1: "Asset Integrity and Support Services in Nigeria",
         canonical: "https://mantle-gold.com/services/asset-integrity",
-        type: "article",
+        type: "website",
         noindex: false,
         schema: {
             "@context": "https://schema.org",
@@ -249,7 +249,7 @@ const pages = [
         description: "Structural and offshore fabrication for oil and gas projects, delivered from Lagos with strict quality and safety control. Request a quote.",
         h1: "Oil and Gas Fabrication in Lagos, Nigeria",
         canonical: "https://mantle-gold.com/services/fabrication",
-        type: "article",
+        type: "website",
         noindex: false,
         schema: {
             "@context": "https://schema.org",
@@ -279,7 +279,7 @@ const pages = [
         description: "API-certified line pipes, subsea valves and energy procurement for Nigeria's oil and gas sector. Direct site delivery from Lagos.",
         h1: "Procurement Services for Nigeria's Oil and Gas Industry",
         canonical: "https://mantle-gold.com/services/procurement",
-        type: "article",
+        type: "website",
         noindex: false,
         schema: {
             "@context": "https://schema.org",
@@ -437,6 +437,12 @@ function renderPageHtml(template, page) {
         }
     }
 
+    // Replace OG Image Alt
+    const pageImageAlt = `${page.title} - Mantle-Gold Ltd`;
+    if (html.includes('<meta property="og:image:alt"')) {
+        html = html.replace(/<meta\s+property="og:image:alt"\s+content="[^"]*"/i, `<meta property="og:image:alt" content="${pageImageAlt}"`);
+    }
+
     // Schema JSON-LD injection
     if (page.schema) {
         const schemaString = JSON.stringify(page.schema);
@@ -446,6 +452,12 @@ function renderPageHtml(template, page) {
         } else {
             html = html.replace('</head>', `    <script type="application/ld+json">${schemaString}</script>\n  </head>`);
         }
+    }
+
+    // Pre-render semantic content inside #root for crawlers/cURL before React hydration
+    if (page.h1) {
+        const fallbackContent = `<div id="root"><main class="seo-crawler-content"><h1>${page.h1}</h1><p>${page.description}</p></main></div>`;
+        html = html.replace('<div id="root"></div>', fallbackContent);
     }
 
     return html;

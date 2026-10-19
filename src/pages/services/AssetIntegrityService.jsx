@@ -53,7 +53,7 @@ const AssetIntegrityService = () => {
     return (
         <div className="bg-black text-white">
             <SEO
-                title="Asset Integrity Management Nigeria | Mantle-Gold Ltd"
+                title="Asset Integrity Management in Nigeria | Mantle-Gold Ltd"
                 description="Asset support and integrity services that keep Nigerian oil and gas facilities safe, compliant and operating. Speak to Mantle-Gold Ltd."
                 canonicalPath="/services/asset-integrity"
                 schema={serviceSchema}

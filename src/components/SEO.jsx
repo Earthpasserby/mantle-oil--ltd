@@ -8,6 +8,7 @@ const SEO = ({
     description,
     canonicalPath = '',
     image = DEFAULT_IMAGE,
+    imageAlt = '',
     type = 'website',
     noindex = false,
     schema = null
@@ -15,6 +16,7 @@ const SEO = ({
     const fullTitle = title || "Mantle-Gold Ltd | EPCI & Oil and Gas Services in Nigeria";
     const fullDescription = description || "Mantle-Gold Ltd is a Lagos-based EPCI contractor: subsea engineering, pipeline installation and asset integrity for Nigeria's oil and gas sector.";
     const cleanCanonical = `${DOMAIN}${canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`}`.replace(/\/$/, '') || DOMAIN;
+    const computedImageAlt = imageAlt || `${fullTitle} - Mantle-Gold Ltd`;
 
     // Environment-based check: if staging hostname or explicitly set, noindex
     const isStaging = typeof window !== 'undefined' && window.location.hostname.includes('vercel.app');
@@ -37,7 +39,7 @@ const SEO = ({
             <meta property="og:image" content={image} />
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="630" />
-            <meta property="og:image:alt" content="Mantle-Gold Ltd EPCI & Subsea Oil and Gas Engineering in Nigeria" />
+            <meta property="og:image:alt" content={computedImageAlt} />
             <meta property="og:locale" content="en_NG" />
 
             {/* Twitter */}
