@@ -78,11 +78,12 @@ const About = () => {
                         muted
                         playsInline
                         poster="/images/platform-topsides.jpg"
-                        className="w-full h-full object-cover opacity-25"
+                        className="w-full h-full object-cover opacity-40"
                     >
                         <source src="/images/hero-twilight.mp4" type="video/mp4" />
                     </video>
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/80 to-black" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black" />
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent pointer-events-none" />
                 </div>
 
                 <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center">
