@@ -26,7 +26,7 @@ const faqs = [
     },
     {
         question: "How can clients request a quotation for offshore fabrication work?",
-        answer: "You can submit engineering drawings, technical specifications, or Invitation to Tender (ITT) packages directly to our Lagos commercial team via email at info@mantleoilandgas.com or by calling +234 803 236 8599."
+        answer: "You can submit engineering drawings, technical specifications, or Invitation to Tender (ITT) packages directly to our Lagos commercial team via email at info@mantle-gold.com or by calling +234 803 236 8599."
     }
 ];
 

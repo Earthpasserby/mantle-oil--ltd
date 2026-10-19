@@ -26,7 +26,7 @@ const faqs = [
     },
     {
         question: "How do we engage Mantle-Gold Ltd for an EPCI project tender?",
-        answer: "You can request a technical qualification package or submit your Invitation to Tender (ITT) directly via email at info@mantleoilandgas.com or contact our Lagos engineering office at +234 803 236 8599."
+        answer: "You can request a technical qualification package or submit your Invitation to Tender (ITT) directly via email at info@mantle-gold.com or contact our Lagos engineering office at +234 803 236 8599."
     }
 ];
 

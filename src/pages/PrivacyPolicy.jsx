@@ -66,7 +66,7 @@ const PrivacyPolicy = () => {
                 <section>
                     <h2 className="text-xl sm:text-2xl font-serif font-bold text-white mb-3">5. Contact Information</h2>
                     <p>
-                        For any questions concerning this Privacy Policy, please contact our administrative office at 31 Discovery Gardens Estate, Lekki, Lagos, Nigeria, or email us at <a href="mailto:info@mantleoilandgas.com" className="text-gold hover:underline">info@mantleoilandgas.com</a>.
+                        For any questions concerning this Privacy Policy, please contact our administrative office at 31 Discovery Gardens Estate, Lekki, Lagos, Nigeria, or email us at <a href="mailto:info@mantle-gold.com" className="text-gold hover:underline">info@mantle-gold.com</a>.
                     </p>
                 </section>
             </div>

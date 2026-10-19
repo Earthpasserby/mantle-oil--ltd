@@ -65,7 +65,7 @@ const TermsOfService = () => {
                         <br />
                         31 Discovery Gardens Estate, Lekki, Lagos, Nigeria
                         <br />
-                        Email: <a href="mailto:info@mantleoilandgas.com" className="text-gold hover:underline">info@mantleoilandgas.com</a>
+                        Email: <a href="mailto:info@mantle-gold.com" className="text-gold hover:underline">info@mantle-gold.com</a>
                     </p>
                 </section>
             </div>

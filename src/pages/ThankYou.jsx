@@ -37,7 +37,7 @@ const ThankYou = () => {
                         </div>
                         <div className="flex items-center justify-center gap-2">
                             <Mail size={15} className="text-gold" />
-                            <span>Direct Email: <a href="mailto:info@mantleoilandgas.com" className="text-gold hover:underline">info@mantleoilandgas.com</a></span>
+                            <span>Direct Email: <a href="mailto:info@mantle-gold.com" className="text-gold hover:underline">info@mantle-gold.com</a></span>
                         </div>
                     </div>
 

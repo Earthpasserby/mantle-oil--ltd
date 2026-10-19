@@ -26,7 +26,7 @@ const faqs = [
     },
     {
         question: "How can operators submit a procurement requisition or RFQ?",
-        answer: "Operators can transmit their Bill of Materials (BOM), Material Requisitions (MR), or Request for Quotation (RFQ) directly to our procurement department at info@mantleoilandgas.com or telephone +234 803 236 8599."
+        answer: "Operators can transmit their Bill of Materials (BOM), Material Requisitions (MR), or Request for Quotation (RFQ) directly to our procurement department at info@mantle-gold.com or telephone +234 803 236 8599."
     }
 ];
 
