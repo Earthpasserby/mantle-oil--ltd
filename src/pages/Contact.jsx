@@ -32,8 +32,8 @@ const contactSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://mantle-gold.com/contact#localbusiness",
-    "name": "Mantle-Gold Ltd",
-    "alternateName": ["Mantle Gold Ltd", "Mantle-Gold Limited", "Mantle Gold Limited"],
+    "name": "Mantle-Gold",
+    "alternateName": ["Mantle Gold", "Mantle-Gold", "Mantle Gold"],
     "url": "https://mantle-gold.com/contact",
     "telephone": ["+2348032368599", "+2349121557656"],
     "email": "info@mantle-gold.com",
@@ -133,8 +133,8 @@ const Contact = () => {
             className="font-sans bg-black min-h-screen text-white"
         >
             <SEO
-                title="Contact Mantle-Gold Ltd | Lekki, Lagos"
-                description="Contact Mantle-Gold Ltd at 31 Discovery Gardens Estate, Lekki, Lagos. Call +234 803 236 8599 or email info@mantle-gold.com."
+                title="Contact Mantle-Gold | Lekki, Lagos"
+                description="Contact Mantle-Gold at 31 Discovery Gardens Estate, Lekki, Lagos. Call +234 803 236 8599 or email info@mantle-gold.com."
                 canonical="https://mantle-gold.com/contact"
                 type="website"
                 schema={contactSchema}
@@ -143,7 +143,7 @@ const Contact = () => {
             {/* Breadcrumbs Navigation */}
             <div className="pt-24 sm:pt-28 pb-4 bg-black">
                 <div className="container mx-auto px-4 sm:px-6">
-                    <Breadcrumbs items={[{ name: 'Contact Mantle-Gold Ltd', url: '/contact' }]} />
+                    <Breadcrumbs items={[{ name: 'Contact Mantle-Gold', url: '/contact' }]} />
                 </div>
             </div>
 
@@ -163,7 +163,7 @@ const Contact = () => {
                         transition={{ delay: 0.1 }}
                         className="text-3xl sm:text-5xl md:text-6xl font-serif font-bold mb-4 sm:mb-6 text-white"
                     >
-                        Contact Mantle-Gold Ltd
+                        Contact Mantle-Gold
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -171,7 +171,7 @@ const Contact = () => {
                         transition={{ delay: 0.2 }}
                         className="text-gray-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed px-2"
                     >
-                        For your official Mantle-Gold Ltd contact needs, project tender invitations, and technical consultations, reach our engineering and commercial teams at our Lekki, Lagos headquarters.
+                        For your official Mantle-Gold contact needs, project tender invitations, and technical consultations, reach our engineering and commercial teams at our Lekki, Lagos headquarters.
                     </motion.p>
                 </div>
             </section>
@@ -251,7 +251,7 @@ const Contact = () => {
                             <div className="mt-6 p-5 sm:p-6 bg-slate rounded-xl border border-white/5">
                                 <h3 className="font-bold text-white mb-2 text-base">Official Channels</h3>
                                 <p className="text-gray-400 text-xs sm:text-sm mb-4">
-                                    Follow Mantle-Gold Ltd across our verified corporate profiles:
+                                    Follow Mantle-Gold across our verified corporate profiles:
                                 </p>
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                                     <a
@@ -265,7 +265,7 @@ const Contact = () => {
                                         </div>
                                         <div className="min-w-0">
                                             <div className="text-xs font-bold truncate">LinkedIn</div>
-                                            <div className="text-[10px] text-gray-400 truncate">Mantle-Gold Ltd</div>
+                                            <div className="text-[10px] text-gray-400 truncate">Mantle-Gold</div>
                                         </div>
                                     </a>
 
@@ -304,7 +304,7 @@ const Contact = () => {
                             {/* Map */}
                             <div className="mt-8 rounded-xl overflow-hidden border border-white/10 map-container">
                                 <iframe
-                                    title="Mantle-Gold Ltd Office Location in Lekki Lagos"
+                                    title="Mantle-Gold Office Location in Lekki Lagos"
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7!2d3.5!3d6.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sDiscovery%20Garden%20Estate%20Lekki%20Lagos!5e0!3m2!1sen!2sng!4v1700000000000"
                                     width="100%"
                                     height="250"
@@ -343,7 +343,7 @@ const Contact = () => {
                                     </motion.div>
                                 ) : (
                                     <motion.div key="form">
-                                        <h2 className="text-2xl font-bold mb-2 text-white">Send Mantle-Gold Ltd a Message</h2>
+                                        <h2 className="text-2xl font-bold mb-2 text-white">Send Mantle-Gold a Message</h2>
                                         <p className="text-gray-400 text-sm mb-6">Request project proposals, technical authority oversight, or tender responses.</p>
                                         <form className="space-y-5" onSubmit={handleSubmit} noValidate>
                                             <div className="grid md:grid-cols-2 gap-5">
@@ -403,7 +403,7 @@ const Contact = () => {
                                                 className="w-full bg-gold text-black font-bold py-4 rounded-lg hover:bg-yellow-500 transition-colors cursor-pointer shadow-[0_0_20px_rgba(232,141,20,0.3)] hover:shadow-[0_0_30px_rgba(232,141,20,0.5)] flex items-center justify-center gap-2 text-sm sm:text-base"
                                             >
                                                 <Send size={18} />
-                                                Submit Inquiry to Mantle-Gold Ltd
+                                                Submit Inquiry to Mantle-Gold
                                             </motion.button>
                                         </form>
                                     </motion.div>

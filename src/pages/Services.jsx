@@ -122,7 +122,7 @@ const Services = () => {
             className="font-sans bg-black min-h-screen text-white relative"
         >
             <SEO
-                title="Oil & Gas Services in Nigeria | Mantle-Gold Ltd"
+                title="Oil & Gas Services in Nigeria | Mantle-Gold"
                 description="EPCI project execution, subsea and pipeline engineering, asset integrity, fabrication and procurement for Nigeria's oil and gas sector."
                 canonical="https://mantle-gold.com/services"
                 type="website"
@@ -174,7 +174,7 @@ const Services = () => {
                         transition={{ delay: 0.3 }}
                         className="text-gray-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed px-2"
                     >
-                        Mantle-Gold Ltd delivers premier oil and gas services in Nigeria, spanning turnkey EPCI project execution, certified subsea engineering, offshore pipeline installation, asset integrity management, structural fabrication, and energy procurement.
+                        Mantle-Gold delivers premier oil and gas services in Nigeria, spanning turnkey EPCI project execution, certified subsea engineering, offshore pipeline installation, asset integrity management, structural fabrication, and energy procurement.
                     </motion.p>
                 </div>
             </section>
@@ -184,7 +184,7 @@ const Services = () => {
                 <div className="container mx-auto px-4 sm:px-6">
                     <div className="text-center mb-10 sm:mb-14">
                         <span className="text-gold uppercase tracking-[0.2em] text-[10px] sm:text-xs font-bold">Execution Framework</span>
-                        <h2 className="text-2xl sm:text-4xl font-serif font-bold mt-2 text-white">How Mantle-Gold Ltd Delivers EPCI Projects</h2>
+                        <h2 className="text-2xl sm:text-4xl font-serif font-bold mt-2 text-white">How Mantle-Gold Delivers EPCI Projects</h2>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 relative items-stretch">

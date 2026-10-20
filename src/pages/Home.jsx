@@ -50,23 +50,23 @@ const missionTabs = [
 
 const homeFaqs = [
     {
-        question: "What core services does Mantle-Gold Ltd provide in Nigeria?",
-        answer: "Mantle-Gold Ltd delivers end-to-end EPCI project execution, subsea engineering, offshore and onshore pipeline installation, asset integrity management, structural fabrication, and specialized energy procurement for Nigeria's oil and gas sector."
+        question: "What core services does Mantle-Gold provide in Nigeria?",
+        answer: "Mantle-Gold delivers end-to-end EPCI project execution, subsea engineering, offshore and onshore pipeline installation, asset integrity management, structural fabrication, and specialized energy procurement for Nigeria's oil and gas sector."
     },
     {
-        question: "Where is Mantle-Gold Ltd located and what regions do you serve?",
-        answer: "Mantle-Gold Ltd is headquartered at 31 Discovery Gardens Estate, Lekki, Lagos, Nigeria. We execute projects across the Niger Delta, offshore Gulf of Guinea, Port Harcourt, Warri, and major deepwater basins."
+        question: "Where is Mantle-Gold located and what regions do you serve?",
+        answer: "Mantle-Gold is headquartered at 31 Discovery Gardens Estate, Lekki, Lagos, Nigeria. We execute projects across the Niger Delta, offshore Gulf of Guinea, Port Harcourt, Warri, and major deepwater basins."
     },
     {
-        question: "What technical qualifications and safety standards does Mantle-Gold Ltd maintain?",
+        question: "What technical qualifications and safety standards does Mantle-Gold maintain?",
         answer: "Our leadership includes a Shell-Certified Technical Authority in Subsea Systems. We operate under rigorous ISO 9001 quality and ISO 45001 occupational safety guidelines, with a 98% safety rating and zero Lost Time Injuries (LTI) across 532,480+ cumulative project man-hours."
     },
     {
-        question: "How does Mantle-Gold Ltd comply with Nigerian Content (NCDMB) requirements?",
-        answer: "Mantle-Gold Ltd is 100% committed to Nigerian Content development under the NOGICD Act. We prioritize local engineering talent, domestic fabrication facilities in Lagos and the Niger Delta, and local vendor ecosystems."
+        question: "How does Mantle-Gold comply with Nigerian Content (NCDMB) requirements?",
+        answer: "Mantle-Gold is 100% committed to Nigerian Content development under the NOGICD Act. We prioritize local engineering talent, domestic fabrication facilities in Lagos and the Niger Delta, and local vendor ecosystems."
     },
     {
-        question: "What are some of Mantle-Gold Ltd's landmark projects in Nigeria?",
+        question: "What are some of Mantle-Gold's landmark projects in Nigeria?",
         answer: "Notable project milestones include the Okwori Field umbilical and flexible flowline relocation for ADDAX Petroleum, as well as deepwater subsea FEED, technical authority oversight, and ITT engineering support on major SNEPCo deepwater assets."
     }
 ];
@@ -128,8 +128,8 @@ const Home = () => {
             className="font-sans bg-black text-white"
         >
             <SEO
-                title="Mantle-Gold Ltd | EPCI & Oil and Gas Services in Nigeria"
-                description="Mantle-Gold Ltd is a Lagos-based EPCI contractor: subsea engineering, pipeline installation and asset integrity for Nigeria's oil and gas sector."
+                title="Mantle-Gold | EPCI & Oil and Gas Services in Nigeria"
+                description="Mantle-Gold is a Lagos-based EPCI contractor: subsea engineering, pipeline installation and asset integrity for Nigeria's oil and gas sector."
                 canonical="https://mantle-gold.com/"
                 type="website"
             />
@@ -147,7 +147,7 @@ const Home = () => {
                         className="inline-flex items-center gap-2 bg-black/60 backdrop-blur-md border border-gold/30 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-gold uppercase tracking-[0.18em] sm:tracking-[0.25em] text-[10px] sm:text-xs font-bold mb-4 sm:mb-6 shadow-xl"
                     >
                         <Sparkles size={13} className="text-gold" />
-                        <span>MANTLE-GOLD LTD &bull; NIGERIAN EPCI EXCELLENCE</span>
+                        <span>MANTLE-GOLD &bull; NIGERIAN EPCI EXCELLENCE</span>
                     </motion.div>
 
                     <motion.h1
@@ -156,7 +156,7 @@ const Home = () => {
                         transition={{ delay: 0.4, duration: 0.6 }}
                         className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 sm:mb-8 leading-[1.18] max-w-5xl mx-auto pb-1"
                     >
-                        Mantle-Gold Ltd: EPCI and Engineering Solutions for Nigeria's Oil and Gas Industry
+                        Mantle-Gold: EPCI and Engineering Solutions for Nigeria's Oil and Gas Industry
                     </motion.h1>
 
                     <motion.p
@@ -165,7 +165,7 @@ const Home = () => {
                         transition={{ delay: 0.6, duration: 0.6 }}
                         className="text-gray-200 text-sm sm:text-lg md:text-xl max-w-3xl mx-auto mb-6 sm:mb-10 font-light leading-relaxed drop-shadow-md px-2"
                     >
-                        Mantle-Gold Ltd delivers premier turnkey EPCI, subsea installation, pipeline engineering, and asset integrity management for offshore and onshore energy operators across Nigeria and the Gulf of Guinea.
+                        Mantle-Gold delivers premier turnkey EPCI, subsea installation, pipeline engineering, and asset integrity management for offshore and onshore energy operators across Nigeria and the Gulf of Guinea.
                     </motion.p>
 
                     <motion.div
@@ -184,7 +184,7 @@ const Home = () => {
                             to="/about"
                             className="w-full sm:w-auto bg-black/60 hover:bg-white/10 text-white border border-white/20 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold transition-all backdrop-blur-md flex items-center justify-center gap-2 text-sm sm:text-base"
                         >
-                            <span>About Mantle-Gold Ltd</span>
+                            <span>About Mantle-Gold</span>
                         </Link>
                     </motion.div>
                 </div>
@@ -220,10 +220,10 @@ const Home = () => {
                             <span className="text-gold">Delivered in Nigeria</span>
                         </h2>
                         <p className="text-gray-300 mb-3 sm:mb-5 leading-relaxed text-xs sm:text-base md:text-lg">
-                            Mantle-Gold Ltd is the trusted engineering contractor of choice for International Oil Companies (IOCs) and Nigerian independents developing critical oil, natural gas, and offshore energy infrastructure.
+                            Mantle-Gold is the trusted engineering contractor of choice for International Oil Companies (IOCs) and Nigerian independents developing critical oil, natural gas, and offshore energy infrastructure.
                         </p>
                         <p className="text-gray-300 mb-5 sm:mb-7 leading-relaxed text-xs sm:text-base md:text-lg">
-                            With over a decade of operational excellence, Shell-certified technical governance, and 532,480 cumulative safe man-hours, Mantle-Gold Ltd combines world-class engineering standards with 100% Nigerian Content compliance.
+                            With over a decade of operational excellence, Shell-certified technical governance, and 532,480 cumulative safe man-hours, Mantle-Gold combines world-class engineering standards with 100% Nigerian Content compliance.
                         </p>
 
                         {/* Interactive Highlights List */}
@@ -324,7 +324,7 @@ const Home = () => {
                         <span className="text-gold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[10px] sm:text-xs font-bold">Specialized Solutions</span>
                         <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold mt-2 sm:mt-3 text-white">Our Oil &amp; Gas Services</h2>
                         <p className="text-gray-400 mt-2 sm:mt-4 max-w-2xl mx-auto text-xs sm:text-base md:text-lg px-2 leading-relaxed">
-                            Mantle-Gold Ltd provides six specialized service divisions engineered to deliver lifecycle integrity and operational reliability for energy assets in Nigeria.
+                            Mantle-Gold provides six specialized service divisions engineered to deliver lifecycle integrity and operational reliability for energy assets in Nigeria.
                         </p>
                     </div>
 
@@ -448,7 +448,7 @@ const Home = () => {
             <section className="py-14 sm:py-20 bg-darker">
                 <div className="container mx-auto px-4 sm:px-6">
                     <FAQAccordion
-                        title="Frequently Asked Questions About Mantle-Gold Ltd"
+                        title="Frequently Asked Questions About Mantle-Gold"
                         subtitle="Key insights into our EPCI engineering capabilities, certifications, and project track record in Nigeria."
                         faqs={homeFaqs}
                     />

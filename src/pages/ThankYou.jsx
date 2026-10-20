@@ -7,8 +7,8 @@ const ThankYou = () => {
     return (
         <div className="bg-black text-white min-h-[85vh] flex flex-col justify-center">
             <SEO
-                title="Thank You | Mantle-Gold Ltd"
-                description="Thank you for contacting Mantle-Gold Ltd. Our engineering team has received your message and will respond within 24 business hours."
+                title="Thank You | Mantle-Gold"
+                description="Thank you for contacting Mantle-Gold. Our engineering team has received your message and will respond within 24 business hours."
                 canonicalPath="/thank-you"
                 noindex={true}
             />
@@ -24,7 +24,7 @@ const ThankYou = () => {
                         Inquiry Received
                     </span>
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white mb-4">
-                        Thank You for Contacting Mantle-Gold Ltd
+                        Thank You for Contacting Mantle-Gold
                     </h1>
                     <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
                         Your message has been routed to our technical and commercial operations team in Lekki, Lagos. We respond to all project inquiries within <strong className="text-white">24 business hours</strong>.

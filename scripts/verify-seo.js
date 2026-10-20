@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const distDir = path.resolve(__dirname, '../dist');
 
-console.log('--- Running Mantle-Gold Ltd SEO Verification & CI Guard ---');
+console.log('--- Running Mantle-Gold SEO Verification & CI Guard ---');
 
 let errorsCount = 0;
 let warningsCount = 0;

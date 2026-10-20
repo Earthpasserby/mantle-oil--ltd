@@ -10,22 +10,22 @@ import CTABanner from '../../components/CTABanner';
 const faqs = [
     {
         question: "What does EPCI project execution encompass in Nigeria?",
-        answer: "EPCI stands for Engineering, Procurement, Construction, and Installation. In Nigeria's oil and gas sector, Mantle-Gold Ltd provides integrated turnkey delivery covering conceptual FEED, detailed multidisciplinary engineering, transparent global and local procurement, onshore fabrication of spools and jackets, and offshore installation using specialized DP2 construction vessels."
+        answer: "EPCI stands for Engineering, Procurement, Construction, and Installation. In Nigeria's oil and gas sector, Mantle-Gold provides integrated turnkey delivery covering conceptual FEED, detailed multidisciplinary engineering, transparent global and local procurement, onshore fabrication of spools and jackets, and offshore installation using specialized DP2 construction vessels."
     },
     {
-        question: "How does Mantle-Gold Ltd comply with the NOGICD Act?",
-        answer: "Mantle-Gold Ltd maintains 100% Nigerian Content commitment across all EPCI operations. Our engineering design, project management, welding fabrication, and site supervision personnel are domiciled in Nigeria, meeting and exceeding Nigerian Oil and Gas Industry Content Development (NOGICD) guidelines."
+        question: "How does Mantle-Gold comply with the NOGICD Act?",
+        answer: "Mantle-Gold maintains 100% Nigerian Content commitment across all EPCI operations. Our engineering design, project management, welding fabrication, and site supervision personnel are domiciled in Nigeria, meeting and exceeding Nigerian Oil and Gas Industry Content Development (NOGICD) guidelines."
     },
     {
-        question: "What is Mantle-Gold Ltd's safety track record on major projects?",
-        answer: "Over our decade-plus operational history since 2014, Mantle-Gold Ltd has delivered 532,480 cumulative man-hours with a 98% audited safety rating and an unblemished Zero Lost Time Injury (Zero LTI) track record across high-risk offshore and swamp locations."
+        question: "What is Mantle-Gold's safety track record on major projects?",
+        answer: "Over our decade-plus operational history since 2014, Mantle-Gold has delivered 532,480 cumulative man-hours with a 98% audited safety rating and an unblemished Zero Lost Time Injury (Zero LTI) track record across high-risk offshore and swamp locations."
     },
     {
-        question: "Can Mantle-Gold Ltd handle both greenfield and brownfield EPCI projects?",
+        question: "Can Mantle-Gold handle both greenfield and brownfield EPCI projects?",
         answer: "Yes. We engineer and execute greenfield field development installations as well as brownfield asset retrofits, platform debottlenecking, pipeline tie-ins, and offshore umbilical relocations in shallow, swamp, and deepwater concessions."
     },
     {
-        question: "How do we engage Mantle-Gold Ltd for an EPCI project tender?",
+        question: "How do we engage Mantle-Gold for an EPCI project tender?",
         answer: "You can request a technical qualification package or submit your Invitation to Tender (ITT) directly via email at info@mantle-gold.com or contact our Lagos engineering office at +234 803 236 8599."
     }
 ];
@@ -38,7 +38,7 @@ const EPCIService = () => {
         "serviceType": "Engineering, Procurement, Construction and Installation (EPCI)",
         "provider": {
             "@type": "Organization",
-            "name": "Mantle-Gold Ltd",
+            "name": "Mantle-Gold",
             "url": "https://mantle-gold.com",
             "logo": "https://mantle-gold.com/logo.png"
         },
@@ -53,7 +53,7 @@ const EPCIService = () => {
     return (
         <div className="bg-black text-white">
             <SEO
-                title="EPCI Contractor in Nigeria | Mantle-Gold Ltd"
+                title="EPCI Contractor in Nigeria | Mantle-Gold"
                 description="End-to-end EPCI project execution for oil and gas assets in Nigeria, from engineering and procurement to installation. Request a quote."
                 canonicalPath="/services/epci"
                 schema={serviceSchema}
@@ -83,13 +83,13 @@ const EPCIService = () => {
                                 Integrated Turnkey EPCI Solutions for Nigeria’s Energy Infrastructure
                             </h2>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
-                                As a premier <strong>EPCI contractor Nigeria</strong>, Mantle-Gold Ltd delivers integrated Engineering, Procurement, Construction, and Installation projects that solve complex technical hurdles across the Niger Delta basin, Gulf of Guinea deepwater assets, and onshore energy terminals.
+                                As a premier <strong>EPCI contractor Nigeria</strong>, Mantle-Gold delivers integrated Engineering, Procurement, Construction, and Installation projects that solve complex technical hurdles across the Niger Delta basin, Gulf of Guinea deepwater assets, and onshore energy terminals.
                             </p>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
                                 Since our establishment in June 2014, our multidisciplinary team of Shell-certified technical authorities, project managers, and marine operations specialists has executed high-precision EPCI work scopes. We bridge the gap between conceptual field architecture and robust, safe operational delivery under rigorous international codes and Nigerian local content regulations.
                             </p>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
-                                Whether deploying subsea production systems, fabricating heavy topside manifolds, or executing high-pressure flowline tie-ins, Mantle-Gold Ltd provides single-point accountability to IOCs, indigenous operators, and national oil companies.
+                                Whether deploying subsea production systems, fabricating heavy topside manifolds, or executing high-pressure flowline tie-ins, Mantle-Gold provides single-point accountability to IOCs, indigenous operators, and national oil companies.
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
@@ -113,7 +113,7 @@ const EPCIService = () => {
                             <div className="relative rounded-2xl overflow-hidden border border-gold/30 shadow-2xl bg-slate">
                                 <img
                                     src="/images/platform-topsides.jpg"
-                                    alt="Offshore production topsides platform engineered by Mantle-Gold Ltd"
+                                    alt="Offshore production topsides platform engineered by Mantle-Gold"
                                     className="w-full h-80 sm:h-96 object-cover"
                                     loading="lazy"
                                 />
@@ -145,7 +145,7 @@ const EPCIService = () => {
                             Four Pillars of Our Turnkey EPCI Delivery
                         </h2>
                         <p className="text-gray-400 text-sm sm:text-base">
-                            Mantle-Gold Ltd synchronizes every phase of the project lifecycle to eliminate interface risks, curb schedule slippage, and optimize capital expenditure.
+                            Mantle-Gold synchronizes every phase of the project lifecycle to eliminate interface risks, curb schedule slippage, and optimize capital expenditure.
                         </p>
                     </div>
 
@@ -193,7 +193,7 @@ const EPCIService = () => {
                             Rigorous Stage-Gate EPCI Project Methodology
                         </h2>
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                            Every contract undertaken by Mantle-Gold Ltd follows a structured Stage-Gate process designed in accordance with Shell DEP, API, and ISO 9001:2015 frameworks to safeguard capital and ensure field safety.
+                            Every contract undertaken by Mantle-Gold follows a structured Stage-Gate process designed in accordance with Shell DEP, API, and ISO 9001:2015 frameworks to safeguard capital and ensure field safety.
                         </p>
                     </div>
 
@@ -236,7 +236,7 @@ const EPCIService = () => {
                                     Okwori Field Subsea Umbilicals &amp; Flexible Flowlines Relocation
                                 </h3>
                                 <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed mb-4">
-                                    Mantle-Gold Ltd’s executive technical leadership engineered and supervised the complex offshore relocation and re-installation of flexible pipelines and subsea umbilicals for Addax Petroleum in the Okwori concession offshore Nigeria.
+                                    Mantle-Gold’s executive technical leadership engineered and supervised the complex offshore relocation and re-installation of flexible pipelines and subsea umbilicals for Addax Petroleum in the Okwori concession offshore Nigeria.
                                 </p>
                                 <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed mb-6">
                                     The project resolved dynamic pipeline fatigue challenges while safeguarding active production wells, completed on schedule under zero-incident safety protocols.

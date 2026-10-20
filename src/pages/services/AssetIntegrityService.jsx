@@ -13,20 +13,20 @@ const faqs = [
         answer: "Asset integrity management Nigeria refers to the systematic engineering processes that ensure oil and gas production facilities, offshore platforms, pipelines, and pressure vessels remain structurally sound, safe to operate, and fully compliant with Nigerian Upstream Petroleum Regulatory Commission (NUPRC) and international codes throughout their operational lifecycle."
     },
     {
-        question: "What inspection methodologies does Mantle-Gold Ltd deploy?",
+        question: "What inspection methodologies does Mantle-Gold deploy?",
         answer: "We deploy advanced Non-Destructive Testing (NDT) techniques including Phased Array Ultrasonic Testing (PAUT), Time of Flight Diffraction (TOFD), Eddy Current Testing (ECT), magnetic particle inspection, acoustic emission testing, and digital radiographic inspection."
     },
     {
         question: "How does Risk-Based Inspection (RBI) save costs for operators?",
-        answer: "By applying API 580 and API 581 Risk-Based Inspection methodologies, Mantle-Gold Ltd prioritizes inspection resources on high-consequence, high-probability failure points. This minimizes unnecessary facility shutdowns, prevents catastrophic leaks, and optimizes maintenance expenditure."
+        answer: "By applying API 580 and API 581 Risk-Based Inspection methodologies, Mantle-Gold prioritizes inspection resources on high-consequence, high-probability failure points. This minimizes unnecessary facility shutdowns, prevents catastrophic leaks, and optimizes maintenance expenditure."
     },
     {
-        question: "Can Mantle-Gold Ltd evaluate aging offshore facilities for life extension?",
+        question: "Can Mantle-Gold evaluate aging offshore facilities for life extension?",
         answer: "Yes. We execute comprehensive Fitness-For-Service (FFS) assessments under API 579 / ASME FFS-1 standards. Our engineers analyze metal loss, crack-like flaws, fatigue cycles, and corrosion rates to certify safe operating envelope extensions for mature assets."
     },
     {
         question: "What is your safety track record during asset turnaround maintenance?",
-        answer: "Mantle-Gold Ltd has delivered over 532,480 cumulative man-hours across high-risk offshore platforms and onshore production facilities with an audited 98% safety rating and an unblemished Zero Lost Time Injury (Zero LTI) track record since 2014."
+        answer: "Mantle-Gold has delivered over 532,480 cumulative man-hours across high-risk offshore platforms and onshore production facilities with an audited 98% safety rating and an unblemished Zero Lost Time Injury (Zero LTI) track record since 2014."
     }
 ];
 
@@ -38,7 +38,7 @@ const AssetIntegrityService = () => {
         "serviceType": "Oil and Gas Asset Integrity Management (AIM)",
         "provider": {
             "@type": "Organization",
-            "name": "Mantle-Gold Ltd",
+            "name": "Mantle-Gold",
             "url": "https://mantle-gold.com",
             "logo": "https://mantle-gold.com/logo.png"
         },
@@ -46,15 +46,15 @@ const AssetIntegrityService = () => {
             "@type": "Country",
             "name": "Nigeria"
         },
-        "description": "Asset support and integrity services that keep Nigerian oil and gas facilities safe, compliant and operating. Speak to Mantle-Gold Ltd.",
+        "description": "Asset support and integrity services that keep Nigerian oil and gas facilities safe, compliant and operating. Speak to Mantle-Gold.",
         "url": "https://mantle-gold.com/services/asset-integrity"
     };
 
     return (
         <div className="bg-black text-white">
             <SEO
-                title="Asset Integrity Management in Nigeria | Mantle-Gold Ltd"
-                description="Asset support and integrity services that keep Nigerian oil and gas facilities safe, compliant and operating. Speak to Mantle-Gold Ltd."
+                title="Asset Integrity Management in Nigeria | Mantle-Gold"
+                description="Asset support and integrity services that keep Nigerian oil and gas facilities safe, compliant and operating. Speak to Mantle-Gold."
                 canonicalPath="/services/asset-integrity"
                 schema={serviceSchema}
             />
@@ -83,7 +83,7 @@ const AssetIntegrityService = () => {
                                 Comprehensive Asset Integrity Management Nigeria for Energy Infrastructure
                             </h2>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
-                                In mature and demanding operating environments, maintaining structural and mechanical reliability is essential for continuous production. Mantle-Gold Ltd provides industry-leading <strong>asset integrity management Nigeria</strong>, delivering engineering surveillance, non-destructive evaluation, and maintenance support that protect high-value capital assets across the energy sector.
+                                In mature and demanding operating environments, maintaining structural and mechanical reliability is essential for continuous production. Mantle-Gold provides industry-leading <strong>asset integrity management Nigeria</strong>, delivering engineering surveillance, non-destructive evaluation, and maintenance support that protect high-value capital assets across the energy sector.
                             </p>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
                                 Our integrated integrity frameworks align with American Petroleum Institute (API 510, API 570, API 653, API 580) and Shell DEP standards. We help asset managers transition from reactive maintenance to proactive, risk-informed lifecycle stewardship.
@@ -198,7 +198,7 @@ const AssetIntegrityService = () => {
                                     Operating in Nigeria's upstream, midstream, and downstream sectors requires strict adherence to regulatory guidelines issued by the Nigerian Upstream Petroleum Regulatory Commission (NUPRC).
                                 </p>
                                 <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed mb-6">
-                                    Mantle-Gold Ltd provides verified integrity inspection documentation, statutory pressure vessel re-certification dossiers, and technical authority sign-offs that satisfy international auditing bodies and local authorities.
+                                    Mantle-Gold provides verified integrity inspection documentation, statutory pressure vessel re-certification dossiers, and technical authority sign-offs that satisfy international auditing bodies and local authorities.
                                 </p>
                                 <div className="flex flex-wrap gap-4 text-xs font-semibold text-gray-300">
                                     <div className="flex items-center gap-2">

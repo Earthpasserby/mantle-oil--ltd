@@ -6,8 +6,8 @@ const TermsOfService = () => {
     return (
         <div className="bg-black text-white min-h-screen">
             <SEO
-                title="Terms of Service | Mantle-Gold Ltd"
-                description="Terms of Service for Mantle-Gold Ltd. Review the terms governing the use of our website and engineering solutions in Nigeria's oil and gas sector."
+                title="Terms of Service | Mantle-Gold"
+                description="Terms of Service for Mantle-Gold. Review the terms governing the use of our website and engineering solutions in Nigeria's oil and gas sector."
                 canonicalPath="/terms"
             />
 
@@ -20,7 +20,7 @@ const TermsOfService = () => {
                         Terms of Service
                     </h1>
                     <p className="text-gray-400 text-sm">
-                        Last updated: October 2026 &bull; Mantle-Gold Ltd
+                        Last updated: October 2026 &bull; Mantle-Gold
                     </p>
                 </div>
             </div>
@@ -31,14 +31,14 @@ const TermsOfService = () => {
                 <section>
                     <h2 className="text-xl sm:text-2xl font-serif font-bold text-white mb-3">1. Agreement to Terms</h2>
                     <p>
-                        By accessing or using the website of Mantle-Gold Ltd (accessible via mantle-gold.com), you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and applicable laws and regulations of the Federal Republic of Nigeria.
+                        By accessing or using the website of Mantle-Gold (accessible via mantle-gold.com), you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and applicable laws and regulations of the Federal Republic of Nigeria.
                     </p>
                 </section>
 
                 <section>
                     <h2 className="text-xl sm:text-2xl font-serif font-bold text-white mb-3">2. Intellectual Property Rights</h2>
                     <p>
-                        All engineering descriptions, proprietary case studies, photographic media, registered company marks, diagrams, and code appearing on this site are the exclusive property of Mantle-Gold Ltd or credited project partners. Unauthorized reproduction, scraping, or commercial exploitation is strictly prohibited without written authorization.
+                        All engineering descriptions, proprietary case studies, photographic media, registered company marks, diagrams, and code appearing on this site are the exclusive property of Mantle-Gold or credited project partners. Unauthorized reproduction, scraping, or commercial exploitation is strictly prohibited without written authorization.
                     </p>
                 </section>
 
@@ -61,7 +61,7 @@ const TermsOfService = () => {
                     <p>
                         For inquiries concerning corporate governance or terms, please contact:
                         <br />
-                        <strong>Mantle-Gold Ltd</strong>
+                        <strong>Mantle-Gold</strong>
                         <br />
                         31 Discovery Gardens Estate, Lekki, Lagos, Nigeria
                         <br />

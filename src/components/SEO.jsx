@@ -13,10 +13,10 @@ const SEO = ({
     noindex = false,
     schema = null
 }) => {
-    const fullTitle = title || "Mantle-Gold Ltd | EPCI & Oil and Gas Services in Nigeria";
-    const fullDescription = description || "Mantle-Gold Ltd is a Lagos-based EPCI contractor: subsea engineering, pipeline installation and asset integrity for Nigeria's oil and gas sector.";
+    const fullTitle = title || "Mantle-Gold | EPCI & Oil and Gas Services in Nigeria";
+    const fullDescription = description || "Mantle-Gold is a Lagos-based EPCI contractor: subsea engineering, pipeline installation and asset integrity for Nigeria's oil and gas sector.";
     const cleanCanonical = `${DOMAIN}${canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`}`.replace(/\/$/, '') || DOMAIN;
-    const computedImageAlt = imageAlt || `${fullTitle} - Mantle-Gold Ltd`;
+    const computedImageAlt = imageAlt || `${fullTitle} - Mantle-Gold`;
 
     // Environment-based check: if staging hostname or explicitly set, noindex
     const isStaging = typeof window !== 'undefined' && window.location.hostname.includes('vercel.app');
@@ -31,7 +31,7 @@ const SEO = ({
             <link rel="canonical" href={cleanCanonical} />
 
             {/* Open Graph */}
-            <meta property="og:site_name" content="Mantle-Gold Ltd" />
+            <meta property="og:site_name" content="Mantle-Gold" />
             <meta property="og:type" content={type} />
             <meta property="og:url" content={cleanCanonical} />
             <meta property="og:title" content={fullTitle} />

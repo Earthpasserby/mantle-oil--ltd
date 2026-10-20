@@ -25,11 +25,11 @@ const Footer = () => {
                     {/* Brand */}
                     <div>
                         <div className="flex items-center gap-3 mb-6">
-                            <img src="/logo.png" alt="Mantle-Gold Ltd logo" className="h-8" loading="lazy" />
-                            <span className="text-lg font-bold text-white">Mantle-Gold Ltd</span>
+                            <img src="/logo.png" alt="Mantle-Gold logo" className="h-8" loading="lazy" />
+                            <span className="text-lg font-bold text-white">Mantle-Gold</span>
                         </div>
                         <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                            Oil, Gas &amp; Energy Products &amp; Engineering Solutions. Delivering EPCI excellence with safety, quality, and Nigerian local content strength.
+                            Oil, Gas &amp; Engineering Solutions. Delivering EPCI excellence with safety, quality, and Nigerian local content strength.
                         </p>
                         <div className="flex flex-wrap items-center gap-2.5">
                             <a
@@ -37,7 +37,7 @@ const Footer = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#0A66C2] hover:border-[#0A66C2]/40 hover:bg-[#0A66C2]/10 transition-all"
-                                aria-label="Mantle-Gold Ltd on LinkedIn"
+                                aria-label="Mantle-Gold on LinkedIn"
                                 title="LinkedIn"
                             >
                                 <Linkedin size={18} />
@@ -47,7 +47,7 @@ const Footer = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-white/40 hover:bg-white/10 transition-all"
-                                aria-label="Mantle-Gold Ltd on X"
+                                aria-label="Mantle-Gold on X"
                                 title="X (Twitter)"
                             >
                                 <XIcon size={15} />
@@ -57,7 +57,7 @@ const Footer = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#E4405F] hover:border-[#E4405F]/40 hover:bg-[#E4405F]/10 transition-all"
-                                aria-label="Mantle-Gold Ltd on Instagram"
+                                aria-label="Mantle-Gold on Instagram"
                                 title="Instagram"
                             >
                                 <Instagram size={18} />
@@ -166,7 +166,7 @@ const Footer = () => {
                 {/* Bottom bar */}
                 <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-600 text-sm">
-                        &copy; {currentYear} Mantle-Gold Ltd. All Rights Reserved.
+                        &copy; {currentYear} Mantle-Gold. All Rights Reserved.
                     </p>
                     <div className="flex items-center gap-6 text-xs text-gray-500">
                         <Link to="/privacy" className="hover:text-gold transition-colors">Privacy Policy</Link>

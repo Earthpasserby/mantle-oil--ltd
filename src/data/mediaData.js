@@ -1,4 +1,4 @@
-// Comprehensive Media Database for Mantle-Gold Limited
+// Comprehensive Media Database for Mantle-Gold
 // Contains all real operational photos and video assets
 
 export const heroVideos = [

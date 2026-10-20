@@ -6,8 +6,8 @@ const PrivacyPolicy = () => {
     return (
         <div className="bg-black text-white min-h-screen">
             <SEO
-                title="Privacy Policy | Mantle-Gold Ltd"
-                description="Privacy Policy for Mantle-Gold Ltd. Understand how we collect, use, and protect your information when engaging our oil and gas EPCI services."
+                title="Privacy Policy | Mantle-Gold"
+                description="Privacy Policy for Mantle-Gold. Understand how we collect, use, and protect your information when engaging our oil and gas EPCI services."
                 canonicalPath="/privacy"
             />
 
@@ -20,7 +20,7 @@ const PrivacyPolicy = () => {
                         Privacy Policy
                     </h1>
                     <p className="text-gray-400 text-sm">
-                        Last updated: October 2026 &bull; Mantle-Gold Ltd
+                        Last updated: October 2026 &bull; Mantle-Gold
                     </p>
                 </div>
             </div>
@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
                 <section>
                     <h2 className="text-xl sm:text-2xl font-serif font-bold text-white mb-3">1. Introduction</h2>
                     <p>
-                        Mantle-Gold Ltd ("we," "our," or "us"), incorporated under the laws of the Federal Republic of Nigeria with its principal administrative office at 31 Discovery Gardens Estate, Lekki, Lagos, respects the privacy of our website visitors, clients, and industry partners. This Privacy Policy details how we handle information submitted to us through our digital presence at mantle-gold.com.
+                        Mantle-Gold ("we," "our," or "us"), incorporated under the laws of the Federal Republic of Nigeria with its principal administrative office at 31 Discovery Gardens Estate, Lekki, Lagos, respects the privacy of our website visitors, clients, and industry partners. This Privacy Policy details how we handle information submitted to us through our digital presence at mantle-gold.com.
                     </p>
                 </section>
 
@@ -59,7 +59,7 @@ const PrivacyPolicy = () => {
                 <section>
                     <h2 className="text-xl sm:text-2xl font-serif font-bold text-white mb-3">4. Information Security &amp; Sharing</h2>
                     <p>
-                        Mantle-Gold Ltd will never sell, lease, or monetize your commercial or personal data. We implement industry-grade technical safeguards to prevent unauthorized access or disclosure. Information is disclosed only when required by Nigerian legal authorities or with your explicit consent to project joint venture partners.
+                        Mantle-Gold will never sell, lease, or monetize your commercial or personal data. We implement industry-grade technical safeguards to prevent unauthorized access or disclosure. Information is disclosed only when required by Nigerian legal authorities or with your explicit consent to project joint venture partners.
                     </p>
                 </section>
 

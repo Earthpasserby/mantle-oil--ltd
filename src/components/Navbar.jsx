@@ -102,13 +102,13 @@ const Navbar = () => {
         <nav className={`fixed top-0 left-0 right-0 w-full z-50 transition-colors duration-300 ${scrolled ? 'bg-black/95 md:backdrop-blur-md py-3 sm:py-4 shadow-xl' : isOpen ? 'bg-black py-3 sm:py-4' : 'bg-transparent py-4 md:py-6'}`}>
             <div className="container mx-auto px-4 sm:px-6 flex justify-between items-center relative z-50">
                 <Link to="/" className="flex items-center gap-2.5 sm:gap-3 max-w-[calc(100%-54px)] md:max-w-none">
-                    <img src="/logo.png" alt="Mantle-Gold Ltd logo" className="h-9 sm:h-11 md:h-12 flex-shrink-0" />
+                    <img src="/logo.png" alt="Mantle-Gold logo" className="h-9 sm:h-11 md:h-12 flex-shrink-0" />
                     <div className="flex flex-col min-w-0">
                         <span className="text-base sm:text-lg md:text-xl font-bold tracking-wide text-white leading-tight truncate">
-                            Mantle-Gold Ltd
+                            Mantle-Gold
                         </span>
                         <span className="text-[9px] sm:text-[10px] text-gold tracking-wider sm:tracking-widest uppercase mt-0.5 truncate">
-                            Oil, Gas &amp; Energy Solutions
+                            Oil, Gas &amp; Engineering Solutions
                         </span>
                     </div>
                 </Link>
@@ -388,7 +388,7 @@ const Navbar = () => {
                                 </div>
 
                                 <p className="text-gray-500 text-xs">
-                                    &copy; {new Date().getFullYear()} MANTLE-GOLD LTD.
+                                    &copy; {new Date().getFullYear()} MANTLE-GOLD.
                                 </p>
                             </motion.div>
                         </div>

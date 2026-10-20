@@ -9,8 +9,8 @@ import CTABanner from '../../components/CTABanner';
 
 const faqs = [
     {
-        question: "What fabrication services does Mantle-Gold Ltd provide in Lagos, Nigeria?",
-        answer: "Mantle-Gold Ltd provides specialized oil and gas fabrication Lagos capabilities, including heavy structural steel framing, offshore topside modules, subsea manifolds, PLET/PLEM structures, high-pressure piping spools, process equipment skids, and customized marine subsea templates."
+        question: "What fabrication services does Mantle-Gold provide in Lagos, Nigeria?",
+        answer: "Mantle-Gold provides specialized oil and gas fabrication Lagos capabilities, including heavy structural steel framing, offshore topside modules, subsea manifolds, PLET/PLEM structures, high-pressure piping spools, process equipment skids, and customized marine subsea templates."
     },
     {
         question: "What welding certifications and qualifications do your fabricators hold?",
@@ -21,8 +21,8 @@ const faqs = [
         answer: "Every fabrication assembly undergoes strict quality verification, including 100% Non-Destructive Testing (NDT) via Phased Array Ultrasonic Testing (PAUT), radiographic inspection (RT), magnetic particle testing (MT), dye penetrant inspection (PT), hydrostatic pressure proof testing, and dimensional laser verification."
     },
     {
-        question: "How does Mantle-Gold Ltd comply with Nigerian Content (NOGICD Act)?",
-        answer: "Mantle-Gold Ltd is 100% committed to Nigerian Content development. All structural fabrication, pipe spooling, blast cleaning, protective coating, and assembly work scopes are executed by Nigerian personnel in compliant fabrication facilities, creating domestic industrial value."
+        question: "How does Mantle-Gold comply with Nigerian Content (NOGICD Act)?",
+        answer: "Mantle-Gold is 100% committed to Nigerian Content development. All structural fabrication, pipe spooling, blast cleaning, protective coating, and assembly work scopes are executed by Nigerian personnel in compliant fabrication facilities, creating domestic industrial value."
     },
     {
         question: "How can clients request a quotation for offshore fabrication work?",
@@ -38,7 +38,7 @@ const FabricationService = () => {
         "serviceType": "Structural and Offshore Mechanical Fabrication",
         "provider": {
             "@type": "Organization",
-            "name": "Mantle-Gold Ltd",
+            "name": "Mantle-Gold",
             "url": "https://mantle-gold.com",
             "logo": "https://mantle-gold.com/logo.png"
         },
@@ -53,7 +53,7 @@ const FabricationService = () => {
     return (
         <div className="bg-black text-white">
             <SEO
-                title="Oil & Gas Fabrication in Lagos | Mantle-Gold Ltd"
+                title="Oil & Gas Fabrication in Lagos | Mantle-Gold"
                 description="Structural and offshore fabrication for oil and gas projects, delivered from Lagos with strict quality and safety control. Request a quote."
                 canonicalPath="/services/fabrication"
                 schema={serviceSchema}
@@ -83,13 +83,13 @@ const FabricationService = () => {
                                 Precision Oil and Gas Fabrication in Lagos, Nigeria
                             </h2>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
-                                High-integrity mechanical and structural assembly is the bedrock of dependable oil and gas infrastructure. Mantle-Gold Ltd delivers premier <strong>oil and gas fabrication Lagos</strong> solutions that meet the stringent material, dimensional, and metallurgical requirements of upstream IOCs, midstream pipeline operators, and offshore concession holders.
+                                High-integrity mechanical and structural assembly is the bedrock of dependable oil and gas infrastructure. Mantle-Gold delivers premier <strong>oil and gas fabrication Lagos</strong> solutions that meet the stringent material, dimensional, and metallurgical requirements of upstream IOCs, midstream pipeline operators, and offshore concession holders.
                             </p>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
                                 Operating from Lagos with direct access to coastal logistics corridors, our fabrication operations cover heavy structural steel, offshore topside modules, subsea manifolds, pressure-containing pipe spools, and customized equipment skids. We operate under rigorous AWS D1.1, ASME Section IX, and API 1104 welding procedure specifications (WPS).
                             </p>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
-                                Backed by a verified corporate track record of 532,480+ cumulative man-hours without an LTI since 2014, Mantle-Gold Ltd pairs technical excellence with complete compliance under the Nigerian Oil and Gas Industry Content Development (NOGICD) Act.
+                                Backed by a verified corporate track record of 532,480+ cumulative man-hours without an LTI since 2014, Mantle-Gold pairs technical excellence with complete compliance under the Nigerian Oil and Gas Industry Content Development (NOGICD) Act.
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
@@ -188,7 +188,7 @@ const FabricationService = () => {
                                     Certified QA/QC and Weld Procedure Qualifications
                                 </h3>
                                 <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed mb-4">
-                                    Every fabrication project at Mantle-Gold Ltd is governed by an exhaustive Inspection and Test Plan (ITP). Our QA/QC inspectors maintain Level II and III PCN/CSWIP qualifications, supervising Welder Performance Qualifications (WPQ) and Procedure Qualification Records (PQR).
+                                    Every fabrication project at Mantle-Gold is governed by an exhaustive Inspection and Test Plan (ITP). Our QA/QC inspectors maintain Level II and III PCN/CSWIP qualifications, supervising Welder Performance Qualifications (WPQ) and Procedure Qualification Records (PQR).
                                 </p>
                                 <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed mb-6">
                                     Traceability dossiers provide full 3.1 material test certificates (MTC), NDT films, dimensional inspection reports, and hydrostatic charts for client handover.

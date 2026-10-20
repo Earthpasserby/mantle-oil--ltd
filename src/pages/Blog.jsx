@@ -21,7 +21,7 @@ const blogPosts = [
         image: "/images/subsea-vessel.jpg",
         content: `
             <h3>Project Background & Field Context</h3>
-            <p>In offshore subsea field redevelopments, the relocation of existing subsea umbilicals and flexible production flowlines presents extreme engineering and hydrodynamic challenges. In the Okwori field offshore Nigeria, operated by ADDAX Petroleum, Mantle-Gold Ltd was tasked with engineering and technically coordinating the safe relocation of three critical subsea umbilicals and flexible flowlines from donor well locations to receiver wells.</p>
+            <p>In offshore subsea field redevelopments, the relocation of existing subsea umbilicals and flexible production flowlines presents extreme engineering and hydrodynamic challenges. In the Okwori field offshore Nigeria, operated by ADDAX Petroleum, Mantle-Gold was tasked with engineering and technically coordinating the safe relocation of three critical subsea umbilicals and flexible flowlines from donor well locations to receiver wells.</p>
 
             <h3>Technical Execution & Dynamic Analysis</h3>
             <p>Subsea umbilicals operate under severe tension, bending, and torsional cycles caused by wave-induced vessel motions and deepwater ocean currents. Prior to mobilization, our technical team executed comprehensive static and dynamic finite element modeling to determine minimum bend radius (MBR) limits and permissible pull-in tension thresholds.</p>
@@ -50,7 +50,7 @@ const blogPosts = [
             <p>In deepwater offshore developments, over 70% of lifecycle cost overruns and operational failures trace back to inadequate Front-End Engineering Design (FEED) or compromised Technical Authority (TA) governance. When high-pressure, high-temperature (HPHT) subsea systems fail 1,000 meters underwater, remediation costs multiply exponentially.</p>
 
             <h3>The Shell Technical Authority Framework</h3>
-            <p>As a Shell-Certified Technical Authority (TA) in Subsea Systems, Mantle-Gold Ltd applies Shell Design and Engineering Practices (DEPs) to review Invitation for Tender (IFT) specifications, subsea equipment layouts, and material selections. Independent TA verification guarantees that all safety barriers, material fatigue limits, and flow assurance criteria meet world-class industry thresholds.</p>
+            <p>As a Shell-Certified Technical Authority (TA) in Subsea Systems, Mantle-Gold applies Shell Design and Engineering Practices (DEPs) to review Invitation for Tender (IFT) specifications, subsea equipment layouts, and material selections. Independent TA verification guarantees that all safety barriers, material fatigue limits, and flow assurance criteria meet world-class industry thresholds.</p>
 
             <h3>Application on Nigerian Deepwater Assets</h3>
             <p>During our involvement with major deepwater FEED packages in SNEPCo and Gulf of Guinea fields, this structured technical authority oversight identified critical flowline expansion vulnerabilities early in the design cycle, saving operators significant capital expenditure and ensuring decades of safe operations.</p>
@@ -63,7 +63,7 @@ const blogPosts = [
         excerpt: "Strategies for combatting microbiologically influenced corrosion, structural fatigue, and splash-zone degradation on aging West African production platforms.",
         date: "2024-02-10",
         formattedDate: "February 10, 2024",
-        author: "Mantle-Gold Ltd Technical Team",
+        author: "Mantle-Gold Technical Team",
         authorRole: "Asset Integrity Engineering Division",
         readTime: "7 min read",
         category: "Asset Integrity",
@@ -73,7 +73,7 @@ const blogPosts = [
             <p>The Gulf of Guinea hosts dozens of offshore production platforms and topsides that have exceeded their original 20-to-25-year design lifespans. High humidity, warm sea surface temperatures, and severe marine growth accelerate splash-zone corrosion and structural fatigue.</p>
 
             <h3>Risk-Based Inspection (RBI) Methodologies</h3>
-            <p>Rather than relying on generic calendar-based maintenance schedules, Mantle-Gold Ltd deploys Risk-Based Inspection (RBI) compliant with API 580/581. By modeling probability of failure (PoF) alongside consequence of failure (CoF), inspection resources are focused directly on high-risk process piping, pressure vessels, and primary structural jacket members.</p>
+            <p>Rather than relying on generic calendar-based maintenance schedules, Mantle-Gold deploys Risk-Based Inspection (RBI) compliant with API 580/581. By modeling probability of failure (PoF) alongside consequence of failure (CoF), inspection resources are focused directly on high-risk process piping, pressure vessels, and primary structural jacket members.</p>
 
             <h3>Non-Destructive Testing (NDT) & Life Extension</h3>
             <p>Utilizing advanced ultrasonic thickness gauging, phased array NDT, and underwater drone/ROV visual surveys, our engineers provide operators with precise structural fitness-for-service (FFS) assessments, allowing safe license renewals and production uptime extension.</p>
@@ -88,12 +88,12 @@ const Blog = () => {
         "@context": "https://schema.org",
         "@type": "Blog",
         "@id": "https://mantle-gold.com/blog#blog",
-        "name": "Mantle-Gold Ltd Engineering Insights & Blog",
-        "description": "Technical insights, field case studies, and engineering analysis from Mantle-Gold Ltd's oil and gas experts in Lagos, Nigeria.",
+        "name": "Mantle-Gold Engineering Insights & Blog",
+        "description": "Technical insights, field case studies, and engineering analysis from Mantle-Gold's oil and gas experts in Lagos, Nigeria.",
         "url": "https://mantle-gold.com/blog",
         "publisher": {
             "@type": "Organization",
-            "name": "Mantle-Gold Ltd",
+            "name": "Mantle-Gold",
             "url": "https://mantle-gold.com",
             "logo": "https://mantle-gold.com/logo.png"
         },
@@ -110,7 +110,7 @@ const Blog = () => {
             },
             "publisher": {
                 "@type": "Organization",
-                "name": "Mantle-Gold Ltd",
+                "name": "Mantle-Gold",
                 "logo": "https://mantle-gold.com/logo.png"
             },
             "image": `https://mantle-gold.com${post.image}`,
@@ -127,8 +127,8 @@ const Blog = () => {
             className="font-sans bg-black min-h-screen text-white relative"
         >
             <SEO
-                title="Oil & Gas Engineering Insights | Mantle-Gold Ltd"
-                description="Technical insights, subsea project case studies, and pipeline engineering articles from Mantle-Gold Ltd, Lagos, Nigeria."
+                title="Oil & Gas Engineering Insights | Mantle-Gold"
+                description="Technical insights, subsea project case studies, and pipeline engineering articles from Mantle-Gold, Lagos, Nigeria."
                 canonical="https://mantle-gold.com/blog"
                 type="website"
                 schema={blogSchema}
@@ -165,7 +165,7 @@ const Blog = () => {
                         transition={{ delay: 0.2 }}
                         className="text-gray-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed px-2"
                     >
-                        Explore technical case studies, subsea field execution reviews, and regulatory standards written by the technical authorities and engineers at Mantle-Gold Ltd.
+                        Explore technical case studies, subsea field execution reviews, and regulatory standards written by the technical authorities and engineers at Mantle-Gold.
                     </motion.p>
                 </div>
             </section>

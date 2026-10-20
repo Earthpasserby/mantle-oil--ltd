@@ -9,8 +9,8 @@ import CTABanner from '../../components/CTABanner';
 
 const faqs = [
     {
-        question: "What scope of pipeline engineering does Mantle-Gold Ltd provide in Nigeria?",
-        answer: "Mantle-Gold Ltd provides comprehensive pipeline engineering Nigeria services across onshore rights-of-way (ROW), swamp terrain, and offshore environments. Our scope includes hydraulic simulation, route optimization, trenching, horizontal directional drilling (HDD) river crossings, line pipe welding, NDT, hydrotesting, and cathodic protection system commissioning."
+        question: "What scope of pipeline engineering does Mantle-Gold provide in Nigeria?",
+        answer: "Mantle-Gold provides comprehensive pipeline engineering Nigeria services across onshore rights-of-way (ROW), swamp terrain, and offshore environments. Our scope includes hydraulic simulation, route optimization, trenching, horizontal directional drilling (HDD) river crossings, line pipe welding, NDT, hydrotesting, and cathodic protection system commissioning."
     },
     {
         question: "How do you ensure pipeline integrity across swamp and creek crossings?",
@@ -21,7 +21,7 @@ const faqs = [
         answer: "All pipeline welding and testing strictly complies with API 1104, ASME B31.4 (liquid transportation), ASME B31.8 (gas transmission), and Shell DEP specifications, verified through 100% radiographic, phased-array ultrasonic testing (PAUT), and hydrotesting."
     },
     {
-        question: "Can Mantle-Gold Ltd perform hot tapping and pipeline tie-ins?",
+        question: "Can Mantle-Gold perform hot tapping and pipeline tie-ins?",
         answer: "Yes. We engineer and execute high-pressure hot tapping, stopple plugging, and tie-in spools on active pipelines, enabling brownfield modifications and expansions without halting commercial production."
     },
     {
@@ -38,7 +38,7 @@ const PipelineService = () => {
         "serviceType": "Pipeline & Flowline Engineering & Construction",
         "provider": {
             "@type": "Organization",
-            "name": "Mantle-Gold Ltd",
+            "name": "Mantle-Gold",
             "url": "https://mantle-gold.com",
             "logo": "https://mantle-gold.com/logo.png"
         },
@@ -53,7 +53,7 @@ const PipelineService = () => {
     return (
         <div className="bg-black text-white">
             <SEO
-                title="Pipeline Engineering in Nigeria | Mantle-Gold Ltd"
+                title="Pipeline Engineering in Nigeria | Mantle-Gold"
                 description="Pipeline and flowline engineering, installation and construction support for onshore and offshore projects in Nigeria. Request a proposal."
                 canonicalPath="/services/pipeline-engineering"
                 schema={serviceSchema}
@@ -83,13 +83,13 @@ const PipelineService = () => {
                                 Specialized Pipeline Engineering Nigeria for Critical Energy Conduits
                             </h2>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
-                                Pipelines represent the lifeblood of Nigeria's oil and gas infrastructure. As a seasoned specialist in <strong>pipeline engineering Nigeria</strong>, Mantle-Gold Ltd engineers, procures, constructs, and commissions onshore gathering networks, swamp transit trunklines, and offshore flowline systems that withstand high pressures, corrosive fluids, and challenging operating terrains.
+                                Pipelines represent the lifeblood of Nigeria's oil and gas infrastructure. As a seasoned specialist in <strong>pipeline engineering Nigeria</strong>, Mantle-Gold engineers, procures, constructs, and commissions onshore gathering networks, swamp transit trunklines, and offshore flowline systems that withstand high pressures, corrosive fluids, and challenging operating terrains.
                             </p>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
                                 From right-of-way (ROW) survey and environmental impact mitigation in the Niger Delta to deepwater pipeline end manifold (PLEM) hookups, our multidisciplinary team manages every technical interface. We apply cutting-edge hydraulic simulation, flow assurance modeling, and stress analysis under ASME B31.4, ASME B31.8, and API 1104 standards.
                             </p>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
-                                With over 532,480 cumulative project man-hours executed with an unblemished Zero LTI record since 2014, Mantle-Gold Ltd delivers pipeline capital projects on schedule, within budget, and with complete technical compliance.
+                                With over 532,480 cumulative project man-hours executed with an unblemished Zero LTI record since 2014, Mantle-Gold delivers pipeline capital projects on schedule, within budget, and with complete technical compliance.
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
@@ -145,7 +145,7 @@ const PipelineService = () => {
                             End-to-End Pipeline Infrastructure Execution
                         </h2>
                         <p className="text-gray-400 text-sm sm:text-base">
-                            Mantle-Gold Ltd provides comprehensive technical capability across the pipeline asset lifecycle.
+                            Mantle-Gold provides comprehensive technical capability across the pipeline asset lifecycle.
                         </p>
                     </div>
 
@@ -188,7 +188,7 @@ const PipelineService = () => {
                                     Flexible Flowline &amp; Riser Relocation — Okwori Asset
                                 </h3>
                                 <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed mb-4">
-                                    Mantle-Gold Ltd’s executive leadership directed the dynamic pipeline engineering and offshore relocation of flexible flowlines and risers in Addax Petroleum's Okwori offshore field.
+                                    Mantle-Gold’s executive leadership directed the dynamic pipeline engineering and offshore relocation of flexible flowlines and risers in Addax Petroleum's Okwori offshore field.
                                 </p>
                                 <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed mb-6">
                                     The project successfully resolved severe seabed scour and fatigue issues on existing flexible risers, reconnecting deepwater production lines with zero disruption to field hydrocarbons delivery.

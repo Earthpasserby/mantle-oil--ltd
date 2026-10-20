@@ -9,8 +9,8 @@ import CTABanner from '../../components/CTABanner';
 
 const faqs = [
     {
-        question: "What subsea engineering services does Mantle-Gold Ltd provide in Nigeria?",
-        answer: "Mantle-Gold Ltd delivers comprehensive subsea engineering services Nigeria, including FEED and detailed design for Subsea Umbilicals, Risers, and Flowlines (SURF), subsea manifold and PLET/PLEM layout, dynamic umbilical fatigue analysis, deepwater installation supervision, and diverless ROV intervention planning."
+        question: "What subsea engineering services does Mantle-Gold provide in Nigeria?",
+        answer: "Mantle-Gold delivers comprehensive subsea engineering services Nigeria, including FEED and detailed design for Subsea Umbilicals, Risers, and Flowlines (SURF), subsea manifold and PLET/PLEM layout, dynamic umbilical fatigue analysis, deepwater installation supervision, and diverless ROV intervention planning."
     },
     {
         question: "What qualifications does your subsea technical leadership hold?",
@@ -25,7 +25,7 @@ const faqs = [
         answer: "Our technical team has executed subsea flowline and umbilical relocation in Addax Petroleum's Okwori field offshore Nigeria and contributed to subsea FEED and ITT packages for deepwater offshore projects across the Gulf of Guinea."
     },
     {
-        question: "Can Mantle-Gold Ltd support subsea inspection, maintenance, and repair (IMR)?",
+        question: "Can Mantle-Gold support subsea inspection, maintenance, and repair (IMR)?",
         answer: "Yes. We plan and execute subsea IMR campaigns utilizing Work-Class ROVs, acoustic seabed mapping, cathodic protection monitoring, and ultrasonic non-destructive testing for subsea trees, manifolds, and pipelines."
     }
 ];
@@ -38,7 +38,7 @@ const SubseaService = () => {
         "serviceType": "Subsea Umbilicals, Risers and Flowlines (SURF) Engineering",
         "provider": {
             "@type": "Organization",
-            "name": "Mantle-Gold Ltd",
+            "name": "Mantle-Gold",
             "url": "https://mantle-gold.com",
             "logo": "https://mantle-gold.com/logo.png"
         },
@@ -83,13 +83,13 @@ const SubseaService = () => {
                                 Specialized Subsea Engineering Services Nigeria for Offshore Operators
                             </h2>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
-                                Delivering reliable <strong>subsea engineering services Nigeria</strong> demands deep domain expertise, hydrodynamic modeling prowess, and strict adherence to deepwater offshore safety standards. Mantle-Gold Ltd provides end-to-end subsea engineering for Subsea Umbilicals, Risers, and Flowlines (SURF), subsea production systems (SPS), and seabed tie-in infrastructure across shallow water and ultra-deep concessions.
+                                Delivering reliable <strong>subsea engineering services Nigeria</strong> demands deep domain expertise, hydrodynamic modeling prowess, and strict adherence to deepwater offshore safety standards. Mantle-Gold provides end-to-end subsea engineering for Subsea Umbilicals, Risers, and Flowlines (SURF), subsea production systems (SPS), and seabed tie-in infrastructure across shallow water and ultra-deep concessions.
                             </p>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
-                                Headquartered in Lekki, Lagos, Mantle-Gold Ltd brings technical leadership backed by Shell-certified Technical Authority credentials. Our engineering team specializes in resolving dynamic subsea pipeline fatigue, high-temperature/high-pressure (HPHT) flowline expansions, seabed routing across uneven bathymetry, and J-tube pull-in stress calculations.
+                                Headquartered in Lekki, Lagos, Mantle-Gold brings technical leadership backed by Shell-certified Technical Authority credentials. Our engineering team specializes in resolving dynamic subsea pipeline fatigue, high-temperature/high-pressure (HPHT) flowline expansions, seabed routing across uneven bathymetry, and J-tube pull-in stress calculations.
                             </p>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
-                                With a direct legacy of executing critical subsea projects—including flexible flowlines and umbilical relocation for Addax Petroleum in Nigeria's Okwori field and umbilical distribution systems for Shell’s deepwater Perdido Stage 2 in the Gulf of Mexico—Mantle-Gold Ltd stands as a proven partner for major operators.
+                                With a direct legacy of executing critical subsea projects—including flexible flowlines and umbilical relocation for Addax Petroleum in Nigeria's Okwori field and umbilical distribution systems for Shell’s deepwater Perdido Stage 2 in the Gulf of Mexico—Mantle-Gold stands as a proven partner for major operators.
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
@@ -191,7 +191,7 @@ const SubseaService = () => {
                                     In the Okwori concession offshore Nigeria, dynamic marine currents and changing production requirements necessitated the relocation and re-installation of subsea umbilicals and flexible pipelines without shutting down adjacent producing wells.
                                 </p>
                                 <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed mb-6">
-                                    Mantle-Gold Ltd technical leadership orchestrated the detailed umbilical stress modeling, marine vessel procedures, and ROV-assisted hookup, successfully executing the campaign under zero-incident safety conditions.
+                                    Mantle-Gold technical leadership orchestrated the detailed umbilical stress modeling, marine vessel procedures, and ROV-assisted hookup, successfully executing the campaign under zero-incident safety conditions.
                                 </p>
                                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs">
                                     <div className="p-3 bg-black/40 rounded-lg border border-white/5">

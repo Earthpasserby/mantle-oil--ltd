@@ -17,9 +17,9 @@ const baseHtml = fs.readFileSync(baseHtmlPath, 'utf-8');
 const pages = [
     {
         route: '/',
-        title: "Mantle-Gold Ltd | EPCI & Oil and Gas Services in Nigeria",
-        description: "Mantle-Gold Ltd is a Lagos-based EPCI contractor: subsea engineering, pipeline installation and asset integrity for Nigeria's oil and gas sector.",
-        h1: "Mantle-Gold Ltd: EPCI and Engineering Solutions for Nigeria's Oil and Gas Industry",
+        title: "Mantle-Gold | EPCI & Oil and Gas Services in Nigeria",
+        description: "Mantle-Gold is a Lagos-based EPCI contractor: subsea engineering, pipeline installation and asset integrity for Nigeria's oil and gas sector.",
+        h1: "Mantle-Gold: EPCI and Engineering Solutions for Nigeria's Oil and Gas Industry",
         canonical: "https://mantle-gold.com/",
         type: "website",
         noindex: false,
@@ -29,17 +29,17 @@ const pages = [
                 {
                     "@type": "Organization",
                     "@id": "https://mantle-gold.com/#organization",
-                    "name": "Mantle-Gold Ltd",
+                    "name": "Mantle-Gold",
                     "alternateName": [
-                        "Mantle Gold Ltd",
-                        "Mantle-Gold Limited",
-                        "Mantle Gold Limited"
+                        "Mantle Gold",
+                        "Mantle-Gold",
+                        "Mantle Gold"
                     ],
                     "url": "https://mantle-gold.com",
                     "logo": {
                         "@type": "ImageObject",
                         "url": "https://mantle-gold.com/logo.png",
-                        "caption": "Mantle-Gold Ltd logo"
+                        "caption": "Mantle-Gold logo"
                     },
                     "description": "Indigenous Nigerian EPCI contractor delivering turnkey subsea engineering, pipeline construction, asset integrity management, structural fabrication and specialized procurement.",
                     "address": {
@@ -81,7 +81,7 @@ const pages = [
                     "@type": "WebSite",
                     "@id": "https://mantle-gold.com/#website",
                     "url": "https://mantle-gold.com",
-                    "name": "Mantle-Gold Ltd",
+                    "name": "Mantle-Gold",
                     "publisher": {
                         "@id": "https://mantle-gold.com/#organization"
                     }
@@ -91,9 +91,9 @@ const pages = [
     },
     {
         route: '/about',
-        title: "About Mantle-Gold Ltd | Oil & Gas Engineering, Lagos",
-        description: "Established in 2014, Mantle-Gold Ltd delivers EPCI and engineering services to Nigeria's oil and gas industry. Meet the team behind our projects.",
-        h1: "About Mantle-Gold Ltd",
+        title: "About Mantle-Gold | Oil & Gas Engineering, Lagos",
+        description: "Established in 2014, Mantle-Gold delivers EPCI and engineering services to Nigeria's oil and gas industry. Meet the team behind our projects.",
+        h1: "About Mantle-Gold",
         canonical: "https://mantle-gold.com/about",
         type: "website",
         noindex: false,
@@ -102,13 +102,13 @@ const pages = [
             "@type": "BreadcrumbList",
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mantle-gold.com/" },
-                { "@type": "ListItem", "position": 2, "name": "About Mantle-Gold Ltd", "item": "https://mantle-gold.com/about" }
+                { "@type": "ListItem", "position": 2, "name": "About Mantle-Gold", "item": "https://mantle-gold.com/about" }
             ]
         }
     },
     {
         route: '/services',
-        title: "Oil & Gas Services in Nigeria | Mantle-Gold Ltd",
+        title: "Oil & Gas Services in Nigeria | Mantle-Gold",
         description: "EPCI project execution, subsea and pipeline engineering, asset integrity, fabrication and procurement for Nigeria's oil and gas sector.",
         h1: "Oil and Gas Engineering and EPCI Services in Nigeria",
         canonical: "https://mantle-gold.com/services",
@@ -125,7 +125,7 @@ const pages = [
     },
     {
         route: '/services/epci',
-        title: "EPCI Contractor in Nigeria | Mantle-Gold Ltd",
+        title: "EPCI Contractor in Nigeria | Mantle-Gold",
         description: "End-to-end EPCI project execution for oil and gas assets in Nigeria, from engineering and procurement to installation. Request a quote.",
         h1: "EPCI Project Execution for Oil and Gas in Nigeria",
         canonical: "https://mantle-gold.com/services/epci",
@@ -138,7 +138,7 @@ const pages = [
                     "@type": "Service",
                     "name": "EPCI Project Execution",
                     "serviceType": "Engineering, Procurement, Construction and Installation",
-                    "provider": { "@type": "Organization", "name": "Mantle-Gold Ltd", "url": "https://mantle-gold.com" },
+                    "provider": { "@type": "Organization", "name": "Mantle-Gold", "url": "https://mantle-gold.com" },
                     "areaServed": { "@type": "Country", "name": "Nigeria" },
                     "description": "Turnkey EPCI project execution for oil and gas infrastructure in Nigeria."
                 },
@@ -168,7 +168,7 @@ const pages = [
                     "@type": "Service",
                     "name": "Subsea Engineering Services",
                     "serviceType": "Subsea SURF Engineering & Installation",
-                    "provider": { "@type": "Organization", "name": "Mantle-Gold Ltd", "url": "https://mantle-gold.com" },
+                    "provider": { "@type": "Organization", "name": "Mantle-Gold", "url": "https://mantle-gold.com" },
                     "areaServed": { "@type": "Country", "name": "Nigeria" },
                     "description": "Deepwater subsea engineering, SURF design, flowlines, and umbilical installation offshore Nigeria."
                 },
@@ -185,7 +185,7 @@ const pages = [
     },
     {
         route: '/services/pipeline-engineering',
-        title: "Pipeline Engineering in Nigeria | Mantle-Gold Ltd",
+        title: "Pipeline Engineering in Nigeria | Mantle-Gold",
         description: "Pipeline and flowline engineering, installation and construction support for onshore and offshore projects in Nigeria. Request a proposal.",
         h1: "Pipeline Engineering and Installation in Nigeria",
         canonical: "https://mantle-gold.com/services/pipeline-engineering",
@@ -198,7 +198,7 @@ const pages = [
                     "@type": "Service",
                     "name": "Pipeline Engineering and Installation",
                     "serviceType": "Pipeline and Flowline Construction",
-                    "provider": { "@type": "Organization", "name": "Mantle-Gold Ltd", "url": "https://mantle-gold.com" },
+                    "provider": { "@type": "Organization", "name": "Mantle-Gold", "url": "https://mantle-gold.com" },
                     "areaServed": { "@type": "Country", "name": "Nigeria" },
                     "description": "Onshore, swamp, and offshore pipeline design, trenching, installation, and hydrostatic testing in Nigeria."
                 },
@@ -215,8 +215,8 @@ const pages = [
     },
     {
         route: '/services/asset-integrity',
-        title: "Asset Integrity Management in Nigeria | Mantle-Gold Ltd",
-        description: "Asset support and integrity services that keep Nigerian oil and gas facilities safe, compliant and operating. Speak to Mantle-Gold Ltd.",
+        title: "Asset Integrity Management in Nigeria | Mantle-Gold",
+        description: "Asset support and integrity services that keep Nigerian oil and gas facilities safe, compliant and operating. Speak to Mantle-Gold.",
         h1: "Asset Integrity and Support Services in Nigeria",
         canonical: "https://mantle-gold.com/services/asset-integrity",
         type: "website",
@@ -228,7 +228,7 @@ const pages = [
                     "@type": "Service",
                     "name": "Asset Integrity Management",
                     "serviceType": "Asset Support & Integrity Management",
-                    "provider": { "@type": "Organization", "name": "Mantle-Gold Ltd", "url": "https://mantle-gold.com" },
+                    "provider": { "@type": "Organization", "name": "Mantle-Gold", "url": "https://mantle-gold.com" },
                     "areaServed": { "@type": "Country", "name": "Nigeria" },
                     "description": "Comprehensive maintenance, risk-based inspection (RBI), corrosion control, and structural integrity management for Nigerian assets."
                 },
@@ -245,7 +245,7 @@ const pages = [
     },
     {
         route: '/services/fabrication',
-        title: "Oil & Gas Fabrication in Lagos | Mantle-Gold Ltd",
+        title: "Oil & Gas Fabrication in Lagos | Mantle-Gold",
         description: "Structural and offshore fabrication for oil and gas projects, delivered from Lagos with strict quality and safety control. Request a quote.",
         h1: "Oil and Gas Fabrication in Lagos, Nigeria",
         canonical: "https://mantle-gold.com/services/fabrication",
@@ -258,7 +258,7 @@ const pages = [
                     "@type": "Service",
                     "name": "Oil & Gas Structural Fabrication",
                     "serviceType": "Heavy Structural Steel Fabrication & Spool Piping",
-                    "provider": { "@type": "Organization", "name": "Mantle-Gold Ltd", "url": "https://mantle-gold.com" },
+                    "provider": { "@type": "Organization", "name": "Mantle-Gold", "url": "https://mantle-gold.com" },
                     "areaServed": { "@type": "Country", "name": "Nigeria" },
                     "description": "Certified structural fabrication, pressure piping, subsea manifolds, and modular skid assemblies manufactured in Lagos, Nigeria."
                 },
@@ -288,7 +288,7 @@ const pages = [
                     "@type": "Service",
                     "name": "Procurement and Supply Chain Services",
                     "serviceType": "Energy Sector Procurement & Logistics",
-                    "provider": { "@type": "Organization", "name": "Mantle-Gold Ltd", "url": "https://mantle-gold.com" },
+                    "provider": { "@type": "Organization", "name": "Mantle-Gold", "url": "https://mantle-gold.com" },
                     "areaServed": { "@type": "Country", "name": "Nigeria" },
                     "description": "Global sourcing, expediting, and logistics for API-certified oilfield equipment, line pipes, valves, and electrical materials in Nigeria."
                 },
@@ -305,9 +305,9 @@ const pages = [
     },
     {
         route: '/contact',
-        title: "Contact Mantle-Gold Ltd | Lekki, Lagos",
-        description: "Contact Mantle-Gold Ltd at 31 Discovery Gardens Estate, Lekki, Lagos. Call +234 803 236 8599 or email info@mantle-gold.com.",
-        h1: "Contact Mantle-Gold Ltd",
+        title: "Contact Mantle-Gold | Lekki, Lagos",
+        description: "Contact Mantle-Gold at 31 Discovery Gardens Estate, Lekki, Lagos. Call +234 803 236 8599 or email info@mantle-gold.com.",
+        h1: "Contact Mantle-Gold",
         canonical: "https://mantle-gold.com/contact",
         type: "website",
         noindex: false,
@@ -315,8 +315,8 @@ const pages = [
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "@id": "https://mantle-gold.com/contact#localbusiness",
-            "name": "Mantle-Gold Ltd",
-            "alternateName": ["Mantle Gold Ltd", "Mantle-Gold Limited", "Mantle Gold Limited"],
+            "name": "Mantle-Gold",
+            "alternateName": ["Mantle Gold", "Mantle-Gold", "Mantle Gold"],
             "url": "https://mantle-gold.com/contact",
             "telephone": ["+2348032368599", "+2349121557656"],
             "email": "info@mantle-gold.com",
@@ -347,8 +347,8 @@ const pages = [
     },
     {
         route: '/blog',
-        title: "Oil & Gas Engineering Insights | Mantle-Gold Ltd",
-        description: "Technical insights, subsea project case studies and pipeline engineering articles from Mantle-Gold Ltd in Lagos, Nigeria.",
+        title: "Oil & Gas Engineering Insights | Mantle-Gold",
+        description: "Technical insights, subsea project case studies and pipeline engineering articles from Mantle-Gold in Lagos, Nigeria.",
         h1: "Oil & Gas Engineering Insights & Articles",
         canonical: "https://mantle-gold.com/blog",
         type: "website",
@@ -357,15 +357,15 @@ const pages = [
             "@context": "https://schema.org",
             "@type": "Blog",
             "@id": "https://mantle-gold.com/blog#blog",
-            "name": "Mantle-Gold Ltd Engineering Insights & Blog",
-            "description": "Technical insights, field case studies, and engineering analysis from Mantle-Gold Ltd's oil and gas experts in Lagos, Nigeria.",
+            "name": "Mantle-Gold Engineering Insights & Blog",
+            "description": "Technical insights, field case studies, and engineering analysis from Mantle-Gold's oil and gas experts in Lagos, Nigeria.",
             "url": "https://mantle-gold.com/blog"
         }
     },
     {
         route: '/privacy',
-        title: "Privacy Policy | Mantle-Gold Ltd",
-        description: "Privacy policy for Mantle-Gold Ltd. How we handle personal data, project inquiries, and cookies in accordance with Nigerian NDPR.",
+        title: "Privacy Policy | Mantle-Gold",
+        description: "Privacy policy for Mantle-Gold. How we handle personal data, project inquiries, and cookies in accordance with Nigerian NDPR.",
         h1: "Privacy Policy",
         canonical: "https://mantle-gold.com/privacy",
         type: "website",
@@ -373,8 +373,8 @@ const pages = [
     },
     {
         route: '/terms',
-        title: "Terms of Service | Mantle-Gold Ltd",
-        description: "Terms and conditions governing the use of Mantle-Gold Ltd's website and engineering inquiry services in Nigeria.",
+        title: "Terms of Service | Mantle-Gold",
+        description: "Terms and conditions governing the use of Mantle-Gold's website and engineering inquiry services in Nigeria.",
         h1: "Terms of Service",
         canonical: "https://mantle-gold.com/terms",
         type: "website",
@@ -382,17 +382,17 @@ const pages = [
     },
     {
         route: '/thank-you',
-        title: "Thank You | Mantle-Gold Ltd",
-        description: "Thank you for contacting Mantle-Gold Ltd. Our engineering team will review your inquiry within 24 business hours.",
-        h1: "Thank You for Contacting Mantle-Gold Ltd",
+        title: "Thank You | Mantle-Gold",
+        description: "Thank you for contacting Mantle-Gold. Our engineering team will review your inquiry within 24 business hours.",
+        h1: "Thank You for Contacting Mantle-Gold",
         canonical: "https://mantle-gold.com/thank-you",
         type: "website",
         noindex: true
     },
     {
         route: '/404',
-        title: "Page Not Found (404) | Mantle-Gold Ltd",
-        description: "The requested page could not be found. Explore Mantle-Gold Ltd's EPCI and oil and gas engineering services in Nigeria.",
+        title: "Page Not Found (404) | Mantle-Gold",
+        description: "The requested page could not be found. Explore Mantle-Gold's EPCI and oil and gas engineering services in Nigeria.",
         h1: "404 - Page Not Found",
         canonical: "https://mantle-gold.com/404",
         type: "website",
@@ -438,7 +438,7 @@ function renderPageHtml(template, page) {
     }
 
     // Replace OG Image Alt
-    const pageImageAlt = `${page.title} - Mantle-Gold Ltd`;
+    const pageImageAlt = `${page.title} - Mantle-Gold`;
     if (html.includes('<meta property="og:image:alt"')) {
         html = html.replace(/<meta\s+property="og:image:alt"\s+content="[^"]*"/i, `<meta property="og:image:alt" content="${pageImageAlt}"`);
     }
@@ -463,7 +463,7 @@ function renderPageHtml(template, page) {
     return html;
 }
 
-console.log('--- Starting Mantle-Gold Ltd SEO Prerendering ---');
+console.log('--- Starting Mantle-Gold SEO Prerendering ---');
 
 for (const page of pages) {
     const renderedHtml = renderPageHtml(baseHtml, page);

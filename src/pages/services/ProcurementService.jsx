@@ -9,15 +9,15 @@ import CTABanner from '../../components/CTABanner';
 
 const faqs = [
     {
-        question: "What procurement services does Mantle-Gold Ltd provide for Nigeria's energy sector?",
-        answer: "Mantle-Gold Ltd provides strategic oil and gas procurement Nigeria services, including global sourcing of API 5L line pipes, subsea production valves, dynamic umbilicals, high-yield structural steel tubulars, heat exchangers, instrumentation packages, and heavy rotating machinery."
+        question: "What procurement services does Mantle-Gold provide for Nigeria's energy sector?",
+        answer: "Mantle-Gold provides strategic oil and gas procurement Nigeria services, including global sourcing of API 5L line pipes, subsea production valves, dynamic umbilicals, high-yield structural steel tubulars, heat exchangers, instrumentation packages, and heavy rotating machinery."
     },
     {
         question: "How do you ensure equipment quality and authenticity from OEMs?",
         answer: "Every procurement order is tied to accredited Original Equipment Manufacturers (OEMs). We conduct factory source audits, witness Factory Acceptance Testing (FAT), verify EN 10204 Type 3.1 and 3.2 material test certificates (MTC), and execute third-party pre-shipment inspections."
     },
     {
-        question: "How does Mantle-Gold Ltd manage customs clearance and Nigerian logistics?",
+        question: "How does Mantle-Gold manage customs clearance and Nigerian logistics?",
         answer: "Operating from Lekki, Lagos, our supply chain team navigates Nigerian port clearances, Form M processing, SONCAP certification, and end-to-end heavy freight transport directly to onshore supply bases, fabrication yards, or offshore load-out terminals."
     },
     {
@@ -38,7 +38,7 @@ const ProcurementService = () => {
         "serviceType": "Energy Sector Global Sourcing and Procurement",
         "provider": {
             "@type": "Organization",
-            "name": "Mantle-Gold Ltd",
+            "name": "Mantle-Gold",
             "url": "https://mantle-gold.com",
             "logo": "https://mantle-gold.com/logo.png"
         },
@@ -53,7 +53,7 @@ const ProcurementService = () => {
     return (
         <div className="bg-black text-white">
             <SEO
-                title="Oil & Gas Procurement Services Nigeria | Mantle-Gold Ltd"
+                title="Oil & Gas Procurement Services Nigeria | Mantle-Gold"
                 description="Specialized procurement and global sourcing for Nigerian oil and gas operations. Heavy equipment, subsea components and line pipes delivered."
                 canonicalPath="/services/procurement"
                 schema={serviceSchema}
@@ -83,13 +83,13 @@ const ProcurementService = () => {
                                 Reliable Oil and Gas Procurement Nigeria for Capital Energy Projects
                             </h2>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
-                                Timely delivery of certified equipment and materials is vital to preventing project delays and budget overruns in offshore and onshore operations. Mantle-Gold Ltd delivers transparent, high-efficiency <strong>oil and gas procurement Nigeria</strong> services, connecting Nigerian operators with Tier-1 global Original Equipment Manufacturers (OEMs) and vetted domestic stockists.
+                                Timely delivery of certified equipment and materials is vital to preventing project delays and budget overruns in offshore and onshore operations. Mantle-Gold delivers transparent, high-efficiency <strong>oil and gas procurement Nigeria</strong> services, connecting Nigerian operators with Tier-1 global Original Equipment Manufacturers (OEMs) and vetted domestic stockists.
                             </p>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4">
                                 Our procurement engineering team evaluates technical datasheets, audits manufacturing facilities, and supervises Factory Acceptance Testing (FAT) to ensure absolute compliance with API, ASME, ASTM, and Shell DEP specifications.
                             </p>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
-                                With more than a decade of operational excellence since June 2014, Mantle-Gold Ltd combines international supply chain relationships with Nigerian port clearance expertise, delivering complex materials directly to fabrication yards, platforms, and field terminals.
+                                With more than a decade of operational excellence since June 2014, Mantle-Gold combines international supply chain relationships with Nigerian port clearance expertise, delivering complex materials directly to fabrication yards, platforms, and field terminals.
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
@@ -195,7 +195,7 @@ const ProcurementService = () => {
                                     Integrated Freight Forwarding &amp; Nigerian Port Handling
                                 </h3>
                                 <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed mb-4">
-                                    Importing critical oilfield hardware into Nigeria demands meticulous regulatory adherence. Mantle-Gold Ltd coordinates Form M processing, PAAR generation, NUPRC clearance permits, and expedited customs clearance at Lagos and Port Harcourt port complexes.
+                                    Importing critical oilfield hardware into Nigeria demands meticulous regulatory adherence. Mantle-Gold coordinates Form M processing, PAAR generation, NUPRC clearance permits, and expedited customs clearance at Lagos and Port Harcourt port complexes.
                                 </p>
                                 <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed mb-6">
                                     We manage bonded warehousing, heavy-lift crane handling, and marine barge transport directly to offshore fields or project marshaling yards, ensuring zero project standby costs.

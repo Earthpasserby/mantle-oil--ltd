@@ -7,8 +7,8 @@ const NotFound = () => {
     return (
         <div className="bg-black text-white min-h-[85vh] flex flex-col justify-center">
             <SEO
-                title="Page Not Found | Mantle-Gold Ltd"
-                description="The page you requested could not be found. Explore Mantle-Gold Ltd's EPCI and oil and gas engineering services in Nigeria."
+                title="Page Not Found | Mantle-Gold"
+                description="The page you requested could not be found. Explore Mantle-Gold's EPCI and oil and gas engineering services in Nigeria."
                 canonicalPath="/404"
                 noindex={true}
             />
@@ -29,7 +29,7 @@ const NotFound = () => {
                         Page Not Found
                     </h1>
                     <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-8">
-                        The URL you attempted to reach may have been updated, relocated, or is temporarily unavailable. Use the links below to navigate back to Mantle-Gold Ltd's core operational pages:
+                        The URL you attempted to reach may have been updated, relocated, or is temporarily unavailable. Use the links below to navigate back to Mantle-Gold's core operational pages:
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8 text-left">
