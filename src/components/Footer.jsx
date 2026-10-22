@@ -26,7 +26,7 @@ const Footer = () => {
                     <div>
                         <div className="flex items-center gap-3 mb-6">
                             <img src="/logo.png" alt="Mantle-Gold logo" className="h-8" loading="lazy" />
-                            <span className="text-lg font-bold text-white">Mantle-Gold</span>
+                            <span className="text-lg font-bold text-white">MANTLE-GOLD</span>
                         </div>
                         <p className="text-gray-500 text-sm leading-relaxed mb-6">
                             Oil, Gas &amp; Engineering Solutions. Delivering EPCI excellence with safety, quality, and Nigerian local content strength.
